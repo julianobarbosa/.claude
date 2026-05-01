@@ -193,6 +193,12 @@ Plugins/marketplaces/.chrome-profile/
 plugins/cache/
 Plugins/cache/
 
+# Session
+telemetry/
+
+# Session telemetry
+telemetry/
+
 # Session cache
 cache/
 

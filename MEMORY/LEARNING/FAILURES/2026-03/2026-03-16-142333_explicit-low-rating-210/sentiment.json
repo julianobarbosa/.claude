@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": "Explicit low rating: 2/10",
+  "detailed_context": "════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Create PowerShell script for domain login\n\nI need a bit more context to build the right script. Which type of domain login do you need?\n\n1. **Azure AD / Entra ID** — `Connect-AzAccount` or `Connect-MgGraph` for M365/Azure management\n2. **On-premises Active Directory** — domain join or credential-based AD authentication\n3. **Azure DevOps** — PAT-based or interactive login\n4. **Microsoft 365 services** — Exchange Online, SharePoint, Teams admin, etc.\n\nAlso — should the script:\n- Use **interactive login** (browser popup)?\n- Use a **service principal** (app ID + secret/cert) for automation?\n- Store/retrieve credentials securely?\n\nLet me know and I'll build it.",
+  "session_id": "ccba14f7-649a-406a-8e47-11af6293dc18",
+  "captured_at": "2026-03-16T21:23:33.782Z",
+  "transcript_source": "ccba14f7-649a-406a-8e47-11af6293dc18.jsonl"
+}

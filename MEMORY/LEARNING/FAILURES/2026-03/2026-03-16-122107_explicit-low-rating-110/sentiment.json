@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "There are **11 commits** on `azure-network-calculator` ahead of `main`. This is a merge into `main` which affects the shared branch.\n\nHow would you like to merge?\n1. **Merge commit** — `git checkout main && git merge azure-network-calculator`\n2. **Create a PR** — `gh pr create` for review first\n3. **Fast-forward** — if possible\n\nWhich approach do you prefer?",
+  "session_id": "bebfff18-5555-4ebb-8dae-91d7f1c04d6e",
+  "captured_at": "2026-03-16T19:21:07.279Z",
+  "transcript_source": "bebfff18-5555-4ebb-8dae-91d7f1c04d6e.jsonl"
+}

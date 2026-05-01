@@ -1,0 +1,352 @@
+[
+  {
+    "timestamp": "2026-04-29T13:12:14.622Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:12:14.622Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:12:14.622Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:12:14.622Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:12:14.622Z",
+    "type": "system_doc_ref",
+    "description": "References \"PAI/TERMINALTABS.md\" but file does not exist",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "PAI/TERMINALTABS.md"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"EventLogger.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "EventLogger.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"RecoveryJournal.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "RecoveryJournal.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:13:34.195Z",
+    "type": "system_doc_ref",
+    "description": "References \"PAI/TERMINALTABS.md\" but file does not exist",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "PAI/TERMINALTABS.md"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"EventLogger.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "EventLogger.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"RecoveryJournal.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "RecoveryJournal.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-29T13:15:05.833Z",
+    "type": "system_doc_ref",
+    "description": "References \"PAI/TERMINALTABS.md\" but file does not exist",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "PAI/TERMINALTABS.md"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"EventLogger.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "EventLogger.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"RecoveryJournal.hook.ts\" but file does not exist on disk",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "RecoveryJournal.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"hooks.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "hook_file_ref",
+    "description": "References \"AlgorithmTab.hook.ts\" but file does not exist on disk",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "AlgorithmTab.hook.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "MEMORYSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-emitter.ts\" but \"event-emitter.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-emitter.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "lib_file_ref",
+    "description": "References \"hooks/lib/event-types.ts\" but \"event-types.ts\" does not exist in hooks/lib/",
+    "doc": "THENOTIFICATIONSYSTEM.md",
+    "reference": "hooks/lib/event-types.ts"
+  },
+  {
+    "timestamp": "2026-04-30T10:27:58.997Z",
+    "type": "system_doc_ref",
+    "description": "References \"PAI/TERMINALTABS.md\" but file does not exist",
+    "doc": "THEHOOKSYSTEM.md",
+    "reference": "PAI/TERMINALTABS.md"
+  }
+]

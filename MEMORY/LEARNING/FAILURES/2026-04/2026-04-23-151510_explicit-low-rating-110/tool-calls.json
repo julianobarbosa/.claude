@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-04-23T14:54:32.027Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/fast-jump/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-04-23T14:54:38.352Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/github/fast-jump/.claude/skills/bmad-document-project/",
+      "description": "List skill directory"
+    },
+    "timestamp": "2026-04-23T14:54:45.136Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/github/fast-jump/_bmad/ 2>/dev/null && echo \"---\" && ls /Users/juliano.barbosa/Repos/github/fast-jump/_bmad/bmm/ 2>/dev/null",
+      "description": "Check _bmad config"
+    },
+    "timestamp": "2026-04-23T14:54:46.007Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/fast-jump/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-04-23T14:54:51.350Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/fast-jump/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-04-23T14:54:52.048Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/github/fast-jump/docs/ 2>/dev/null && echo \"---\" && ls /Users/juliano.barbosa/Repos/github/fast-jump/.claude/skills/bmad-document-project/workflows/ 2>/dev/null",
+      "description": "Check docs and workflows dirs"
+    },
+    "timestamp": "2026-04-23T14:54:56.247Z"
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "name": "ToolSearch",
+    "input": {
+      "query": "select:Read,Bash,Glob",
+      "max_results": 3
+    },
+    "timestamp": "2026-03-05T19:31:39.772Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "pwd",
+      "description": "Check current working directory"
+    },
+    "timestamp": "2026-03-05T19:31:43.658Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/PAI/CONTEXT_ROUTING.md",
+      "limit": 50
+    },
+    "timestamp": "2026-03-05T19:31:44.595Z"
+  },
+  {
+    "name": "ToolSearch",
+    "input": {
+      "query": "select:Grep",
+      "max_results": 1
+    },
+    "timestamp": "2026-03-05T19:31:49.780Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad",
+      "path": "/Users/juliano.barbosa/.claude",
+      "glob": "*.md",
+      "output_mode": "files_with_matches",
+      "head_limit": 15
+    },
+    "timestamp": "2026-03-05T19:31:54.036Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad",
+      "path": "/Users/juliano.barbosa/.claude/projects/-Users-juliano-barbosa-Repos-azure-rg-hypera-cafehyna-web-Repos-dev-src-argocd/memory",
+      "glob": "*.md",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-05T19:31:55.427Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad",
+      "path": "/Users/juliano.barbosa/.claude/PAI",
+      "glob": "*.md",
+      "output_mode": "files_with_matches",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-05T19:31:59.268Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/bmad*",
+      "path": "/Users/juliano.barbosa/.claude/PAI"
+    },
+    "timestamp": "2026-03-05T19:31:59.492Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad",
+      "path": "/Users/juliano.barbosa/.claude",
+      "glob": "*.{ts,js,json,yaml,yml}",
+      "output_mode": "files_with_matches",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-05T19:32:03.822Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/bmad*",
+      "path": "/Users/juliano.barbosa/.claude"
+    },
+    "timestamp": "2026-03-05T19:32:04.274Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad-orchestrate|bmad-method|bmad.*skill",
+      "path": "/Users/juliano.barbosa/.claude",
+      "glob": "*.{ts,js,md}",
+      "output_mode": "files_with_matches",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-05T19:32:10.176Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/.claude/skills/ 2>/dev/null | head -20; echo \"---\"; ls /Users/juliano.barbosa/.claude/commands/ 2>/dev/null | head -20",
+      "description": "Check for skills and commands directories"
+    },
+    "timestamp": "2026-03-05T19:32:10.254Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la /Users/juliano.barbosa/.claude/skills/bmad-orchestrate-skill/",
+      "description": "List bmad skill directory contents"
+    },
+    "timestamp": "2026-03-05T19:32:14.349Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/skills/bmad-orchestrate-skill/SKILL.md"
+    },
+    "timestamp": "2026-03-05T19:32:17.300Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/.claude/skills/bmad-orchestrate-skill/Workflows/",
+      "description": "List bmad workflows"
+    },
+    "timestamp": "2026-03-05T19:32:20.615Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/.claude/skills/bmad-orchestrate-skill/Tools/",
+      "description": "List bmad tools"
+    },
+    "timestamp": "2026-03-05T19:32:21.011Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad-method|bmad method|BMAD",
+      "path": "/Users/juliano.barbosa/.claude/skills",
+      "glob": "*.md",
+      "output_mode": "files_with_matches",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-05T19:32:26.249Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/.claude/commands/ 2>/dev/null; echo \"---\"; find /Users/juliano.barbosa/.claude -maxdepth 2 -name \"*bmad*\" -type f 2>/dev/null; echo \"---\"; find /Users/juliano.barbosa/.claude -maxdepth 2 -name \"*bmad*\" -type d 2>/dev/null",
+      "description": "Find all bmad-related files and directories"
+    },
+    "timestamp": "2026-03-05T19:32:27.861Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bmad",
+      "path": "/Users/juliano.barbosa/.claude",
+      "glob": "**/*.md",
+      "output_mode": "files_with_matches",
+      "head_limit": 20
+    },
+    "timestamp": "2026-03-05T19:32:32.464Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/MEMORY/WORK/20260305-120000_bmad-workflow-automation-parallel-dev/PRD.md"
+    },
+    "timestamp": "2026-03-05T19:32:36.369Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/MEMORY/LEARNING/FAILURES/2026-03/2026-03-05-112515_explicit-low-rating-310/CONTEXT.md"
+    },
+    "timestamp": "2026-03-05T19:32:39.993Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/sprint-status*"
+    },
+    "timestamp": "2026-03-05T19:32:47.373Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/epics*"
+    },
+    "timestamp": "2026-03-05T19:32:47.798Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/.bmad*"
+    },
+    "timestamp": "2026-03-05T19:32:48.114Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/",
+      "description": "List bmad directory contents"
+    },
+    "timestamp": "2026-03-05T19:32:55.437Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/**/*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip"
+    },
+    "timestamp": "2026-03-05T19:32:55.875Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls _bmad/core/ 2>/dev/null; echo \"---\"; ls _bmad/_config/ 2>/dev/null; echo \"---\"; ls _bmad/tea/ 2>/dev/null; echo \"---\"; ls _bmad/cis/ 2>/dev/null",
+      "description": "List BMAD core directories"
+    },
+    "timestamp": "2026-03-05T19:33:02.935Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/_config/*"
+    },
+    "timestamp": "2026-03-05T19:33:02.942Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/_config/manifest.yaml"
+    },
+    "timestamp": "2026-03-05T19:33:07.190Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-03-05T19:33:07.690Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": ".cursor/rules/**/*.mdc"
+    },
+    "timestamp": "2026-03-05T19:33:15.600Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/_config/ides/*"
+    },
+    "timestamp": "2026-03-05T19:33:15.814Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/_config/ides/claude-code.yaml"
+    },
+    "timestamp": "2026-03-05T19:33:20.241Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/core/tasks/help.md"
+    },
+    "timestamp": "2026-03-05T19:33:33.266Z"
+  }
+]

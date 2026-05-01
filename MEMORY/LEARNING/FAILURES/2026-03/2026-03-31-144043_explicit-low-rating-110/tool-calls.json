@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-bmm-document-project"
+    },
+    "timestamp": "2026-03-31T19:48:48.758Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/core/tasks/workflow.xml"
+    },
+    "timestamp": "2026-03-31T19:48:53.574Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/workflows/document-project/workflow.yaml"
+    },
+    "timestamp": "2026-03-31T19:48:53.699Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/**/document-project/**"
+    },
+    "timestamp": "2026-03-31T19:49:00.209Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/**/document*"
+    },
+    "timestamp": "2026-03-31T19:49:04.978Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/bmm/**/*document*/**"
+    },
+    "timestamp": "2026-03-31T19:49:09.007Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-31T19:49:14.034Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-31T19:49:14.486Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/checklist.md"
+    },
+    "timestamp": "2026-03-31T19:49:14.879Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-31T19:49:20.161Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/_memory/project-scan-report.json"
+    },
+    "timestamp": "2026-03-31T19:49:20.950Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/_memory/index.md"
+    },
+    "timestamp": "2026-03-31T19:49:20.957Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/project-scan-report.json"
+    },
+    "timestamp": "2026-03-31T19:49:26.016Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/index.md"
+    },
+    "timestamp": "2026-03-31T19:49:26.039Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-03-31T19:49:41.652Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-03-31T19:49:42.214Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-03-31T19:49:47.956Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/templates/project-overview-template.md"
+    },
+    "timestamp": "2026-03-31T19:49:48.907Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/templates/index-template.md"
+    },
+    "timestamp": "2026-03-31T19:49:49.347Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/templates/source-tree-template.md"
+    },
+    "timestamp": "2026-03-31T19:49:50.237Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/_bmad/bmm/1-analysis/bmad-document-project/templates/project-scan-report-schema.json"
+    },
+    "timestamp": "2026-03-31T19:49:50.678Z"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "🔧 CHANGE: Added \"Create Daily Note\" as first QuickAdd choice using `daily.md` template\n- Path: `06 - Daily/YYYY/MM/YYYYMMDD.md` — matches vault structure\n- `fileExistsBehavior: \"Nothing\"` — won't duplicate if today's note exists\n- Opens in source mode after creation\n\n✅ VERIFY: QuickAdd order is now: Create Daily Note → Add Task → Quick Capture → Weekly Review\n\n🗣️ TARS: daily.md now has its own QuickAdd entry at the top of the command palette.",
+  "session_id": "f7a02008-2a2c-48cd-a452-16142e2e8336",
+  "captured_at": "2026-03-17T13:42:01.417Z",
+  "transcript_source": "f7a02008-2a2c-48cd-a452-16142e2e8336.jsonl"
+}

@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Existing documentation generated on **2026-03-03**, covering 5 deep-dives and full project scan.\n\n---\n\nI found existing documentation generated on **2026-03-03** (15 days ago).\n\nWhat would you like to do?\n\n1. **Re-scan entire project** - Update all documentation with latest changes\n2. **Deep-dive into specific area** - Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** - Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "717c5a62-9f41-4c41-bd61-f3074aca57dc",
+  "captured_at": "2026-03-18T18:11:32.668Z",
+  "transcript_source": "717c5a62-9f41-4c41-bd61-f3074aca57dc.jsonl"
+}

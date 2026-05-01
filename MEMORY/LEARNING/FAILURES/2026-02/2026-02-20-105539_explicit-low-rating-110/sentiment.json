@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "♻︎ Entering the PAI ALGORITHM… (v1.5.0 | github.com/danielmiessler/TheAlgorithm) ═════════════\n\n🗒️ TASK: Execute BMAD sprint-status workflow, interactive mode\n\n**Workflow files in context from prior invocation — executing directly.**\n\n---\n\n**Step 0:** mode not provided → `interactive` → Step 1\n\n**Step 1:** `_bmad-output/implementation-artifacts/sprint-status.yaml` ✓ found\n\n**Step 2: Parse & Classify**\n\n| Key | Type | Status |\n|---|---|---|\n| epic-1 | Epic | done |\n| epic-2 | Epic | in-progress ",
+  "session_id": "4fcbd156-1e31-47a8-bccc-5b517833d246",
+  "captured_at": "2026-02-20T18:55:39.818Z",
+  "transcript_source": "4fcbd156-1e31-47a8-bccc-5b517833d246.jsonl"
+}

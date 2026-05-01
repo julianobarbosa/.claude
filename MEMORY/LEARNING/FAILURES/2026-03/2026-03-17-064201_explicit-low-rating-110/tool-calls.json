@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Bash",
+    "input": {
+      "command": "cd /Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src && git log --oneline -5 bmad/pr-validation-pipeline",
+      "description": "Check recent commits on current branch"
+    },
+    "timestamp": "2026-03-17T12:36:13.555Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "cd /Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src && git log --oneline main..bmad/pr-validation-pipeline",
+      "description": "Show commits ahead of main"
+    },
+    "timestamp": "2026-03-17T12:36:14.455Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "cd /Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src && git diff --stat main..bmad/pr-validation-pipeline | tail -5",
+      "description": "Summary of changes vs main"
+    },
+    "timestamp": "2026-03-17T12:36:16.190Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "cd /Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src && git diff --stat --cached 2>/dev/null | tail -3; echo \"---UNSTAGED---\"; git diff --stat 2>/dev/null | wc -l; echo \"---UNTRACKED---\"; git ls-files --others --exclude-standard 2>/dev/null | wc -l",
+      "description": "Check staged, unstaged, and untracked files"
+    },
+    "timestamp": "2026-03-17T12:36:24.198Z"
+  }
+]

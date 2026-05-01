@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "````\n════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Document project — resume or rescan\n````\n\nI found an in-progress workflow state from **2026-03-24**.\n\n**Current Progress:**\n\n- **Mode:** full_rescan\n- **Scan Level:** exhaustive\n- **Completed Steps:** 12/12 (all complete)\n- **Last Step:** completed\n- **Project Type(s):** infra (Infrastructure Definitions), infra (Environment-Specific Helm Values)\n\nThe previous scan completed successfully on 2026-03-24 and generated documentation for the full project including architecture, source tree, dev guide, deploy guide, and integration architecture.\n\n**However, since this state file is older than 24 hours (16 days ago), per the workflow rules, I should start a fresh scan.**\n\nWhat would you like to do?\n\n1. **Re-scan entire project** — Update all documentation with latest changes (recommended, since the last scan was 16 days ago)\n2. **Deep-dive into specific area** — Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** — Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "02844bbb-c320-42a7-a6fe-e5c7b560576e",
+  "captured_at": "2026-04-09T11:19:49.363Z",
+  "transcript_source": "02844bbb-c320-42a7-a6fe-e5c7b560576e.jsonl"
+}

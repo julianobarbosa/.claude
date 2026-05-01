@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git rebase --continue",
+      "description": "Continue the interactive rebase"
+    },
+    "timestamp": "2026-03-16T14:55:48.898Z"
+  }
+]

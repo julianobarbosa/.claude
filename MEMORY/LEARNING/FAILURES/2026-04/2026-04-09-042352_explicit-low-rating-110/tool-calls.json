@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-04-09T11:18:53.280Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-04-09T11:18:59.767Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-04-09T11:19:09.266Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-04-09T11:19:15.215Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip"
+    },
+    "timestamp": "2026-04-09T11:19:16.032Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json"
+    },
+    "timestamp": "2026-04-09T11:19:19.146Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-04-09T11:19:57.124Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-04-09T11:20:03.979Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-04-09T11:20:12.904Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "mkdir -p /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/.archive && cp /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/.archive/project-scan-report-20260324.json",
+      "description": "Archive old state file"
+    },
+    "timestamp": "2026-04-09T11:20:15.421Z"
+  }
+]

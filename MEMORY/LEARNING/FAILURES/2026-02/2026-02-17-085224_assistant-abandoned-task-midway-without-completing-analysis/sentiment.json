@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": "and 1",
+  "detailed_context": "Now I have all the context needed. Let me build ISC for this review and execute it.\n\n**🎯 IDEAL STATE CRITERIA:**\n\nISC-C1: All ACs accurately match implementation evidence in code\nISC-C2: All [x] tasks correspond to real implemented changes\nISC-C3: Story File List matches actual git reality completely\nISC-C4: Code quality issues found at 3-10 minimum count\nISC-A1: No lazy \"looks good\" rubber-stamp review produced\n\n**⚒️ CAPABILITIES:** #1 Task, #25 CLI Probes | Scan: 25/25, USE: 2\n\n━━━ 🧠 THINK ━",
+  "session_id": "da60fcfc-3e6f-4582-8842-a2a3fa4c69f0",
+  "captured_at": "2026-02-17T16:52:24.203Z",
+  "transcript_source": "da60fcfc-3e6f-4582-8842-a2a3fa4c69f0.jsonl"
+}

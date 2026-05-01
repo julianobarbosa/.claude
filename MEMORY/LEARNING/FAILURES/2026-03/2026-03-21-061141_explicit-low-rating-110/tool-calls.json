@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/.claude/skills/bmad-create-prd/workflow.md"
+    },
+    "timestamp": "2026-03-21T13:10:47.452Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-21T13:10:51.515Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/.claude/skills/bmad-create-prd/steps-c/step-01-init.md"
+    },
+    "timestamp": "2026-03-21T13:10:55.686Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/prd.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator"
+    },
+    "timestamp": "2026-03-21T13:11:01.689Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*brief*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output"
+    },
+    "timestamp": "2026-03-21T13:11:02.585Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*research*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output"
+    },
+    "timestamp": "2026-03-21T13:11:03.485Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/project-context.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator"
+    },
+    "timestamp": "2026-03-21T13:11:04.373Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/docs"
+    },
+    "timestamp": "2026-03-21T13:11:04.712Z"
+  }
+]

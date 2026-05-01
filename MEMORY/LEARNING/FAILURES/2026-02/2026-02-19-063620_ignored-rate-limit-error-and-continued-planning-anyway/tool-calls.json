@@ -1,0 +1,181 @@
+[
+  {
+    "name": "Bash",
+    "input": {
+      "command": "curl -s -X POST http://localhost:8888/notify -H \"Content-Type: application/json\" -d '{\"message\": \"Entering the PAI Algorithm Observe phase\", \"voice_id\": \"fTtv3eikoepIosk8dTZ5\"}'"
+    },
+    "timestamp": "2026-02-19T14:26:49.331Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/_bmad/core/tasks/workflow.xml"
+    },
+    "timestamp": "2026-02-19T14:27:02.221Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/_bmad/bmm/workflows/4-implementation/code-review/workflow.yaml"
+    },
+    "timestamp": "2026-02-19T14:27:02.963Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/_bmad/bmm/workflows/4-implementation/code-review/instructions.xml"
+    },
+    "timestamp": "2026-02-19T14:27:08.321Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-02-19T14:27:08.885Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/_bmad-output/implementation-artifacts/1-1-provision-network-infrastructure.md"
+    },
+    "timestamp": "2026-02-19T14:27:20.975Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git status --porcelain 2>&1 | head -60",
+      "description": "Show uncommitted changes"
+    },
+    "timestamp": "2026-02-19T14:27:22.466Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git diff --name-only 2>&1 | grep terraform && git diff --cached --name-only 2>&1 | grep terraform",
+      "description": "Get terraform file changes from git"
+    },
+    "timestamp": "2026-02-19T14:27:28.036Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/**/*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src"
+    },
+    "timestamp": "2026-02-19T14:27:28.891Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/modules/networking/main.tf"
+    },
+    "timestamp": "2026-02-19T14:27:40.936Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/modules/networking/variables.tf"
+    },
+    "timestamp": "2026-02-19T14:27:41.638Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/modules/networking/outputs.tf"
+    },
+    "timestamp": "2026-02-19T14:27:42.046Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/main.tf"
+    },
+    "timestamp": "2026-02-19T14:27:47.532Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/variables.tf"
+    },
+    "timestamp": "2026-02-19T14:27:47.891Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/providers.tf"
+    },
+    "timestamp": "2026-02-19T14:27:48.295Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/outputs.tf"
+    },
+    "timestamp": "2026-02-19T14:27:54.029Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/backend.tf"
+    },
+    "timestamp": "2026-02-19T14:27:54.628Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/scripts/sap-smoke-test.sh"
+    },
+    "timestamp": "2026-02-19T14:27:55.373Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "terraform/environments/**",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src"
+    },
+    "timestamp": "2026-02-19T14:28:00.664Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/.terraform.lock.hcl"
+    },
+    "timestamp": "2026-02-19T14:28:01.618Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/environments/dev.tfvars"
+    },
+    "timestamp": "2026-02-19T14:28:04.229Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/environments/prd.tfvars"
+    },
+    "timestamp": "2026-02-19T14:28:04.757Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/terraform/environments/dev.backend.hcl"
+    },
+    "timestamp": "2026-02-19T14:28:05.347Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "curl -s -X POST http://localhost:8888/notify -H \"Content-Type: application/json\" -d '{\"message\": \"Entering the Think phase\", \"voice_id\": \"fTtv3eikoepIosk8dTZ5\"}'"
+    },
+    "timestamp": "2026-02-19T14:30:42.831Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "curl -s -X POST http://localhost:8888/notify -H \"Content-Type: application/json\" -d '{\"message\": \"Entering the Plan phase\", \"voice_id\": \"fTtv3eikoepIosk8dTZ5\"}'"
+    },
+    "timestamp": "2026-02-19T14:30:57.639Z"
+  }
+]

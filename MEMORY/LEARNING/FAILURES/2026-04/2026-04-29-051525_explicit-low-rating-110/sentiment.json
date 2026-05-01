@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Existing docs found from 2026-04-27. Presenting the workflow choice to Barbosa.\n\n════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Route document-project workflow for existing docs\n\n---\n\nHey Barbosa! I found existing documentation generated on **2026-04-27**.\n\nWhat would you like to do?\n\n1. **Re-scan entire project** — Update all documentation with latest changes\n2. **Deep-dive into specific area** — Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** — Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "50c70912-7f47-4c1a-9ff0-bb3ee1b230a4",
+  "captured_at": "2026-04-29T12:15:25.544Z",
+  "transcript_source": "50c70912-7f47-4c1a-9ff0-bb3ee1b230a4.jsonl"
+}

@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Setting `workflow_mode = \"full_rescan\"`. Now choose your scan depth:\n\n**1. Quick Scan** (2-5 minutes)\n- Pattern-based analysis without reading source files\n- Scans: Config files, package manifests, directory structure\n- Best for: Quick project overview, initial understanding\n\n**2. Deep Scan** (10-30 minutes)\n- Reads files in critical directories based on project type\n- Scans: All critical paths from documentation requirements\n- Best for: Comprehensive documentation for brownfield PRD\n\n**3. Exhaustive Scan** (30-120 minutes)\n- Reads ALL source files in project\n- Scans: Every source file (excludes node_modules, dist, build)\n- Best for: Complete analysis, migration planning, detailed audit\n\nYour choice [1/2/3] (default: 1):\n\nFor an infra project with 9 Terraform modules, **Deep Scan** (option 2) will give the best quality-to-time ratio — it reads the actual `.tf` files in each module to extract real resource definitions, variables, and outputs.",
+  "session_id": "0d7511da-903a-4c37-93c9-b94095b89441",
+  "captured_at": "2026-03-31T20:04:44.300Z",
+  "transcript_source": "0d7511da-903a-4c37-93c9-b94095b89441.jsonl"
+}

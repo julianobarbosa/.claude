@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "I found an in-progress workflow state from **2026-03-22T12:30:00Z** (today).\n\n**Current Progress:**\n\n- **Mode:** full_rescan\n- **Scan Level:** deep\n- **Completed Steps:** 12/12 (all complete)\n- **Last Step:** completed\n- **Project Type(s):** Infrastructure as Code (Terraform/Azure)\n\nThe previous scan completed successfully today — all 12 steps finished, 6 files updated, 14 total docs generated.\n\nWould you like to:\n\n1. **Re-scan entire project** — Update all documentation with latest changes\n2. **Deep-dive into specific area** — Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** — Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "401f8185-9585-4b63-b680-081982875de1",
+  "captured_at": "2026-03-22T18:14:31.567Z",
+  "transcript_source": "401f8185-9585-4b63-b680-081982875de1.jsonl"
+}

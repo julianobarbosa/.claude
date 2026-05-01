@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Project classified. Here's what I found:\n\n**Project Classification:**\n- **Repository Type:** Monolith (single cohesive infrastructure codebase)\n- **Project Type:** `infra` (matched via `*.tf` files across 9 modules)\n- **Primary Technology:** Terraform / Azure\n- **Structure:** 9 numbered deployment modules (01 through 99), each with its own Makefile\n- **Key patterns:** `.tf` files, `Makefile` per module, `yor.yaml` for tagging, `values.yaml` for Helm workloads\n- **No Dockerfiles, no `.tfvars` files** (variables via environment)\n\nDoes this classification look correct? **[y/n/edit]**\n\nI'm proceeding with `infra` type — the `documentation-requirements.csv` row for `infra` specifies:\n- `requires_api_scan`: false\n- `requires_data_models`: false\n- `requires_deployment_config`: true\n- `critical_directories`: terraform/, modules/, k8s/, charts/\n- `ci_cd_patterns`: .github/workflows/**, azure-pipelines.yml",
+  "session_id": "d1eac370-48ea-4acc-bb0b-8c1e2b0d7190",
+  "captured_at": "2026-03-31T21:40:43.419Z",
+  "transcript_source": "d1eac370-48ea-4acc-bb0b-8c1e2b0d7190.jsonl"
+}

@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/core/tasks/help.md"
+    },
+    "timestamp": "2026-03-12T00:06:48.671Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-03-12T00:06:55.078Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/*/config.yaml",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp"
+    },
+    "timestamp": "2026-03-12T00:06:55.281Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-12T00:07:01.688Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/core/config.yaml"
+    },
+    "timestamp": "2026-03-12T00:07:01.730Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/core/tasks/workflow.xml"
+    },
+    "timestamp": "2026-03-12T00:15:54.800Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/workflow.yaml"
+    },
+    "timestamp": "2026-03-12T00:15:55.358Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/instructions.md"
+    },
+    "timestamp": "2026-03-12T00:15:59.249Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp"
+    },
+    "timestamp": "2026-03-12T00:16:08.186Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/index.md",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp"
+    },
+    "timestamp": "2026-03-12T00:16:08.790Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-03-12T00:16:14.434Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/projects/-Users-juliano-barbosa--dotfiles-tmuxp--tmuxp/b827af0d-b96e-4da3-bcfa-009869cdce41/tool-results/toolu_01GFz51G19Dwz1zLBdwLv1SC.txt"
+    },
+    "timestamp": "2026-03-12T00:16:18.346Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md",
+      "offset": 1,
+      "limit": 200
+    },
+    "timestamp": "2026-03-12T00:16:26.445Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-03-12T00:16:36.682Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md",
+      "offset": 200,
+      "limit": 400
+    },
+    "timestamp": "2026-03-12T00:16:42.559Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmuxp/.tmuxp/_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md",
+      "offset": 600,
+      "limit": 300
+    },
+    "timestamp": "2026-03-12T00:16:55.629Z"
+  }
+]

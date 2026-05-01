@@ -1,0 +1,98 @@
+[
+  {
+    "name": "ToolSearch",
+    "input": {
+      "query": "select:Bash",
+      "max_results": 1
+    },
+    "timestamp": "2026-03-05T19:21:38.233Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git worktree list",
+      "description": "List all git worktrees"
+    },
+    "timestamp": "2026-03-05T19:21:42.026Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git branch --list 'bmad/cs-epic7'",
+      "description": "Check if bmad/cs-epic7 branch exists"
+    },
+    "timestamp": "2026-03-05T19:22:25.869Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git worktree add .claude/worktrees/wt-cs-epic7 bmad/cs-epic7",
+      "description": "Create worktree for bmad/cs-epic7"
+    },
+    "timestamp": "2026-03-05T19:22:29.032Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git worktree list",
+      "description": "Verify worktree was created"
+    },
+    "timestamp": "2026-03-05T19:22:34.624Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git log --oneline main..bmad/cs-epic7",
+      "description": "Show commits on epic7 not yet in main"
+    },
+    "timestamp": "2026-03-05T19:23:11.013Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git log --oneline bmad/cs-epic7..main",
+      "description": "Show commits on main not in epic7"
+    },
+    "timestamp": "2026-03-05T19:23:14.863Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git worktree remove .claude/worktrees/wt-cs-epic7",
+      "description": "Remove the epic7 worktree"
+    },
+    "timestamp": "2026-03-05T19:24:18.181Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git worktree list",
+      "description": "Verify worktree removed"
+    },
+    "timestamp": "2026-03-05T19:24:24.146Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git status",
+      "description": "Show working tree status"
+    },
+    "timestamp": "2026-03-05T19:24:47.801Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git diff --stat",
+      "description": "Show staged and unstaged change summary"
+    },
+    "timestamp": "2026-03-05T19:24:48.249Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git log --oneline -5",
+      "description": "Show recent commit messages"
+    },
+    "timestamp": "2026-03-05T19:24:48.646Z"
+  }
+]

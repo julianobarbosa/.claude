@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": ", 1 YOLO",
+  "detailed_context": "━━━ 📋 PLAN ━━━ 3/7\n\n**10 issues found across 3 HIGH, 3 MEDIUM, 4 LOW.**\n\n---\n\n**🔥 CODE REVIEW FINDINGS, Barbosa!**\n\n**Story:** `1-1-provision-network-infrastructure.md`\n**Git vs Story Discrepancies:** 2 found (AKS + namespaces modules undocumented)\n**Issues Found:** 3 High, 3 Medium, 4 Low\n\n---\n\n## 🔴 HIGH ISSUES\n\n### H1 — `terraform validate` NOT CONFIRMED after Code Review 4\n\n**File:** Story Dev Agent Record — Change Log (2026-02-19)\n\nThe last changelog entry explicitly states:\n> *\"`terrafor",
+  "session_id": "cad33157-2077-444c-9e4d-412579d08d27",
+  "captured_at": "2026-02-19T14:36:20.656Z",
+  "transcript_source": "cad33157-2077-444c-9e4d-412579d08d27.jsonl"
+}

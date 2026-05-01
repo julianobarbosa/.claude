@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "src/azure_reservations/**/*.py"
+    },
+    "timestamp": "2026-03-31T22:12:51.790Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la /Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/src/azure_reservations/",
+      "description": "List azure_reservations source dir"
+    },
+    "timestamp": "2026-03-31T22:12:52.793Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/src/azure_reservations/cli.py"
+    },
+    "timestamp": "2026-03-31T22:12:56.871Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/src/azure_reservations/commands/list_arm_resources.py"
+    },
+    "timestamp": "2026-03-31T22:12:57.373Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/github/python-devops/azure-reservation/src/azure_reservations/commands/list_active.py"
+    },
+    "timestamp": "2026-03-31T22:12:57.539Z"
+  }
+]

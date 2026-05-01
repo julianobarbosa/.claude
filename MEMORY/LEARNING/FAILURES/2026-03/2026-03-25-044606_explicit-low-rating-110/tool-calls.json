@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-03-25T11:45:18.362Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-25T11:45:21.213Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-25T11:45:25.947Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-25T11:45:26.098Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:45:31.616Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/index.md",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:45:32.135Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/project-scan-report.json"
+    },
+    "timestamp": "2026-03-25T11:45:35.121Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/index.md"
+    },
+    "timestamp": "2026-03-25T11:45:38.165Z"
+  }
+]

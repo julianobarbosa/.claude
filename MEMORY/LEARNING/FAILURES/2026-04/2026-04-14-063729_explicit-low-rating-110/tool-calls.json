@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-help"
+    },
+    "timestamp": "2026-04-14T13:34:40.360Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/**/*.{csv,yaml,yml}"
+    },
+    "timestamp": "2026-04-14T13:34:44.113Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-04-14T13:34:44.179Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-04-14T13:34:47.230Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/_bmad/_config/manifest.yaml"
+    },
+    "timestamp": "2026-04-14T13:34:47.874Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-04-14T13:34:53.342Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/_bmad/core/config.yaml"
+    },
+    "timestamp": "2026-04-14T13:34:54.341Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad/**/user-config.yaml"
+    },
+    "timestamp": "2026-04-14T13:34:54.345Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/**/*"
+    },
+    "timestamp": "2026-04-14T13:34:58.107Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/**/*"
+    },
+    "timestamp": "2026-04-14T13:34:58.139Z"
+  },
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-04-14T13:36:20.924Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-04-14T13:36:24.234Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-04-14T13:36:27.466Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/project-scan-report.json"
+    },
+    "timestamp": "2026-04-14T13:36:30.833Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "docs/index.md"
+    },
+    "timestamp": "2026-04-14T13:36:30.844Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/.claude/skills/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-04-14T13:36:34.822Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-04-14T13:36:38.199Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/hypera-rg-hypera-alz-mgmt-tf-dev/Repos/alz-bootstrap-202604/.claude/skills/bmad-document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-04-14T13:36:43.707Z"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "YOLO",
+  "detailed_context": "All steps complete. Here's the summary:\n\n🔧 CHANGE:\n- Added `configs.ssh.knownHosts` with SSH keys (GitHub, Bitbucket, GitLab, Azure DevOps)\n- Added `configs.tls.certificates: {}` empty placeholder\n- Added `configs.clusterCredentials` with 6 clusters (hub-in-cluster, cafehyna-dev, cafehyna-prd, loyalty-dev, painelclientes-dev, painelclientes-prd)\n- Added ClusterRole `argocd-manager-role` to extraObjects (14 API groups)\n- Added ClusterRoleBinding `argocd-manager-role-binding` to extraObjects\n- Updated header inventory with cluster list and SSH/TLS info\n- File grew from 3505 to 3937 lines\n\n✅ VERIFY:\n- YAML parsed successfully with `yaml.safe_load()`\n- Pre-commit yamllint warnings are pre-existing (line-length, quoted-strings)\n- Indentation matches existing `extraObjects` pattern (2-space)\n- All 6 clusters from `kustomization.yaml` active resources included\n\n🗣️ TARS: Merged SSH hosts, TLS certs, 6 clusters, and cluster RBAC into values.yaml successfully",
+  "session_id": "1951c363-620a-4b6f-83b9-4097349eaa04",
+  "captured_at": "2026-03-04T22:27:59.490Z",
+  "transcript_source": "1951c363-620a-4b6f-83b9-4097349eaa04.jsonl"
+}

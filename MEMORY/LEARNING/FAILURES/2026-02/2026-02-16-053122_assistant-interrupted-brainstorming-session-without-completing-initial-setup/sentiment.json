@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": ".",
+  "detailed_context": "Got it! So we're brainstorming about **YouTube channels/playlists that produce podcast-like content that don't exist on Apple Podcasts** — and we need to figure out how to get them there using (or evolving) the existing RSS feed generation tool.\n\n**Now for question 2 — what specific outcomes are you hoping for?**\n\n1. A fully automated tool/script that batch-migrates your entire YouTube Music podcast library\n2. An enhanced version of the existing `youtube_to_apple_podcast.py` that handles multipl",
+  "session_id": "83395036-5c28-45a1-a5bc-991e2cbe5088",
+  "captured_at": "2026-02-16T13:31:22.331Z",
+  "transcript_source": "83395036-5c28-45a1-a5bc-991e2cbe5088.jsonl"
+}

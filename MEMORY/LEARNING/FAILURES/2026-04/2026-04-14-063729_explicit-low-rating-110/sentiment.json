@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Good, I have everything I need. Now let me scan the project structure to begin Step 1.\n\n```\n════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Document Project — initial scan of ALZ bootstrap\n```\n\nHello Barbosa! No existing documentation index found. Starting initial project scan...\n\n**How Project Type Detection Works:**\n\nThis workflow uses a comprehensive CSV with 12 project types to intelligently detect and document your project. Loaded documentation requirements for all 12 types (web, mobile, backend, cli, library, desktop, game, data, extension, infra, embedded).\n\nDocumentation requirements loaded successfully. Ready to begin project analysis.\n\nChoose your scan depth level:\n\n**1. Quick Scan** (2-5 minutes) [DEFAULT]\n- Pattern-based analysis without reading source files\n- Scans: Config files, package manifests, directory structure\n- Best for: Quick project overview, initial understanding\n\n**2. Deep Scan** (10-30 minutes)\n- Reads files in critical directories based on project type\n- Best for: Comprehensive documentation for brownfield PRD\n\n**3. Exhaustive Scan** (30-120 minutes)\n- Reads ALL source files in project\n- Best for: Complete analysis, migration planning, detailed audit\n\nYour choice [1/2/3] (default: 1):",
+  "session_id": "6fea38fe-e0ab-41bb-86c3-3f0f98060186",
+  "captured_at": "2026-04-14T13:37:29.465Z",
+  "transcript_source": "6fea38fe-e0ab-41bb-86c3-3f0f98060186.jsonl"
+}

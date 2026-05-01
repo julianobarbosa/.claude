@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": "Explicit low rating: 2/10",
+  "detailed_context": "I found an in-progress workflow state from **2026-03-03T12:30:00Z**.\n\n**Current Progress:**\n\n- **Mode:** deep_dive\n- **Scan Level:** exhaustive\n- **Completed Steps:** 7/7\n- **Last Step:** completed\n- **Project Type(s):** infra (Infrastructure & Base Configuration), infra (Environment-Specific Helm Values)\n\nWould you like to:\n\n1. **Resume from where we left off** — Continue from completed state (add another deep-dive)\n2. **Start fresh** — Archive old state and begin new scan\n3. **Cancel** — Exit without changes\n\nYour choice [1/2/3]:",
+  "session_id": "bcf7378b-6ba8-487a-9ccc-72750e0d2145",
+  "captured_at": "2026-03-03T21:20:02.826Z",
+  "transcript_source": "bcf7378b-6ba8-487a-9ccc-72750e0d2145.jsonl"
+}

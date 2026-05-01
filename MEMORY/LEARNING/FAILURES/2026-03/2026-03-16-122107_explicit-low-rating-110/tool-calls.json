@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-help"
+    },
+    "timestamp": "2026-03-16T19:16:10.450Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/.claude/skills/bmad-help/workflow.md"
+    },
+    "timestamp": "2026-03-16T19:16:16.579Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-03-16T19:16:19.742Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/_bmad/**/config.yaml"
+    },
+    "timestamp": "2026-03-16T19:16:20.075Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad/_config/bmad-help.csv"
+    },
+    "timestamp": "2026-03-16T19:16:22.764Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-16T19:16:23.579Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad/core/config.yaml"
+    },
+    "timestamp": "2026-03-16T19:16:23.866Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/_bmad-output/**/*"
+    },
+    "timestamp": "2026-03-16T19:16:29.612Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/docs/**/*"
+    },
+    "timestamp": "2026-03-16T19:16:30.082Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/design_artifacts/**/*"
+    },
+    "timestamp": "2026-03-16T19:16:30.201Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git status",
+      "description": "Check git status"
+    },
+    "timestamp": "2026-03-16T19:20:24.926Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git log --oneline main..HEAD",
+      "description": "Show commits on azure-network-calculator not in main"
+    },
+    "timestamp": "2026-03-16T19:20:25.840Z"
+  }
+]

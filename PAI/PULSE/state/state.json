@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "jobs": {
+    "assistant-tasks": {
+      "lastRun": 1777652790098,
+      "lastResult": "error",
+      "consecutiveFailures": 3
+    },
+    "healthcheck": {
+      "lastRun": 1777655448023,
+      "lastResult": "ok",
+      "consecutiveFailures": 0
+    },
+    "airgradient-poll": {
+      "lastRun": 1777655448071,
+      "lastResult": "ok",
+      "consecutiveFailures": 0
+    },
+    "cost-aggregation": {
+      "lastRun": 1777654847979,
+      "lastResult": "ok",
+      "consecutiveFailures": 0
+    },
+    "assistant-heartbeat": {
+      "lastRun": 1777654853418,
+      "lastResult": "error",
+      "consecutiveFailures": 2
+    },
+    "cost-tracker": {
+      "lastRun": 1777654853374,
+      "lastResult": "ok",
+      "consecutiveFailures": 0
+    }
+  },
+  "startedAt": 1777653107730
+}

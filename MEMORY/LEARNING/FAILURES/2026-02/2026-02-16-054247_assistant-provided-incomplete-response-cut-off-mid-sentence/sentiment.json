@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "This is gold. Here's what we've uncovered — **real bedrock truths**, not assumptions:\n\n---\n\n### Bedrock Truth #1: There IS a way to extract your YouTube Music podcast library programmatically\n\nThe [**ytmusicapi**](https://ytmusicapi.readthedocs.io/) (unofficial Python API, actively maintained — v1.11.5) has a function specifically for this:\n\n```python\nYTMusic.get_library_podcasts(limit=25, order='a_to_z')\n```\n\nThis returns a list of all podcasts you're subscribed to in YouTube Music. That's our ",
+  "session_id": "83395036-5c28-45a1-a5bc-991e2cbe5088",
+  "captured_at": "2026-02-16T13:42:47.444Z",
+  "transcript_source": "83395036-5c28-45a1-a5bc-991e2cbe5088.jsonl"
+}

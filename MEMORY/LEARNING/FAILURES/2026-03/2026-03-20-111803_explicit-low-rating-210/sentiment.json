@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": "Explicit low rating: 2/10",
+  "detailed_context": "**Session setup complete!** I have a clear understanding of your goals — including the critical pivot from self-hosted container to **managed Azure resource** with best practice guidance.\n\n**Ready to explore technique approaches?**\n\n**[1] User-Selected Techniques** - Browse our complete technique library\n**[2] AI-Recommended Techniques** - Get customized suggestions based on your goals\n**[3] Random Technique Selection** - Discover unexpected creative methods\n**[4] Progressive Technique Flow** - Start broad, then systematically narrow focus\n\nGiven that your session combines architecture decisions, deployment strategy, and use case discovery, I'd lean toward **[2]** or **[4]** — but the choice is yours.\n\nWhich approach appeals to you most? (Enter 1-4)",
+  "session_id": "6a4c8eac-1809-4c85-8601-6c70abfb573d",
+  "captured_at": "2026-03-20T18:18:03.887Z",
+  "transcript_source": "6a4c8eac-1809-4c85-8601-6c70abfb573d.jsonl"
+}

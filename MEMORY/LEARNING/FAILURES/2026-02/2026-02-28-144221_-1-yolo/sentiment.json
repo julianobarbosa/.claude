@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": ", 1 YOLO",
+  "detailed_context": "Three of four scans complete. Scripts/CI scan revealed 60+ scripts across 13 categories, 22 pre-commit hooks, GitHub Actions + Azure Pipelines CI/CD. Waiting for the docs inventory agent...",
+  "session_id": "84b09e0d-0456-4ec6-8516-4eed09f3f6fe",
+  "captured_at": "2026-02-28T22:42:21.057Z",
+  "transcript_source": "84b09e0d-0456-4ec6-8516-4eed09f3f6fe.jsonl"
+}

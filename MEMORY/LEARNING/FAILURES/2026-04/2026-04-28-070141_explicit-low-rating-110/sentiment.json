@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "---\n\nHey Barbosa! I found existing documentation generated on **2026-04-27** (yesterday's full rescan — all 12 steps completed).\n\nWhat would you like to do?\n\n1. **Re-scan entire project** — Update all documentation with latest changes\n2. **Deep-dive into specific area** — Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** — Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "31a396c1-661c-4f2c-a910-083b5c5daa08",
+  "captured_at": "2026-04-28T14:01:41.783Z",
+  "transcript_source": "31a396c1-661c-4f2c-a910-083b5c5daa08.jsonl"
+}

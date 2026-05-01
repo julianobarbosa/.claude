@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-04-11T18:24:55.477Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-04-11T18:24:58.375Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-04-11T18:24:58.727Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/docs"
+    },
+    "timestamp": "2026-04-11T18:25:04.771Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/index.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/docs"
+    },
+    "timestamp": "2026-04-11T18:25:05.148Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/docs/project-scan-report.json"
+    },
+    "timestamp": "2026-04-11T18:25:08.184Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/docs/index.md",
+      "limit": 30
+    },
+    "timestamp": "2026-04-11T18:25:08.703Z"
+  }
+]

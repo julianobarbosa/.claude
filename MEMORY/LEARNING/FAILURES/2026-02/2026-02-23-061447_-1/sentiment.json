@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": ", 1",
+  "detailed_context": "Input discovery results:\n- ✓ Loaded architecture from `_bmad-output/planning-artifacts/architecture.md`\n- ✓ Loaded epic context from `_bmad-output/planning-artifacts/epics.md` (Story 2.3 section)\n- ○ No project-context.md found\n- ○ No UX design files (not applicable)\n\n---\n\n## Step 2: Build Review Attack Plan\n\n**Acceptance Criteria extracted:**\n| # | Core Requirement | Status to Verify |\n|---|---|---|\n| AC1 | Exit 0 on all success + green SUCCESS messages | Claimed ✅ |\n| AC2 | Exit 1 on failure +",
+  "session_id": "31577330-d0c2-40d2-8766-fc43d99262cb",
+  "captured_at": "2026-02-23T14:14:47.439Z",
+  "transcript_source": "31577330-d0c2-40d2-8766-fc43d99262cb.jsonl"
+}

@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "I now have a comprehensive understanding of the workflow. Let me begin executing it.\n\n---\n\n**📊 Mary (Business Analyst) — Document Project Workflow**\n\n**How Project Type Detection Works:**\n\nThis workflow uses a comprehensive CSV file to intelligently document your project:\n\n**documentation-requirements.csv** — Contains 12 project types with detection columns and requirement columns that tell the workflow WHERE to look and WHAT to document.\n\nLoaded documentation requirements for 12 project types (web, mobile, backend, cli, library, desktop, game, data, extension, infra, embedded).\n\n✓ Documentation requirements loaded successfully. Ready to begin project analysis.\n\n---\n\nNo existing documentation found at `docs/index.md`. Setting **workflow_mode = \"initial_scan\"**.\n\n**Choose your scan depth level:**\n\n**1. Quick Scan** (2-5 minutes) [DEFAULT]\n- Pattern-based analysis without reading source files\n- Scans: Config files, package manifests, directory structure\n- Best for: Quick project overview, initial understanding\n\n**2. Deep Scan** (10-30 minutes)\n- Reads files in critical directories based on project type\n- Scans: All critical paths from documentation requirements\n- Best for: Comprehensive documentation for brownfield PRD\n\n**3. Exhaustive Scan** (30-120 minutes)\n- Reads ALL source files in project\n- Best for: Complete analysis, migration planning, detailed audit\n\nYour choice [1/2/3] (default: 1):",
+  "session_id": "b827af0d-b96e-4da3-bcfa-009869cdce41",
+  "captured_at": "2026-03-12T00:18:47.020Z",
+  "transcript_source": "b827af0d-b96e-4da3-bcfa-009869cdce41.jsonl"
+}

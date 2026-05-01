@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/core/tasks/workflow.xml"
+    },
+    "timestamp": "2026-03-04T20:59:53.335Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/bmm/workflows/4-implementation/create-story/workflow.yaml"
+    },
+    "timestamp": "2026-03-04T20:59:53.735Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-04T21:00:00.411Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/bmm/workflows/4-implementation/create-story/template.md"
+    },
+    "timestamp": "2026-03-04T21:00:01.296Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/bmm/workflows/4-implementation/create-story/instructions.xml"
+    },
+    "timestamp": "2026-03-04T21:00:01.715Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/*epic*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:14.735Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/*architecture*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:15.667Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/*prd*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:15.997Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/*ux*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:17.065Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/project-context.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:17.883Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/implementation-artifacts/sprint-status.yaml",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:18.779Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/*epic*/*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:19.560Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/sprint-status.yaml"
+    },
+    "timestamp": "2026-03-04T21:00:26.279Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/planning-artifacts/epics.md"
+    },
+    "timestamp": "2026-03-04T21:00:27.351Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/planning-artifacts/architecture.md"
+    },
+    "timestamp": "2026-03-04T21:00:27.790Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/planning-artifacts/prd.md"
+    },
+    "timestamp": "2026-03-04T21:00:28.591Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git log --oneline -10",
+      "description": "Get last 10 commits for git intelligence"
+    },
+    "timestamp": "2026-03-04T21:00:29.933Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/implementation-artifacts/4-*.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:40.815Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "terraform/modules/monitoring/**/*",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:42.176Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "k8s/platform/monitoring/**/*",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5"
+    },
+    "timestamp": "2026-03-04T21:00:42.528Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/4-4-deploy-argocd-with-applicationsets-for-gitops.md"
+    },
+    "timestamp": "2026-03-04T21:00:47.892Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/terraform -type f -name \"*.tf\" | head -40",
+      "description": "List existing Terraform files"
+    },
+    "timestamp": "2026-03-04T21:00:48.905Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/terraform/main.tf"
+    },
+    "timestamp": "2026-03-04T21:00:54.218Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/terraform/providers.tf"
+    },
+    "timestamp": "2026-03-04T21:00:54.555Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/terraform/variables.tf"
+    },
+    "timestamp": "2026-03-04T21:00:55.470Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/terraform/outputs.tf"
+    },
+    "timestamp": "2026-03-04T21:00:55.734Z"
+  },
+  {
+    "name": "Agent",
+    "input": {
+      "description": "Research LGTM stack latest versions",
+      "prompt": "Research the latest stable Helm chart versions and any important changes for these components as of March 2026:\n\n1. **Robusta** - Helm chart from robusta-charts.storage.googleapis.com. Architecture says 0.10.30+. What's the latest?\n2. **Grafana Mimir (distributed)** - Helm chart from grafana.github.io/helm-charts. Architecture says v4.1+.\n3. **Grafana Loki** - Helm chart from grafana.github.io/helm-charts. Architecture says 6.53.0.\n4. **Grafana Tempo (distributed)** - Helm chart from grafana.github.io/helm-charts. Architecture says 1.61.x.\n5. **OpenTelemetry Operator** - from open-telemetry/opentelemetry-operator.\n6. **Terraform AzureRM provider** — latest version for Azure Storage Account + blob containers.\n\nFor each, provide:\n- Latest stable Helm chart version\n- Any breaking changes or migration notes\n- Key configuration parameters for Azure blob backend (for Mimir, Loki, Tempo)\n- Azure Workload Identity configuration patterns\n\nThis is research only — do not write any code.",
+      "subagent_type": "Explore",
+      "model": "haiku",
+      "run_in_background": true
+    },
+    "timestamp": "2026-03-04T21:01:31.629Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/",
+      "description": "Check implementation artifacts directory exists"
+    },
+    "timestamp": "2026-03-04T21:01:36.930Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/5-1-deploy-lgtm-observability-stack.md",
+      "content": "# Story 5.1: Deploy LGTM Observability Stack\n\nStatus: ready-for-dev\n\n<!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->\n\n## Story\n\nAs a Platform Admin (Juliano),\nI want Robusta (with embedded Prometheus + Grafana), Mimir, Loki, and Tempo deployed with Azure Storage backends,\nso that the monitoring infrastructure can collect metrics, logs, and traces for all CronJob workloads across namespaces.\n\n## Acceptance Criteria\n\n1. **Given** AKS cluster is operational and Azure Storage Account with 3 containers exists **When** Terraform monitoring module is applied **Then** Robusta is deployed with kube-prometheus-stack (Prometheus + Grafana + AlertManager)\n2. **Given** Robusta is deployed with Prometheus **When** metrics are scraped **Then** Prometheus remote-writes metrics to Mimir (Azure Blob: `mimir-blocks`)\n3. **Given** Loki Helm release is deployed **When** pods produce logs **Then** Loki collects logs to Azure Blob (`loki-chunks`)\n4. **Given** Tempo Helm release is deployed **When** traces are generated **Then** Tempo collects traces to Azure Blob (`tempo-traces`)\n5. **Given** all LGTM components are operational **When** Grafana UI is accessed **Then** single Grafana instance connects to Mimir, Loki, and Tempo as data sources\n6. **Given** Prometheus is scraping CronJob pods **When** checking scrape configuration **Then** Prometheus scraping interval is <= 30 seconds for CronJob metrics (NFR26)\n7. **Given** AKS cluster has namespaces provisioned **When** OTel Operator is deployed **Then** Python auto-instrumentation CR exists per namespace with annotation `instrumentation.opentelemetry.io/inject-python: \"true\"` sending traces to Tempo distributor on port 4318\n\n## Tasks / Subtasks\n\n- [ ] Task 1: Create Terraform monitoring module skeleton (AC: #1)\n  - [ ] 1.1 Create `terraform/modules/monitoring/` directory with `main.tf`, `variables.tf`, `outputs.tf`, `storage.tf`, `identity.tf`\n  - [ ] 1.2 Define required providers: `helm ~> 2.x`, `kubernetes ~> 2.35`, `azurerm ~> 4.60`\n  - [ ] 1.3 Define input variables: `environment`, `location`, `resource_group_name`, `monitoring_namespace`, `namespaces` (list for OTel CRs), `aks_oidc_issuer_url`, `tags`\n\n- [ ] Task 2: Provision Azure Storage Account for LGTM backends (AC: #2, #3, #4)\n  - [ ] 2.1 Create `storage.tf` with `azurerm_storage_account` resource (`stlgtm<env>`) with Standard_LRS replication\n  - [ ] 2.2 Create 3 `azurerm_storage_container` resources: `mimir-blocks`, `loki-chunks`, `tempo-traces`\n  - [ ] 2.3 Configure storage account network rules to allow AKS subnet access\n\n- [ ] Task 3: Create User-Assigned Managed Identity for Workload Identity (AC: #2, #3, #4)\n  - [ ] 3.1 Create `identity.tf` with `azurerm_user_assigned_identity` for LGTM pods\n  - [ ] 3.2 Assign `Storage Blob Data Contributor` role on each container to the managed identity\n  - [ ] 3.3 Create `azurerm_federated_identity_credential` for each LGTM service account (mimir, loki, tempo) using AKS OIDC issuer\n\n- [ ] Task 4: Deploy Robusta with kube-prometheus-stack (AC: #1, #5, #6)\n  - [ ] 4.1 Add `helm_release` for Robusta Helm chart in `main.tf`\n  - [ ] 4.2 Configure embedded Prometheus with remote-write to Mimir endpoint (`http://mimir-distributor.monitoring:8080/api/v1/push`)\n  - [ ] 4.3 Configure Prometheus scrape interval to 30 seconds (NFR26)\n  - [ ] 4.4 Configure embedded Grafana with Mimir, Loki, and Tempo as provisioned data sources\n  - [ ] 4.5 Configure AlertManager for future alert routing (Story 7.1 will configure sinks)\n\n- [ ] Task 5: Deploy Grafana Mimir (distributed) (AC: #2)\n  - [ ] 5.1 Add `helm_release` for Mimir distributed Helm chart\n  - [ ] 5.2 Configure Azure Blob Storage backend using Workload Identity (container: `mimir-blocks`)\n  - [ ] 5.3 Configure Mimir service accounts with `azure.workload.identity/use: \"true\"` label\n  - [ ] 5.4 Set retention period for long-term metrics storage (365 days per architecture)\n\n- [ ] Task 6: Deploy Grafana Loki (AC: #3)\n  - [ ] 6.1 Add `helm_release` for Loki Helm chart\n  - [ ] 6.2 Configure Azure Blob Storage backend using Workload Identity (container: `loki-chunks`)\n  - [ ] 6.3 Configure Loki TSDB schema v13 + index gateway for NFR21 (<5s log queries)\n  - [ ] 6.4 Configure Loki service accounts with Workload Identity annotation\n\n- [ ] Task 7: Deploy Grafana Tempo (distributed) (AC: #4)\n  - [ ] 7.1 Add `helm_release` for Tempo distributed Helm chart\n  - [ ] 7.2 Configure Azure Blob Storage backend using Workload Identity (container: `tempo-traces`)\n  - [ ] 7.3 Configure Tempo distributor to accept OTLP/HTTP on port 4318\n  - [ ] 7.4 Configure Tempo service accounts with Workload Identity annotation\n\n- [ ] Task 8: Deploy OpenTelemetry Operator + Python Instrumentation CRs (AC: #7)\n  - [ ] 8.1 Add `helm_release` for OpenTelemetry Operator\n  - [ ] 8.2 Create `kubernetes_manifest` for `Instrumentation` CR per namespace with Python auto-instrumentation\n  - [ ] 8.3 Configure exporter endpoint to `http://tempo-distributor.monitoring:4318`\n  - [ ] 8.4 Document pod annotation requirement: `instrumentation.opentelemetry.io/inject-python: \"true\"`\n\n- [ ] Task 9: Wire monitoring module into root Terraform configuration (AC: all)\n  - [ ] 9.1 Add `module \"monitoring\"` block in `terraform/main.tf` with `depends_on = [module.aks]`\n  - [ ] 9.2 Add monitoring variables to `terraform/variables.tf`\n  - [ ] 9.3 Add monitoring outputs to `terraform/outputs.tf`\n  - [ ] 9.4 Validate with `terraform init -backend=false && terraform validate`\n\n## Dev Notes\n\n### Architecture Compliance\n\n- **Terraform State:** Using shared state (`terraform.tfstate`) consistent with existing modules (networking, aks, security, argocd, ci, namespaces). Architecture specifies `monitoring/terraform.tfstate` but actual codebase uses single shared state — keep consistent with Story 4.4 precedent.\n- **Provider Versions:** AzureRM ~> 4.60, Helm ~> 2.x, Kubernetes ~> 2.35 (same as existing providers.tf)\n- **Module Pattern:** Follow existing `terraform/modules/<name>/` structure with `main.tf`, `variables.tf`, `outputs.tf` + domain-specific files (`storage.tf`, `identity.tf`)\n- **Helm Provider:** Already configured in `terraform/providers.tf` (Story 4.4) using AKS kube credentials — no changes needed\n- **Kubernetes Provider:** Already configured in `terraform/providers.tf` (Story 1.3) — no changes needed\n- **Monitoring Namespace:** Deploy all LGTM components to `monitoring` namespace (created by the module, not by the namespaces module)\n- **Workload Identity Pattern:** Follow `terraform/modules/security/identity.tf` pattern for UAMI creation + federated identity credentials\n\n### Critical Architecture Decisions\n\n- **Decision 5.1 (OTel Operator):** Zero-code auto-instrumentation via pod annotations. OTel Operator injects Python auto-instrumentation at pod startup. Traces sent to Tempo via OTLP/HTTP port 4318. Instrumentation CR per namespace.\n- **Decision 5.2 (Log Format):** Structured JSON via `structlog` — `timestamp`, `level`, `message`, `cronjob_name`, `namespace`, `trace_id`, `run_id`. Loki TSDB schema v13 for efficient indexing.\n- **Decision 5.3 (Alert Routing):** Robusta sinks for Teams/Email. This story deploys AlertManager; Story 7.1 configures the actual routing rules and sinks.\n- **Architecture Data Flow:**\n  ```\n  CronJob pods\n    ├── metrics → Prometheus (Robusta) → remote-write → Mimir (Azure Blob)\n    ├── logs → Loki (Azure Blob)\n    └── traces → Tempo (Azure Blob) [via OpenTelemetry]\n                      ↓\n                Grafana (Robusta embedded)\n                connects to all 3 backends\n  ```\n\n### CRITICAL GUARDRAILS — Preventing Developer Mistakes\n\n1. **DO NOT deploy a separate Grafana instance.** The architecture specifies a SINGLE Grafana embedded in Robusta's kube-prometheus-stack. Add Mimir, Loki, and Tempo as data sources to this existing Grafana. Deploying a separate Grafana will create confusion and wasted resources.\n\n2. **DO NOT use static credentials for Azure Storage access.** Use Workload Identity (User-Assigned Managed Identity + Federated Identity Credential) exclusively. No storage account keys, no connection strings in Helm values. Follow the pattern in `terraform/modules/security/identity.tf`.\n\n3. **DO NOT hardcode the storage account name.** Use Terraform references (`azurerm_storage_account.lgtm.name`) for all references.\n\n4. **DO NOT create the `monitoring` namespace via the `namespaces` module.** The monitoring namespace is infrastructure, not a business area. Create it within the monitoring module's Helm releases (`create_namespace = true` on the first Helm release, or a dedicated `kubernetes_namespace` resource).\n\n5. **DO NOT skip the OTel Operator deployment.** Even though no CronJobs will generate traces yet, the Instrumentation CRs must exist so that when CronJobs deploy (Epic 2 already done), they automatically get trace injection via the pod annotation.\n\n6. **DO NOT use `kubectl_manifest` provider.** Use `kubernetes_manifest` from the hashicorp/kubernetes provider (same as Story 4.4 ApplicationSet pattern) to avoid third-party provider dependencies.\n\n7. **Prometheus scrape interval MUST be <= 30 seconds (NFR26).** This is a hard requirement. Configure in Robusta Helm values under the kube-prometheus-stack section.\n\n### Project Structure Notes\n\n```\nterraform/modules/monitoring/       # NEW MODULE\n  main.tf              # helm_release for Robusta, Mimir, Loki, Tempo, OTel Operator\n  storage.tf           # Azure Storage Account + 3 containers\n  identity.tf          # User-Assigned Managed Identity + role assignments + federated creds\n  otel.tf              # OTel Operator helm_release + Instrumentation CRs per namespace\n  variables.tf         # Monitoring module input variables\n  outputs.tf           # Monitoring endpoints, storage account name, identity IDs\n\nk8s/platform/monitoring/            # Helm values files for reference/GitOps\n  robusta-values.yaml  # Robusta Helm values (Prometheus remote-write to Mimir)\n  mimir-values.yaml    # Mimir distributed values (Azure Blob: mimir-blocks)\n  loki-values.yaml     # Loki values (Azure Blob: loki-chunks)\n  tempo-values.yaml    # Tempo distributed values (Azure Blob: tempo-traces)\n\nterraform/\n  main.tf              # MODIFY: add module \"monitoring\" block\n  variables.tf         # MODIFY: add monitoring variables\n  outputs.tf           # MODIFY: add monitoring outputs\n```\n\n### Library/Framework Requirements\n\n| Component | Helm Chart | Version | Repository |\n|-----------|-----------|---------|-----------|\n| Robusta | robusta/robusta | 0.10.30+ | robusta-charts.storage.googleapis.com |\n| Mimir (distributed) | grafana/mimir-distributed | latest (v4.1+) | grafana.github.io/helm-charts |\n| Loki | grafana/loki | 6.53.0+ | grafana.github.io/helm-charts |\n| Tempo (distributed) | grafana/tempo-distributed | 1.61.x+ | grafana.github.io/helm-charts |\n| OTel Operator | open-telemetry/opentelemetry-operator | latest | open-telemetry.github.io/opentelemetry-helm-charts |\n| Terraform AzureRM | hashicorp/azurerm | ~> 4.60 | registry.terraform.io |\n| Terraform Helm | hashicorp/helm | ~> 2.x | registry.terraform.io |\n| Terraform Kubernetes | hashicorp/kubernetes | ~> 2.35 | registry.terraform.io |\n\n### Testing Requirements\n\n- `terraform init -backend=false && terraform validate` must pass for the monitoring module in isolation\n- `terraform plan` should show expected resources: 1 Storage Account, 3 containers, 1 UAMI, role assignments, federated creds, 5 Helm releases, Instrumentation CRs\n- Verify no provider version conflicts with existing modules\n- Verify Helm chart repositories are accessible and chart versions exist\n\n### Previous Story Intelligence (Story 4.4 — ArgoCD)\n\n**Patterns to follow:**\n- **Helm release pattern:** `helm_release` with `create_namespace = true`, `wait = true`, configurable timeout\n- **kubernetes_manifest pattern:** Used for ApplicationSet — same pattern for OTel Instrumentation CRs\n- **Module wiring:** `depends_on = [module.aks]` in root `main.tf`\n- **Variable validation:** Use `validation {}` blocks with regex patterns for critical inputs\n- **Root module variables:** Add section header comment (`# --------------------------------------------------------------------------`)\n\n**Lessons from Story 4.4:**\n- `kubernetes_manifest` works well for CRDs applied after Helm chart installs the CRD definitions\n- Shared state pattern (not per-module state) — don't fight the existing convention\n- Helm provider already configured — no `providers.tf` changes needed\n- Module validated with `terraform init -backend=false && terraform validate`\n\n### Git Intelligence\n\n**Recent commits (Epic 4):**\n- `37150dd` docs(epic-4): update story 4.2 and 4.3 status to done\n- `33f28bc` merge: story 4-4 ArgoCD with ApplicationSets implementation\n- `1f760d5` merge: story 4-2 CI validation pipeline implementation\n- `7aa4883` feat(argocd): implement story 4-4 Deploy ArgoCD with ApplicationSets for GitOps\n\n**Patterns established:**\n- Terraform modules in `terraform/modules/<name>/`\n- Helm-based deployments via Terraform `helm_release` resource\n- Root module wiring with `depends_on` for Kubernetes-dependent modules\n- `kubernetes_manifest` for post-CRD custom resources\n\n### References\n\n- [Source: architecture.md#Decision 5.1 — OTel Operator auto-instrumentation for Python]\n- [Source: architecture.md#Decision 5.2 — Log Format Standardization (structlog JSON)]\n- [Source: architecture.md#Decision 5.3 — Alert Routing Rules via Robusta sinks]\n- [Source: architecture.md#Azure Storage for LGTM Backends — stlgtm<env> with 3 containers]\n- [Source: architecture.md#Data Flow — Observability]\n- [Source: architecture.md#Version Table — Robusta, Mimir, Loki, Tempo, OTel versions]\n- [Source: architecture.md#Project Structure — terraform/modules/monitoring/ layout]\n- [Source: epics.md#Story 5.1 — Acceptance Criteria]\n- [Source: prd.md#FR25-30 — Monitoring & Observability functional requirements]\n- [Source: prd.md#FR46 — Loki centralized log collection]\n- [Source: prd.md#NFR19 — Grafana dashboard load < 3 seconds]\n- [Source: prd.md#NFR21 — Log query response time < 5 seconds (Loki)]\n- [Source: prd.md#NFR26 — Prometheus scraping interval <= 30 seconds]\n- [Source: 4-4-deploy-argocd-with-applicationsets-for-gitops.md — Helm provider pattern, kubernetes_manifest usage]\n- [Source: terraform/main.tf — Existing module wiring pattern with depends_on]\n- [Source: terraform/providers.tf — Existing helm and kubernetes provider configuration]\n- [Source: terraform/modules/security/identity.tf — UAMI + Workload Identity pattern]\n\n## Dev Agent Record\n\n### Agent Model Used\n\n{{agent_model_name_version}}\n\n### Debug Log References\n\n### Completion Notes List\n\n### File List\n"
+    },
+    "timestamp": "2026-03-04T21:03:08.887Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/5-1-deploy-lgtm-observability-stack.md",
+      "old_string": "| Component | Helm Chart | Version | Repository |\n|-----------|-----------|---------|-----------|\n| Robusta | robusta/robusta | 0.10.30+ | robusta-charts.storage.googleapis.com |\n| Mimir (distributed) | grafana/mimir-distributed | latest (v4.1+) | grafana.github.io/helm-charts |\n| Loki | grafana/loki | 6.53.0+ | grafana.github.io/helm-charts |\n| Tempo (distributed) | grafana/tempo-distributed | 1.61.x+ | grafana.github.io/helm-charts |\n| OTel Operator | open-telemetry/opentelemetry-operator | latest | open-telemetry.github.io/opentelemetry-helm-charts |\n| Terraform AzureRM | hashicorp/azurerm | ~> 4.60 | registry.terraform.io |\n| Terraform Helm | hashicorp/helm | ~> 2.x | registry.terraform.io |\n| Terraform Kubernetes | hashicorp/kubernetes | ~> 2.35 | registry.terraform.io |",
+      "new_string": "| Component | Helm Chart | Version | Repository |\n|-----------|-----------|---------|-----------|\n| Robusta | robusta/robusta | 0.10.31+ | robusta-charts.storage.googleapis.com |\n| Mimir (distributed) | grafana/mimir-distributed | 6.1.x (v6 stable) | grafana.github.io/helm-charts **OR** grafana-community.github.io/helm-charts (new repo as of Jan 2026) |\n| Loki | grafana/loki | 6.53.0 | grafana.github.io/helm-charts **OR** grafana-community.github.io/helm-charts (new repo as of Jan 2026) |\n| Tempo (distributed) | grafana/tempo-distributed | 1.48.x (Tempo 2.8/2.9) | grafana.github.io/helm-charts **OR** grafana-community.github.io/helm-charts (new repo as of Jan 2026) |\n| OTel Operator | open-telemetry/opentelemetry-operator | 0.145.0+ | open-telemetry.github.io/opentelemetry-helm-charts |\n| Terraform AzureRM | hashicorp/azurerm | ~> 4.62 | registry.terraform.io |\n| Terraform Helm | hashicorp/helm | ~> 2.x | registry.terraform.io |\n| Terraform Kubernetes | hashicorp/kubernetes | ~> 2.35 | registry.terraform.io |\n\n**CRITICAL: Grafana Helm Repo Migration (Jan 30, 2026)**\nAs of January 30, 2026, Grafana is migrating official Helm charts to `grafana-community.github.io/helm-charts`. The developer MUST verify which repository is active at implementation time. Try the new repo first; fall back to the old one if needed. Update `helm_release` repository URLs accordingly.\n\n**Mimir v6.x Breaking Changes:**\n- Ingest storage and Kafka enabled by default — may need to be explicitly disabled if not using Kafka\n- Rollout-operator webhooks enabled by default — CRD installation before upgrade\n- Top-level `nginx` values section removed — use unified gateway deployment\n- Mimir config now stored in ConfigMap (not Secret)\n\n**Tempo v2.9 Breaking Changes:**\n- Review release notes before selecting version — Tempo v2.9 has breaking changes\n- Consider using v2.8 (Helm 1.48.1) for stability"
+    },
+    "timestamp": "2026-03-04T21:03:25.329Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad/bmm/workflows/4-implementation/create-story/checklist.md"
+    },
+    "timestamp": "2026-03-04T21:04:13.294Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/sprint-status.yaml"
+    },
+    "timestamp": "2026-03-04T21:04:33.029Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/sprint-status.yaml",
+      "old_string": "  # Epic 5: Monitoring, Logging & Observability\n  epic-5: backlog\n  5-1-deploy-lgtm-observability-stack: backlog",
+      "new_string": "  # Epic 5: Monitoring, Logging & Observability\n  epic-5: in-progress\n  5-1-deploy-lgtm-observability-stack: ready-for-dev"
+    },
+    "timestamp": "2026-03-04T21:04:38.112Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "grep -A2 \"epic-5\\|5-1-deploy\" /Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/sprint-status.yaml",
+      "description": "Verify sprint status updates"
+    },
+    "timestamp": "2026-03-04T21:04:42.871Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "head -5 /Users/juliano.barbosa/Repos/azure/rg-hypera-aks-python-infra/Repos/dev/src/.claude/worktrees/wt-cs-epic5/_bmad-output/implementation-artifacts/5-1-deploy-lgtm-observability-stack.md",
+      "description": "Verify story file header"
+    },
+    "timestamp": "2026-03-04T21:04:43.855Z"
+  }
+]

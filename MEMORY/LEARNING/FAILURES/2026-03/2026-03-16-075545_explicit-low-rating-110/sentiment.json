@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Help resolve stuck interactive rebase state\n\nYou're in the middle of an interactive rebase onto `dc3458b` with 10 commits remaining. The rebase paused after picking commit `aaaee77`.\n\nWhat would you like to do?\n\n1. **Continue the rebase** — `git rebase --continue` (if the current commit looks good)\n2. **Abort the rebase** — `git rebase --abort` (return to pre-rebase state)\n3. **Inspect the current state** — I can check what changed and help you decide\n\nWhich approach do you want to take?",
+  "session_id": "354fbabb-3ee1-45ff-b5c5-f576391998ca",
+  "captured_at": "2026-03-16T14:55:45.721Z",
+  "transcript_source": "354fbabb-3ee1-45ff-b5c5-f576391998ca.jsonl"
+}

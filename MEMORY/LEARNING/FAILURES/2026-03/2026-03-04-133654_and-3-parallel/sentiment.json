@@ -1,0 +1,8 @@
+{
+  "rating": 2,
+  "summary": "and 3 parallel",
+  "detailed_context": "Existing documentation found, generated on **2026-02-28** (deep scan, full rescan). Per the workflow:\n\nI found existing documentation generated on **2026-02-28**.\n\nWhat would you like to do?\n\n1. **Re-scan entire project** — Update all documentation with latest changes\n2. **Deep-dive into specific area** — Generate detailed documentation for a particular feature/module/folder\n3. **Cancel** — Keep existing documentation as-is\n\nYour choice [1/2/3]:",
+  "session_id": "6ac2c35f-4293-4800-b0d1-9c7738cf9f15",
+  "captured_at": "2026-03-04T21:36:54.662Z",
+  "transcript_source": "6ac2c35f-4293-4800-b0d1-9c7738cf9f15.jsonl"
+}

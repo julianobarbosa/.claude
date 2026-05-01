@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "════ PAI | NATIVE MODE ═══════════════════════\n🗒️ TASK: Massive merge conflicts during rebase - need decision\n🔄 ITERATION on: Rebase --continue hit ~80+ add/add conflicts in bmad files\n\nThis is a huge number of conflicts — nearly all in `_bmad/` and `.agent/skills/` files. These are all `add/add` conflicts, meaning both sides added the same files with different content. This is typical when a BMAD framework update was committed on both sides of the rebase.\n\n**Options:**\n\n1. **Accept \"theirs\" (incoming) for all bmad files** — takes the version from the commits being rebased, assuming the later BMAD update is the one you want\n2. **Accept \"ours\" (current) for all bmad files** — keeps the version already on the base\n3. **Abort the rebase entirely** — `git rebase --abort` to go back to the original state and reconsider the approach\n4. **Skip this commit** — `git rebase --skip` to drop this particular commit\n\nWhich approach? Given these are BMAD framework files, option 1 or 2 is likely correct — do you know which version of BMAD is newer?",
+  "session_id": "354fbabb-3ee1-45ff-b5c5-f576391998ca",
+  "captured_at": "2026-03-16T14:56:34.494Z",
+  "transcript_source": "354fbabb-3ee1-45ff-b5c5-f576391998ca.jsonl"
+}

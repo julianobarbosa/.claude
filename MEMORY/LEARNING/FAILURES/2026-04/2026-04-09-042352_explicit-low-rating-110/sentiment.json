@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Documentation requirements loaded for 12 project types. Old state file archived.\n\n**How Project Type Detection Works:**\n\nThis workflow uses **documentation-requirements.csv** containing 12 project types (web, mobile, backend, cli, library, desktop, game, data, extension, infra, embedded) with detection columns and requirement columns that guide what to scan and document.\n\nNow, choose your scan depth level:\n\n**1. Quick Scan** (2-5 minutes) [DEFAULT]\n- Pattern-based analysis without reading source files\n- Scans: Config files, package manifests, directory structure\n- Best for: Quick project overview, initial understanding\n\n**2. Deep Scan** (10-30 minutes)\n- Reads files in critical directories based on project type\n- Best for: Comprehensive documentation for brownfield PRD\n\n**3. Exhaustive Scan** (30-120 minutes)\n- Reads ALL source files in project\n- Best for: Complete analysis, migration planning, detailed audit\n\nYour choice [1/2/3] (default: 1):",
+  "session_id": "02844bbb-c320-42a7-a6fe-e5c7b560576e",
+  "captured_at": "2026-04-09T11:23:52.451Z",
+  "transcript_source": "02844bbb-c320-42a7-a6fe-e5c7b560576e.jsonl"
+}

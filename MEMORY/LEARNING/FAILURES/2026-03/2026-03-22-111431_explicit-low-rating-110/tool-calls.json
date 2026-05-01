@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output/project-knowledge/",
+      "description": "List project knowledge docs"
+    },
+    "timestamp": "2026-03-22T18:08:20.387Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output/project-knowledge/company-network-addresses.md",
+      "content": "# Hypera — Company Network Address Inventory\n\n> Canonical reference for all public IP allocations across Hypera sites and cloud infrastructure.\n\n## Summary\n\n| # | Site | Subnets | Usable IPs | Type |\n|---|------|---------|------------|------|\n| 01 | DataCenter | 2 | 252 | On-premises |\n| 02 | Hynova | 2 | 44 | On-premises |\n| 03 | CJCC | 2 | 12 | On-premises |\n| 04 | Anápolis | 2 | 20 | On-premises |\n| 05 | CD — Goiânia | 2 | 20 | On-premises |\n| 06 | Azure — Hypera | 9 | 9 | Cloud (Azure) |\n| 07 | Jundiaí | 2 | 20 | On-premises |\n| 08 | Faz. Solana | 3 | 21 | On-premises |\n| 09 | Itapecerica | 2 | 12 | On-premises |\n| 10 | Escritório Vila Olímpia | 1 | 2 | Office |\n| 11 | JLS Logística (Quick) | 1 | 2 | Partner/Logistics |\n| 12 | Softtek | 2 | 2 | Partner/Vendor |\n| | **TOTAL** | **30** | **416** | |\n\n---\n\n## Detailed Breakdown\n\n### 01 — DataCenter\n\nThe largest allocation — serves as the primary data center.\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `200.230.54.128/25` | 200.230.54.128 | 200.230.54.255 | 200.230.54.129 – .254 | 126 |\n| `201.87.143.0/25` | 201.87.143.0 | 201.87.143.127 | 201.87.143.1 – .126 | 126 |\n\n**Subnet mask:** 255.255.255.128\n**Total usable:** 252 IPs\n\n---\n\n### 02 — Hynova\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `200.174.104.208/28` | 200.174.104.208 | 200.174.104.223 | 200.174.104.209 – .222 | 14 |\n| `187.120.4.0/27` | 187.120.4.0 | 187.120.4.31 | 187.120.4.1 – .30 | 30 |\n\n**Total usable:** 44 IPs\n\n---\n\n### 03 — CJCC\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `200.183.39.176/29` | 200.183.39.176 | 200.183.39.183 | 200.183.39.177 – .182 | 6 |\n| `201.87.156.80/29` | 201.87.156.80 | 201.87.156.87 | 201.87.156.81 – .86 | 6 |\n\n**Subnet mask:** 255.255.255.248\n**Total usable:** 12 IPs\n\n---\n\n### 04 — Anápolis\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `200.242.138.176/28` | 200.242.138.176 | 200.242.138.191 | 200.242.138.177 – .190 | 14 |\n| `187.120.6.152/29` | 187.120.6.152 | 187.120.6.159 | 187.120.6.153 – .158 | 6 |\n\n**Total usable:** 20 IPs\n\n---\n\n### 05 — CD — Goiânia\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `179.96.23.96/29` | 179.96.23.96 | 179.96.23.103 | 179.96.23.97 – .102 | 6 |\n| `200.253.16.96/28` | 200.253.16.96 | 200.253.16.111 | 200.253.16.97 – .110 | 14 |\n\n**Total usable:** 20 IPs\n\n---\n\n### 06 — Azure — Hypera (Cloud)\n\nAll public IPs assigned to Azure resources (single-host /32 allocations).\n\n| CIDR | IP Address | Purpose |\n|------|-----------|---------|\n| `52.142.24.218/32` | 52.142.24.218 | Azure resource |\n| `52.188.222.165/32` | 52.188.222.165 | Azure resource |\n| `168.62.179.166/32` | 168.62.179.166 | Azure resource |\n| `23.96.101.234/32` | 23.96.101.234 | Azure resource |\n| `20.62.193.132/32` | 20.62.193.132 | Azure resource |\n| `52.224.7.125/32` | 52.224.7.125 | Azure resource |\n| `40.88.10.115/32` | 40.88.10.115 | Azure resource |\n| `137.135.79.114/32` | 137.135.79.114 | Azure resource |\n| `20.25.52.109/32` | 20.25.52.109 | Azure resource |\n\n**Total:** 9 IPs (no subnetting — individual hosts)\n\n---\n\n### 07 — Jundiaí\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `189.2.7.192/28` | 189.2.7.192 | 189.2.7.207 | 189.2.7.193 – .206 | 14 |\n| `177.126.0.248/29` | 177.126.0.248 | 177.126.0.255 | 177.126.0.249 – .254 | 6 |\n\n**Total usable:** 20 IPs\n\n---\n\n### 08 — Faz. Solana\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `143.137.248.241/32` | 143.137.248.241 | — | Single host | 1 |\n| `200.250.166.112/28` | 200.250.166.112 | 200.250.166.127 | 200.250.166.113 – .126 | 14 |\n| `201.87.155.8/29` | 201.87.155.8 | 201.87.155.15 | 201.87.155.9 – .14 | 6 |\n\n**Total usable:** 21 IPs\n\n---\n\n### 09 — Itapecerica\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `200.213.221.144/29` | 200.213.221.144 | 200.213.221.151 | 200.213.221.145 – .150 | 6 |\n| `177.126.3.24/29` | 177.126.3.24 | 177.126.3.31 | 177.126.3.25 – .30 | 6 |\n\n**Subnet mask:** 255.255.255.248\n**Total usable:** 12 IPs\n\n---\n\n### 10 — Escritório Vila Olímpia\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `177.126.4.248/30` | 177.126.4.248 | 177.126.4.251 | 177.126.4.249 – .250 | 2 |\n\n**Subnet mask:** 255.255.255.252\n**Total usable:** 2 IPs (point-to-point link)\n\n---\n\n### 11 — JLS Logística (Quick)\n\n| CIDR | Network | Broadcast | Usable Range | Usable Hosts |\n|------|---------|-----------|--------------|--------------|\n| `187.120.3.60/30` | 187.120.3.60 | 187.120.3.63 | 187.120.3.61 – .62 | 2 |\n\n**Subnet mask:** 255.255.255.252\n**Total usable:** 2 IPs (point-to-point link)\n\n---\n\n### 12 — Softtek\n\nExternal partner/vendor IPs.\n\n| CIDR | IP Address | Purpose |\n|------|-----------|---------|\n| `191.33.78.26/32` | 191.33.78.26 | Softtek endpoint |\n| `201.20.104.106/32` | 201.20.104.106 | Softtek endpoint |\n\n**Total:** 2 IPs (single-host allocations)\n\n---\n\n## Flat CIDR List (for firewall/NSG rules)\n\nAll CIDRs in a single copy-paste block for use in Azure NSGs, firewall rules, or IP allow-lists:\n\n```text\n# 01 - DataCenter\n200.230.54.128/25\n201.87.143.0/25\n\n# 02 - Hynova\n200.174.104.208/28\n187.120.4.0/27\n\n# 03 - CJCC\n200.183.39.176/29\n201.87.156.80/29\n\n# 04 - Anapolis\n200.242.138.176/28\n187.120.6.152/29\n\n# 05 - CD - Goiania\n179.96.23.96/29\n200.253.16.96/28\n\n# 06 - Azure - Hypera\n52.142.24.218/32\n52.188.222.165/32\n168.62.179.166/32\n23.96.101.234/32\n20.62.193.132/32\n52.224.7.125/32\n40.88.10.115/32\n137.135.79.114/32\n20.25.52.109/32\n\n# 07 - Jundiai\n189.2.7.192/28\n177.126.0.248/29\n\n# 08 - Faz. Solana\n143.137.248.241/32\n200.250.166.112/28\n201.87.155.8/29\n\n# 09 - Itapecerica\n200.213.221.144/29\n177.126.3.24/29\n\n# 10 - Escritorio Vila Olimpia\n177.126.4.248/30\n\n# 11 - JLS Logistica (Quick)\n187.120.3.60/30\n\n# 12 - Softtek\n191.33.78.26/32\n201.20.104.106/32\n```\n\n---\n\n## Terraform Usage\n\nTo use these in Azure NSG or firewall rules:\n\n```hcl\nlocals {\n  hypera_cidrs = {\n    datacenter = [\"200.230.54.128/25\", \"201.87.143.0/25\"]\n    hynova     = [\"200.174.104.208/28\", \"187.120.4.0/27\"]\n    cjcc       = [\"200.183.39.176/29\", \"201.87.156.80/29\"]\n    anapolis   = [\"200.242.138.176/28\", \"187.120.6.152/29\"]\n    cd_goiania = [\"179.96.23.96/29\", \"200.253.16.96/28\"]\n    azure      = [\n      \"52.142.24.218/32\", \"52.188.222.165/32\", \"168.62.179.166/32\",\n      \"23.96.101.234/32\", \"20.62.193.132/32\", \"52.224.7.125/32\",\n      \"40.88.10.115/32\", \"137.135.79.114/32\", \"20.25.52.109/32\",\n    ]\n    jundiai      = [\"189.2.7.192/28\", \"177.126.0.248/29\"]\n    faz_solana   = [\"143.137.248.241/32\", \"200.250.166.112/28\", \"201.87.155.8/29\"]\n    itapecerica  = [\"200.213.221.144/29\", \"177.126.3.24/29\"]\n    vila_olimpia = [\"177.126.4.248/30\"]\n    jls_quick    = [\"187.120.3.60/30\"]\n    softtek      = [\"191.33.78.26/32\", \"201.20.104.106/32\"]\n  }\n\n  # All company CIDRs flattened\n  all_hypera_cidrs = flatten([for k, v in local.hypera_cidrs : v])\n}\n```\n\n---\n\n*Last updated: 2026-03-22*\n"
+    },
+    "timestamp": "2026-03-22T18:09:03.317Z"
+  },
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-03-22T18:10:02.479Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-22T18:10:05.898Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-22T18:10:10.575Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-22T18:10:13.926Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "git rev-parse --show-toplevel",
+      "description": "Get project root"
+    },
+    "timestamp": "2026-03-22T18:10:22.380Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator"
+    },
+    "timestamp": "2026-03-22T18:10:23.511Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/docs/index.md",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator"
+    },
+    "timestamp": "2026-03-22T18:10:23.785Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output/project-knowledge/project-scan-report.json",
+      "limit": 50
+    },
+    "timestamp": "2026-03-22T18:10:27.218Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-packer-image/Repos/rg-hypera-packer-image/dev/src/.claude/worktrees/azure-network-calculator/_bmad-output/project-knowledge/project-scan-report.json",
+      "offset": 50
+    },
+    "timestamp": "2026-03-22T18:10:30.586Z"
+  }
+]

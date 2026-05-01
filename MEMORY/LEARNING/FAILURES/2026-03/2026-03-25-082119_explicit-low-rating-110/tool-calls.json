@@ -1,0 +1,320 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-party-mode"
+    },
+    "timestamp": "2026-03-25T11:47:51.806Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-party-mode/workflow.md"
+    },
+    "timestamp": "2026-03-25T11:47:55.401Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad/_config/agent-manifest.csv"
+    },
+    "timestamp": "2026-03-25T11:47:58.470Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad/core/config.yaml"
+    },
+    "timestamp": "2026-03-25T11:47:59.103Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-party-mode/steps/step-02-discussion-orchestration.md"
+    },
+    "timestamp": "2026-03-25T11:48:03.927Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T12:55:33.353Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T12:55:33.631Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/options.conf"
+    },
+    "timestamp": "2026-03-25T12:55:36.380Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/keybindings.conf"
+    },
+    "timestamp": "2026-03-25T12:55:36.698Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/features.conf"
+    },
+    "timestamp": "2026-03-25T12:55:37.231Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/plugins.conf"
+    },
+    "timestamp": "2026-03-25T12:55:37.326Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/theme.conf"
+    },
+    "timestamp": "2026-03-25T12:55:42.554Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*sessionizer*",
+      "path": "/Users/juliano.barbosa/.dotfiles"
+    },
+    "timestamp": "2026-03-25T14:47:44.710Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*cht*",
+      "path": "/Users/juliano.barbosa/.dotfiles/bin/.local/bin"
+    },
+    "timestamp": "2026-03-25T14:47:45.639Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/.dotfiles/bin/.local/bin/ | head -30",
+      "description": "List existing scripts in local bin"
+    },
+    "timestamp": "2026-03-25T14:47:45.933Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/bin/.local/bin/tmux-sessionizer"
+    },
+    "timestamp": "2026-03-25T14:47:53.744Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -d ~/work ~/personal ~/projects 2>/dev/null; echo \"---\"; ls ~/work 2>/dev/null | head -10; echo \"---\"; ls ~/personal 2>/dev/null | head -10",
+      "description": "Check project directories"
+    },
+    "timestamp": "2026-03-25T14:47:57.757Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmux.conf"
+    },
+    "timestamp": "2026-03-25T14:47:58.199Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux"
+    },
+    "timestamp": "2026-03-25T14:48:00.719Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/.tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux"
+    },
+    "timestamp": "2026-03-25T14:48:01.653Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la ~/work ~/personal ~/projects ~/repos ~/src ~/dev 2>/dev/null; echo \"===\"; ls -d ~/*/ 2>/dev/null | head -20",
+      "description": "Find project root directories"
+    },
+    "timestamp": "2026-03-25T14:48:02.934Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf"
+    },
+    "timestamp": "2026-03-25T14:48:05.965Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -d ~/repos/*/ 2>/dev/null | head -20; echo \"===\"; ls -d ~/repos/azure/*/ ~/repos/github/*/ ~/repos/gitlab/*/ ~/repos/google/*/ 2>/dev/null | head -30",
+      "description": "Check repos directory structure"
+    },
+    "timestamp": "2026-03-25T14:48:07.042Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -d ~/repos/azure/*/ 2>/dev/null | head -10; echo \"===\"; ls -d ~/repos/github/*/ 2>/dev/null | head -10; echo \"===\"; ls -d ~/repos/google/*/ 2>/dev/null | head -10",
+      "description": "Check repos subdirectory structure"
+    },
+    "timestamp": "2026-03-25T14:48:10.611Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf",
+      "limit": 50
+    },
+    "timestamp": "2026-03-25T14:48:10.706Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "source.*\\.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T14:48:25.499Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "source",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf",
+      "output_mode": "content",
+      "head_limit": 20
+    },
+    "timestamp": "2026-03-25T14:48:27.722Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf",
+      "offset": 160,
+      "limit": 10
+    },
+    "timestamp": "2026-03-25T14:48:30.861Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/*.conf.local",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux"
+    },
+    "timestamp": "2026-03-25T14:48:33.157Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/.tmux.conf.local",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux"
+    },
+    "timestamp": "2026-03-25T14:48:33.662Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local"
+    },
+    "timestamp": "2026-03-25T14:48:37.130Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "source.*config/tmux|source.*options|source.*keybindings|source.*features|source.*plugins|source.*theme",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T14:48:58.809Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.dotfiles/bin/.local/bin/tmux-sessionizer",
+      "old_string": "#!/usr/bin/env bash\n\nif [[ $# -eq 1 ]]; then\n    selected=$1\nelse\n    items=`find ~/work -maxdepth 1 -mindepth 1 -type d`\n    items+=`find ~/personal -maxdepth 1 -mindepth 1 -type d`\n    items+=(\"$HOME/personal\")\n    items+=(\"$HOME/work\")\n    items+=(\"$HOME/.dotfiles\")\n    selected=`echo \"$items\" | fzf`\nfi\n\ntmux_session_name=`basename $selected | tr . _`\n\ntmux switch-client -t $tmux_session_name\nif [[ $? -eq 0 ]]; then\n    exit 0\nfi\n\ntmux new-session -c $selected -d -s $tmux_session_name && tmux switch-client -t $tmux_session_name || tmux new -c $selected -A -s $tmux_session_name",
+      "new_string": "#!/usr/bin/env bash\n# tmux-sessionizer — ThePrimeagen-style project session picker\n# Scans project directories and creates/switches to named tmux sessions\n\nif [[ $# -eq 1 ]]; then\n    selected=$1\nelse\n    selected=$(find \\\n        ~/repos/azure \\\n        ~/repos/github \\\n        ~/repos/gitlab \\\n        ~/repos/google \\\n        -maxdepth 1 -mindepth 1 -type d 2>/dev/null | \\\n        sort | \\\n        fzf --reverse --header \"Pick a project\" \\\n            --preview 'ls -la {} | head -20' \\\n            --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up')\nfi\n\nif [[ -z $selected ]]; then\n    exit 0\nfi\n\nselected_name=$(basename \"$selected\" | tr . _)\ntmux_running=$(pgrep tmux)\n\nif [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then\n    tmux new-session -s \"$selected_name\" -c \"$selected\"\n    exit 0\nfi\n\nif ! tmux has-session -t=\"$selected_name\" 2>/dev/null; then\n    tmux new-session -ds \"$selected_name\" -c \"$selected\"\nfi\n\ntmux switch-client -t \"$selected_name\""
+    },
+    "timestamp": "2026-03-25T14:49:25.778Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/bin/.local/bin/tmux-cht.sh",
+      "content": "#!/usr/bin/env bash\n# tmux-cht.sh — ThePrimeagen-style cheat sheet lookup via cht.sh\n# Opens in a tmux popup for quick reference\n\nlanguages=$(echo \"golang rust python bash typescript javascript lua terraform hcl yaml json dockerfile helm\" | tr ' ' '\\n')\ncore_utils=$(echo \"find xargs sed awk grep curl jq git kubectl docker helm az tmux stow tar gzip\" | tr ' ' '\\n')\n\nselected=$(printf '%s\\n%s' \"$languages\" \"$core_utils\" | fzf --reverse --header \"cht.sh — pick a topic\")\n\nif [[ -z $selected ]]; then\n    exit 0\nfi\n\nread -p \"Query: \" query\n\nif printf '%s' \"$languages\" | grep -qs \"^${selected}$\"; then\n    query=$(echo \"$query\" | tr ' ' '+')\n    tmux neww bash -c \"curl -s cht.sh/${selected}/${query} | less -R\"\nelse\n    tmux neww bash -c \"curl -s cht.sh/${selected}~${query} | less -R\"\nfi\n"
+    },
+    "timestamp": "2026-03-25T14:49:32.860Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "chmod +x /Users/juliano.barbosa/.dotfiles/bin/.local/bin/tmux-cht.sh",
+      "description": "Make cht.sh script executable"
+    },
+    "timestamp": "2026-03-25T14:49:35.614Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "old_string": "# display a message after toggling mouse support\nbind m run \"cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse\" \\; display 'mouse #{?#{mouse},on,off}'\n\n# move status line to top\n#set -g status-position top",
+      "new_string": "# display a message after toggling mouse support\nbind m run \"cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse\" \\; display 'mouse #{?#{mouse},on,off}'\n\n# -- ThePrimeagen-style bindings -----------------------------------------------\n\n# Sessionizer — fzf project picker, creates/switches sessions (prefix + f)\nbind-key -r f run-shell \"tmux neww tmux-sessionizer\"\n\n# Last session toggle — bounce between two sessions instantly (prefix + a)\nbind-key a switch-client -l\n\n# Cheat sheet lookup via cht.sh (prefix + i)\nbind-key -r i run-shell \"tmux neww tmux-cht.sh\"\n\n# Lazygit popup (prefix + g)\nbind-key g display-popup -d '#{pane_current_path}' -w80% -h80% -E lazygit\n\n# Quick terminal popup (prefix + T)\nbind-key T display-popup -d '#{pane_current_path}' -w80% -h80%\n\n# Vim-style pane navigation\nbind-key h select-pane -L\nbind-key j select-pane -D\nbind-key k select-pane -U\nbind-key l select-pane -R\n\n# move status line to top\n#set -g status-position top"
+    },
+    "timestamp": "2026-03-25T14:49:46.663Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "old_string": "# to enable a plugin, use the 'set -g @plugin' syntax:\n# visit https://github.com/tmux-plugins for available plugins\n#set -g @plugin 'tmux-plugins/tmux-copycat'\n#set -g @plugin 'tmux-plugins/tmux-cpu'\n#set -g @plugin 'tmux-plugins/tmux-resurrect'\n#set -g @plugin 'tmux-plugins/tmux-continuum'\n#set -g @continuum-restore 'on'",
+      "new_string": "# -- plugins (lean Prime/Miessler-inspired set) --------------------------------\n# Only essentials — no status bar eye candy, no monitoring, no sidebars\n\n# Session persistence (Miessler's must-have)\nset -g @plugin 'tmux-plugins/tmux-resurrect'\nset -g @plugin 'tmux-plugins/tmux-continuum'\nset -g @resurrect-strategy-nvim 'session'\nset -g @resurrect-capture-pane-contents 'on'\nset -g @continuum-restore 'on'\nset -g @continuum-save-interval '15'\n\n# Seamless vim/tmux navigation (Prime's essential)\nset -g @plugin 'christoomey/vim-tmux-navigator'\n\n# System clipboard integration\nset -g @plugin 'tmux-plugins/tmux-yank'\nset -g @yank_selection_mouse 'clipboard'\n\n# FZF integration\nset -g @plugin 'sainnhe/tmux-fzf'"
+    },
+    "timestamp": "2026-03-25T14:49:55.450Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/bin/.local/bin/tmux-sessionizer"
+    },
+    "timestamp": "2026-03-25T14:50:00.051Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "offset": 382,
+      "limit": 80
+    },
+    "timestamp": "2026-03-25T14:50:00.440Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "offset": 461,
+      "limit": 50
+    },
+    "timestamp": "2026-03-25T14:50:03.358Z"
+  }
+]

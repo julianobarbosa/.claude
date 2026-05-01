@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "The output you showed looks like it ran successfully. Could you clarify what specific issue you want fixed? I see a few potential concerns from the output:\n\n1. **SyntaxWarnings** from the upstream `azure-mgmt-reservations` package (not fixable in your code)\n2. **Utilization > 100%** on several reservations (e.g. 500%, 400%) — this suggests the SKU+location matching is too broad, matching VMs that belong to *other* reservations\n3. **The `reservation_id` in panel titles is truncated** in the terminal\n\nWhich issue are you referring to, or is it something else?",
+  "session_id": "7eaf3fd4-4b01-401e-ade6-4d6b28a6561e",
+  "captured_at": "2026-03-31T22:13:44.242Z",
+  "transcript_source": "7eaf3fd4-4b01-401e-ade6-4d6b28a6561e.jsonl"
+}

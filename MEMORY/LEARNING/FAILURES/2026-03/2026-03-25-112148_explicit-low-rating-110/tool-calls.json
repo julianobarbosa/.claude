@@ -1,0 +1,539 @@
+[
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-03-25T11:45:18.362Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-25T11:45:21.213Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-25T11:45:25.947Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-25T11:45:26.098Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/project-scan-report.json",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:45:31.616Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "_bmad-output/planning-artifacts/index.md",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:45:32.135Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/project-scan-report.json"
+    },
+    "timestamp": "2026-03-25T11:45:35.121Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/index.md"
+    },
+    "timestamp": "2026-03-25T11:45:38.165Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-03-25T11:46:11.250Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-03-25T11:46:14.969Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "limit": 200
+    },
+    "timestamp": "2026-03-25T11:46:18.851Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 200
+    },
+    "timestamp": "2026-03-25T11:46:22.546Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-03-25T11:47:17.894Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "*",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:17.895Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/*.conf 2>/dev/null; echo \"---\"; ls -d /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/*/ 2>/dev/null | head -20",
+      "description": "List top-level config files and directories"
+    },
+    "timestamp": "2026-03-25T11:47:22.551Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "scripts/*",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:22.966Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/ 2>/dev/null; echo \"---PLUGINS---\"; ls -1d /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/plugins/*/ 2>/dev/null | xargs -I{} basename {}; echo \"---DOCS---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/docs/ 2>/dev/null; echo \"---DESIGN---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/ 2>/dev/null; echo \"---PLANS---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/Plans/ 2>/dev/null",
+      "description": "List tmuxedo, plugins, docs, design-artifacts, Plans directories"
+    },
+    "timestamp": "2026-03-25T11:47:31.852Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:36.433Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/plugins.conf 2>/dev/null && wc -l /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/plugins.conf; echo \"---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/A-Product-Brief/ 2>/dev/null; echo \"---E-PRD---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/E-PRD/ 2>/dev/null",
+      "description": "Check tmuxedo plugins and design artifacts contents"
+    },
+    "timestamp": "2026-03-25T11:47:38.238Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "source-file|source ",
+      "glob": "*.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:47:39.257Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "../.tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:42.670Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "../../.tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:43.108Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/.tmux.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux"
+    },
+    "timestamp": "2026-03-25T11:47:46.430Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf"
+    },
+    "timestamp": "2026-03-25T11:47:49.829Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf",
+      "limit": 50
+    },
+    "timestamp": "2026-03-25T11:47:53.571Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "wc -l /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/*.conf; echo \"---TMUXEDO---\"; wc -l /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/*.conf",
+      "description": "Count lines in all config files"
+    },
+    "timestamp": "2026-03-25T11:48:01.268Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^set-option|^set |^setw|^set -g\"",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/options.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:48:02.728Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^set -g @plugin|^run",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/plugins.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:48:03.301Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^set -g @plugin|^run",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/plugins.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:48:07.084Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "dracula|@dracula",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/theme.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:48:07.985Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "bind |unbind",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/keybindings.conf",
+      "output_mode": "count"
+    },
+    "timestamp": "2026-03-25T11:48:08.490Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^set|^run",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/plugins.conf",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-25T11:48:11.692Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "@dracula|dracula|theme|status-",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/theme.conf",
+      "output_mode": "content",
+      "-n": true
+    },
+    "timestamp": "2026-03-25T11:48:12.954Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/plugins.conf"
+    },
+    "timestamp": "2026-03-25T11:48:15.949Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/tmuxedo/tmuxedo.conf"
+    },
+    "timestamp": "2026-03-25T11:48:16.084Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^#|^bind|^set|display-popup|run-shell|new-window",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/features.conf",
+      "output_mode": "content",
+      "head_limit": 40
+    },
+    "timestamp": "2026-03-25T11:48:22.160Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/scripts/",
+      "description": "List all scripts"
+    },
+    "timestamp": "2026-03-25T15:36:26.934Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/plugins.conf"
+    },
+    "timestamp": "2026-03-25T15:36:27.441Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/options.conf"
+    },
+    "timestamp": "2026-03-25T15:36:27.715Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "*.conf",
+      "path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux"
+    },
+    "timestamp": "2026-03-25T15:36:32.722Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/*.conf 2>&1; echo \"---ALL---\"; find /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux -maxdepth 2 -name \"*.conf\" -type f 2>/dev/null",
+      "description": "Find all .conf files in project"
+    },
+    "timestamp": "2026-03-25T15:36:36.412Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux -maxdepth 1 -type f 2>/dev/null | sort",
+      "description": "Find all files in project root"
+    },
+    "timestamp": "2026-03-25T15:36:41.120Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux -maxdepth 1 -type d 2>/dev/null | sort",
+      "description": "Find all directories in project root"
+    },
+    "timestamp": "2026-03-25T15:36:41.652Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/.dotfiles/tmux -maxdepth 2 -name \"*.conf\" -o -name \".tmux*\" 2>/dev/null | sort",
+      "description": "Find tmux config files in broader tree"
+    },
+    "timestamp": "2026-03-25T15:36:50.852Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/TODO.md"
+    },
+    "timestamp": "2026-03-25T15:36:51.796Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/docs/",
+      "description": "List docs directory"
+    },
+    "timestamp": "2026-03-25T15:36:52.345Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/docs/Plans/; echo \"---DA---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/",
+      "description": "List Plans and design artifacts"
+    },
+    "timestamp": "2026-03-25T15:36:56.231Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "limit": 80
+    },
+    "timestamp": "2026-03-25T15:36:56.703Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "offset": 80,
+      "limit": 200
+    },
+    "timestamp": "2026-03-25T15:37:04.739Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/A-Product-Brief/; echo \"---E-PRD---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/E-PRD/; echo \"---G---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/G-Product-Development/",
+      "description": "List design artifact contents"
+    },
+    "timestamp": "2026-03-25T15:37:07.085Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/scripts/; echo \"---SIZES---\"; wc -l /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/scripts/*.sh",
+      "description": "List scripts with sizes"
+    },
+    "timestamp": "2026-03-25T15:37:08.058Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local",
+      "offset": 279
+    },
+    "timestamp": "2026-03-25T15:37:20.666Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/A-Product-Brief/; echo \"---B---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/B-Trigger-Map/ 2>/dev/null; echo \"---C---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/C-UX-Scenarios/ 2>/dev/null; echo \"---D---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/D-Design-System/ 2>/dev/null; echo \"---F---\"; ls -1 /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts/F-Testing/ 2>/dev/null",
+      "description": "List all design artifact subdirectories"
+    },
+    "timestamp": "2026-03-25T15:37:23.624Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/design-artifacts -type f 2>/dev/null | sort",
+      "description": "Find all files in design-artifacts"
+    },
+    "timestamp": "2026-03-25T15:37:29.829Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/Plans -type f 2>/dev/null | sort",
+      "description": "Find all files in Plans"
+    },
+    "timestamp": "2026-03-25T15:37:30.148Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la /Users/juliano.barbosa/.dotfiles/tmux/.tmux/ 2>/dev/null | head -5; echo \"---TYPE---\"; file /Users/juliano.barbosa/.dotfiles/tmux/.tmux 2>/dev/null",
+      "description": "Check .tmux type (dir or symlink)"
+    },
+    "timestamp": "2026-03-25T15:37:31.117Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la /Users/juliano.barbosa/.dotfiles/tmux/.tmux/ 2>/dev/null",
+      "description": "List .tmux operational directory"
+    },
+    "timestamp": "2026-03-25T15:37:34.198Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/Plans/clever-drifting-lobster.md",
+      "limit": 30
+    },
+    "timestamp": "2026-03-25T15:37:35.036Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "mkdir -p /Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts",
+      "description": "Ensure output directory exists"
+    },
+    "timestamp": "2026-03-25T15:37:39.307Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/project-scan-report.json",
+      "content": "{\n  \"scan_metadata\": {\n    \"scan_date\": \"2026-03-25\",\n    \"scan_level\": \"quick\",\n    \"project_root\": \"/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux\",\n    \"repo_root\": \"/Users/juliano.barbosa/.dotfiles/tmux\",\n    \"scanner_version\": \"bmad-document-project-v2\"\n  },\n  \"classification\": {\n    \"repository_type\": \"monolith\",\n    \"project_type\": \"infra\",\n    \"primary_tech\": [\"tmux-conf\", \"bash\"],\n    \"base_framework\": \"gpakosz/.tmux (Oh my tmux!)\",\n    \"plugin_managers\": [\"TPM (built-in to Oh my tmux!)\", \"tmuxedo\"],\n    \"description\": \"Personal tmux configuration built on gpakosz/.tmux, using a single .tmux.conf.local file for customization with TPM plugin management and tmuxedo plugin catalog, plus operational scripts for install, troubleshooting, and health monitoring.\"\n  },\n  \"architecture\": {\n    \"config_entry_point\": \".tmux.conf.local\",\n    \"base_config\": \".tmux.conf (gpakosz Oh my tmux! framework)\",\n    \"config_files\": [\n      {\n        \"file\": \".tmux.conf\",\n        \"lines\": \"~900\",\n        \"role\": \"Oh my tmux! base framework (upstream, not user-modified)\",\n        \"location\": \"/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf\"\n      },\n      {\n        \"file\": \".tmux.conf.local\",\n        \"lines\": 545,\n        \"role\": \"User customization layer — bindings, theme, plugins, settings\",\n        \"location\": \"/Users/juliano.barbosa/.dotfiles/tmux/.tmux.conf.local\"\n      }\n    ],\n    \"config_sections_in_local\": [\n      \"bindings (stock vs custom)\",\n      \"session creation\",\n      \"windows & pane creation\",\n      \"display (24-bit color)\",\n      \"theming (17-color palette, status bar, separators, indicators)\",\n      \"clipboard\",\n      \"urlscan\",\n      \"user customizations (ThePrimeagen-style bindings)\",\n      \"TPM plugins\"\n    ],\n    \"operational_directory\": {\n      \"path\": \".tmux/\",\n      \"contents\": [\"backups\", \"diagnostics\", \"health\", \"logs\", \"performance\", \"plugins\", \"resurrect\", \"scripts\", \"workspaces\"],\n      \"description\": \"Runtime data directory for plugins, session resurrection, logs, and operational health monitoring\"\n    }\n  },\n  \"plugins\": {\n    \"tpm_plugins\": [\n      {\"name\": \"tmux-plugins/tmux-resurrect\", \"purpose\": \"Session persistence across restarts\"},\n      {\"name\": \"tmux-plugins/tmux-continuum\", \"purpose\": \"Automatic session saving (15min interval)\"},\n      {\"name\": \"christoomey/vim-tmux-navigator\", \"purpose\": \"Seamless vim/tmux pane navigation\"},\n      {\"name\": \"tmux-plugins/tmux-yank\", \"purpose\": \"System clipboard integration\"},\n      {\"name\": \"sainnhe/tmux-fzf\", \"purpose\": \"FZF integration for tmux\"}\n    ],\n    \"tpm_config\": {\n      \"auto_update_on_launch\": true,\n      \"auto_update_on_reload\": true,\n      \"uninstall_unused_on_reload\": true,\n      \"resurrect_strategy_nvim\": \"session\",\n      \"resurrect_capture_pane_contents\": true,\n      \"continuum_restore\": true,\n      \"continuum_save_interval\": 15\n    },\n    \"tmuxedo_catalog\": [\n      \"Determinant/tmux-colortag\",\n      \"Feqzz/tmux-mpv-info\",\n      \"MunifTanjim/tmux-mode-indicator\",\n      \"TheSast/tmux-transient-status\",\n      \"alexanderjeurissen/tmux-world-clock\",\n      \"arl/gitmux\",\n      \"jdxcode/tmux-cpu-info\",\n      \"jimeh/tmux-themepack\",\n      \"ofirgall/tmux-browser\",\n      \"ofirgall/tmux-window-name\",\n      \"seebi/tmux-colors-solarized\",\n      \"tmux-plugins/tmux-battery\",\n      \"tmux-plugins/tmux-continuum\",\n      \"tmux-plugins/tmux-cpu\",\n      \"tmux-plugins/tmux-logging\",\n      \"tmux-plugins/tmux-online-status\",\n      \"tmux-plugins/tmux-prefix-highlight\",\n      \"tmux-plugins/tmux-sessionist\",\n      \"tony-sol/tmux-current-pane-hostname\",\n      \"tony-sol/tmux-kubectx\",\n      \"trevarj/tmux-open-nvim\",\n      \"wfxr/tmux-power\",\n      \"yardnsm/tmux-1password\"\n    ],\n    \"tmuxedo_bindings\": {\n      \"prefix_r\": \"tmuxedo (reload/install)\",\n      \"prefix_C-u\": \"tmuxedo --update\",\n      \"prefix_C-t\": \"tmuxedo --tui\"\n    }\n  },\n  \"keybindings\": {\n    \"prefix\": \"C-b (default, not changed)\",\n    \"custom_bindings\": [\n      {\"key\": \"prefix + f\", \"action\": \"tmux-sessionizer (fzf project picker)\"},\n      {\"key\": \"prefix + a\", \"action\": \"switch-client -l (last session toggle)\"},\n      {\"key\": \"prefix + i\", \"action\": \"tmux-cht.sh (cheat sheet lookup)\"},\n      {\"key\": \"prefix + g\", \"action\": \"lazygit popup (80x80%)\"},\n      {\"key\": \"prefix + T\", \"action\": \"terminal popup (80x80%)\"},\n      {\"key\": \"prefix + h/j/k/l\", \"action\": \"vim-style pane navigation\"},\n      {\"key\": \"prefix + m\", \"action\": \"toggle mouse support\"},\n      {\"key\": \"prefix + r\", \"action\": \"tmuxedo reload\"},\n      {\"key\": \"prefix + C-u\", \"action\": \"tmuxedo update\"},\n      {\"key\": \"prefix + C-t\", \"action\": \"tmuxedo TUI\"}\n    ],\n    \"style\": \"ThePrimeagen-inspired + Miessler essentials\"\n  },\n  \"theme\": {\n    \"base\": \"Oh my tmux! built-in theming\",\n    \"palette\": \"17-color dark theme (dark gray base, light blue accent, yellow/pink/green highlights)\",\n    \"status_left\": \"session name + uptime\",\n    \"status_right\": \"kubectx:namespace + prefix/mouse/pairing indicators + battery + time + user@host\",\n    \"separators\": \"plain (no powerline symbols active)\",\n    \"indicators\": {\n      \"pairing\": \"⚇\",\n      \"prefix\": \"⌨\",\n      \"mouse\": \"↗\",\n      \"root\": \"!\",\n      \"synchronized\": \"⚏\"\n    }\n  },\n  \"scripts\": {\n    \"total_lines\": 2081,\n    \"files\": [\n      {\"name\": \"install.sh\", \"lines\": 338, \"purpose\": \"Full installation script\"},\n      {\"name\": \"uninstall.sh\", \"lines\": 240, \"purpose\": \"Clean uninstallation\"},\n      {\"name\": \"validate-config.sh\", \"lines\": 286, \"purpose\": \"Configuration validation\"},\n      {\"name\": \"troubleshoot.sh\", \"lines\": 254, \"purpose\": \"Diagnostic troubleshooting\"},\n      {\"name\": \"project_starter.sh\", \"lines\": 443, \"purpose\": \"Project session bootstrapper\"},\n      {\"name\": \"test-alert.sh\", \"lines\": 190, \"purpose\": \"Alert testing\"},\n      {\"name\": \"plugin-health-check.sh\", \"lines\": 169, \"purpose\": \"Plugin health monitoring\"},\n      {\"name\": \"monitor-performance.sh\", \"lines\": 152, \"purpose\": \"Performance monitoring\"},\n      {\"name\": \"kube_safe.sh\", \"lines\": 9, \"purpose\": \"Kubernetes safety wrapper\"}\n    ]\n  },\n  \"design_artifacts\": {\n    \"pipeline\": \"WDS (Workshop Design System)\",\n    \"phases_present\": [\n      \"A-Product-Brief (empty)\",\n      \"B-Trigger-Map (empty)\",\n      \"C-UX-Scenarios (empty)\",\n      \"D-Design-System (empty)\",\n      \"E-PRD (contains Design-Deliveries subdirectory)\",\n      \"F-Testing (empty)\",\n      \"G-Product-Development (empty)\"\n    ],\n    \"status\": \"Scaffolded but mostly empty — design pipeline not yet executed\"\n  },\n  \"open_tasks\": [\n    \"Update bmad\",\n    \"Document project (this scan)\",\n    \"Party-mode to analyse current config\",\n    \"Investigate tmux-resurrect not working\",\n    \"Find where resurrect sessions are saved\"\n  ],\n  \"dependencies\": {\n    \"external_tools\": [\n      \"tmux (3.2+)\",\n      \"gpakosz/.tmux framework\",\n      \"tmuxedo\",\n      \"fzf\",\n      \"lazygit\",\n      \"nvim\",\n      \"gitmux\",\n      \"tmux-sessionizer\",\n      \"tmux-cht.sh\",\n      \"kubectx/kubens (for status bar)\"\n    ],\n    \"stow\": \"GNU Stow (dotfiles symlink management)\"\n  },\n  \"known_issues\": [\n    {\n      \"issue\": \"tmux-resurrect not restoring sessions\",\n      \"status\": \"open\",\n      \"noted_in\": \"TODO.md [20260325]\"\n    },\n    {\n      \"issue\": \"Resurrect session save location unknown\",\n      \"status\": \"open\",\n      \"actual_location\": \".tmux/resurrect/\",\n      \"noted_in\": \"TODO.md [20260325]\"\n    }\n  ]\n}\n"
+    },
+    "timestamp": "2026-03-25T15:40:10.438Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/index.md",
+      "content": "# Tmux Configuration — Project Documentation\n\n> Generated: 2026-03-25 | Scan level: Quick | Scanner: bmad-document-project-v2\n\n## Project Overview\n\nPersonal tmux configuration built on **gpakosz/.tmux** (Oh my tmux!) framework. Uses a single `.tmux.conf.local` file for all customization — keybindings, theming, plugins, and settings. Managed via GNU Stow as part of a larger dotfiles repository.\n\n**Style:** ThePrimeagen-inspired keybindings + Daniel Miessler essentials (session persistence, clipboard integration).\n\n## Architecture\n\n```\n~/.dotfiles/tmux/\n├── .tmux.conf              ← Oh my tmux! framework (upstream base)\n├── .tmux.conf.local        ← USER CONFIG (545 lines) — all customization here\n├── .tmux/                  ← Runtime data directory\n│   ├── backups/\n│   ├── diagnostics/\n│   ├── health/\n│   ├── logs/\n│   ├── performance/\n│   ├── plugins/            ← TPM-managed plugins\n│   ├── resurrect/          ← Session persistence data\n│   ├── scripts/\n│   └── workspaces/\n└── .config/tmux/           ← Project workspace (this directory)\n    ├── scripts/            ← 9 operational scripts (2081 lines)\n    ├── tmuxedo/            ← Tmuxedo plugin catalog + bindings\n    ├── design-artifacts/   ← WDS design pipeline (scaffolded)\n    ├── Plans/              ← Implementation plans\n    ├── docs/Plans/         ← Documentation plans\n    └── TODO.md             ← Active task list\n```\n\n## Key Configuration Sections (.tmux.conf.local)\n\n| Section | Lines | Purpose |\n|---------|-------|---------|\n| Bindings | 10-17 | Stock binding preservation, session/window/pane creation |\n| Display | 62-72 | 24-bit color auto-detection |\n| Theming | 75-363 | 17-color palette, status bar layout, indicators, battery |\n| User Customizations | 382-435 | ThePrimeagen bindings, vim pane nav, popups |\n| TPM Plugins | 437-489 | 5 plugins: resurrect, continuum, vim-navigator, yank, fzf |\n\n## Plugin Ecosystem\n\n### TPM Plugins (Active — loaded via .tmux.conf.local)\n\n| Plugin | Purpose |\n|--------|---------|\n| tmux-resurrect | Session persistence across tmux restarts |\n| tmux-continuum | Auto-save sessions every 15 minutes, auto-restore |\n| vim-tmux-navigator | Seamless ctrl+h/j/k/l between vim and tmux panes |\n| tmux-yank | System clipboard integration in copy mode |\n| tmux-fzf | FZF-powered tmux operations |\n\n### Tmuxedo Catalog (23 plugins available via tmuxedo TUI)\n\nManaged via `prefix + C-t` (TUI), `prefix + r` (install), `prefix + C-u` (update). Includes colortag, gitmux, kubectx, battery, cpu, logging, 1password, and more.\n\n## Custom Keybindings\n\n| Binding | Action |\n|---------|--------|\n| `prefix + f` | fzf project picker (tmux-sessionizer) |\n| `prefix + a` | Toggle last session |\n| `prefix + i` | cht.sh cheat sheet lookup |\n| `prefix + g` | Lazygit popup (80x80%) |\n| `prefix + T` | Terminal popup (80x80%) |\n| `prefix + h/j/k/l` | Vim-style pane navigation |\n| `prefix + m` | Toggle mouse support |\n\n## Status Bar\n\n- **Left:** Session name + system uptime\n- **Right:** kubectx:namespace | prefix/mouse/pairing/sync indicators | battery | time | user@host\n- **Separators:** Plain text (powerline symbols available but commented out)\n- **Indicators:** ⌨ prefix, ↗ mouse, ⚇ pairing, ⚏ synchronized, ! root\n\n## Operational Scripts\n\n| Script | Lines | Purpose |\n|--------|-------|---------|\n| project_starter.sh | 443 | Bootstrap project sessions with predefined layouts |\n| install.sh | 338 | Full installation (framework + plugins + config) |\n| validate-config.sh | 286 | Configuration validation and syntax checking |\n| troubleshoot.sh | 254 | Diagnostic information gathering |\n| uninstall.sh | 240 | Clean removal of all components |\n| test-alert.sh | 190 | Alert system testing |\n| plugin-health-check.sh | 169 | Plugin health and status monitoring |\n| monitor-performance.sh | 152 | tmux performance metrics |\n| kube_safe.sh | 9 | Kubernetes context safety wrapper |\n\n## External Dependencies\n\n- **tmux** 3.2+ (for popup support)\n- **gpakosz/.tmux** framework\n- **tmuxedo** plugin manager\n- **fzf** (fuzzy finder)\n- **lazygit** (git TUI)\n- **nvim** (neovim)\n- **gitmux** (git status in tmux)\n- **tmux-sessionizer** / **tmux-cht.sh** (ThePrimeagen utilities)\n- **kubectx/kubens** (Kubernetes context in status bar)\n- **GNU Stow** (dotfiles symlink management)\n\n## Known Issues (2026-03-25)\n\n1. **tmux-resurrect not restoring sessions** — Reported in TODO.md, needs investigation\n2. **Resurrect save location unclear** — Sessions are saved in `.tmux/resurrect/`\n\n## Design Artifacts\n\nWDS (Workshop Design System) pipeline scaffolded with phases A through G. Only E-PRD contains a `Design-Deliveries` subdirectory; all other phases are empty directories awaiting execution.\n\n## Files Index\n\n- [project-scan-report.json](project-scan-report.json) — Machine-readable scan data\n- [index.md](index.md) — This document\n"
+    },
+    "timestamp": "2026-03-25T15:40:45.159Z"
+  },
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-03-25T17:34:14.318Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-25T17:34:18.493Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-25T17:34:25.355Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-25T17:34:25.623Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/_bmad-output/planning-artifacts/project-scan-report.json",
+      "limit": 30
+    },
+    "timestamp": "2026-03-25T17:34:31.307Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-03-25T17:43:51.947Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.dotfiles/tmux/.config/tmux/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "limit": 150
+    },
+    "timestamp": "2026-03-25T17:43:58.843Z"
+  }
+]

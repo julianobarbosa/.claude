@@ -1,0 +1,639 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/kustomization.yaml"
+    },
+    "timestamp": "2026-03-18T15:47:12.963Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/",
+      "description": "List existing kube-addons directories"
+    },
+    "timestamp": "2026-03-18T15:47:14.303Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/defectdojo.yaml"
+    },
+    "timestamp": "2026-03-18T15:47:14.844Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "argo-cd-helm-values/kube-addons/defectdojo/cafehyna-dev/secretproviderclass*.yaml"
+    },
+    "timestamp": "2026-03-18T15:47:20.187Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "**/secretproviderclass*.yaml",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values"
+    },
+    "timestamp": "2026-03-18T15:47:22.028Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/defectdojo/cafehyna-dev/secretproviderclass.yaml"
+    },
+    "timestamp": "2026-03-18T15:47:25.747Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "mkdir -p /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev",
+      "description": "Create devpod manifest directory"
+    },
+    "timestamp": "2026-03-18T15:47:30.717Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/Dockerfile",
+      "content": "# DevPod Workspace Image\n# Build: az acr build --registry cafehynadevhlg --image devpod-workspace:1.0.0 -f Dockerfile .\n# Base: code-server (browser-based VS Code) with SSH and full DevOps toolstack\nFROM codercom/code-server:latest\n\nUSER root\n\n# Install system dependencies and SSH server\nRUN apt-get update && apt-get install -y --no-install-recommends \\\n    openssh-server \\\n    curl \\\n    wget \\\n    unzip \\\n    gnupg \\\n    lsb-release \\\n    ca-certificates \\\n    apt-transport-https \\\n    software-properties-common \\\n    python3 \\\n    python3-pip \\\n    python3-venv \\\n    && rm -rf /var/lib/apt/lists/*\n\n# Configure SSH server (port 2222)\nRUN mkdir -p /run/sshd && \\\n    sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config && \\\n    sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config && \\\n    sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config && \\\n    echo \"AllowUsers coder\" >> /etc/ssh/sshd_config && \\\n    ssh-keygen -A\n\n# Install Azure CLI\nRUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash\n\n# Install kubectl\nRUN curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg && \\\n    echo \"deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /\" > /etc/apt/sources.list.d/kubernetes.list && \\\n    apt-get update && apt-get install -y kubectl && \\\n    rm -rf /var/lib/apt/lists/*\n\n# Install Helm\nRUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash\n\n# Install Terraform\nRUN wget -qO- https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg && \\\n    echo \"deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main\" > /etc/apt/sources.list.d/hashicorp.list && \\\n    apt-get update && apt-get install -y terraform && \\\n    rm -rf /var/lib/apt/lists/*\n\n# Install kustomize\nRUN curl -s \"https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh\" | bash && \\\n    mv kustomize /usr/local/bin/\n\n# Install k9s\nRUN curl -fsSL https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz | tar xz -C /usr/local/bin k9s\n\n# Install ArgoCD CLI\nRUN curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 && \\\n    chmod +x /usr/local/bin/argocd\n\n# Install jq and yq\nRUN apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/* && \\\n    curl -fsSL https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o /usr/local/bin/yq && \\\n    chmod +x /usr/local/bin/yq\n\n# Install Node.js 22 and pre-commit\nRUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \\\n    apt-get install -y nodejs && \\\n    rm -rf /var/lib/apt/lists/*\n\n# Install Claude Code globally\nRUN npm install -g @anthropic-ai/claude-code\n\n# Install pre-commit\nRUN pip3 install --break-system-packages pre-commit\n\n# Install git (ensure latest)\nRUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*\n\n# Install VS Code extensions for code-server\nUSER coder\nRUN code-server --install-extension redhat.vscode-yaml && \\\n    code-server --install-extension ms-kubernetes-tools.vscode-kubernetes-tools && \\\n    code-server --install-extension hashicorp.terraform && \\\n    code-server --install-extension ms-azuretools.vscode-docker\n\n# Entrypoint: start SSH and code-server\nUSER root\nCOPY <<'ENTRYPOINT_SCRIPT' /usr/local/bin/entrypoint.sh\n#!/bin/bash\nset -e\n# Start SSH daemon in background\n/usr/sbin/sshd\n# Start code-server as coder user\nexec su - coder -c \"code-server --bind-addr 0.0.0.0:8080 --auth password /home/coder/workspace\"\nENTRYPOINT_SCRIPT\nRUN chmod +x /usr/local/bin/entrypoint.sh\n\nEXPOSE 8080 2222\n\nENTRYPOINT [\"/usr/local/bin/entrypoint.sh\"]\n"
+    },
+    "timestamp": "2026-03-18T15:47:52.762Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "content": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: devpod-workspace\n  namespace: devpod\n  labels:\n    app.kubernetes.io/name: devpod\n    app.kubernetes.io/component: workspace\nspec:\n  replicas: 1\n  strategy:\n    type: Recreate\n  selector:\n    matchLabels:\n      app.kubernetes.io/name: devpod\n  template:\n    metadata:\n      labels:\n        app.kubernetes.io/name: devpod\n        app.kubernetes.io/component: workspace\n    spec:\n      tolerations:\n        - key: kubernetes.azure.com/scalesetpriority\n          operator: Equal\n          value: \"spot\"\n          effect: NoSchedule\n        - key: \"CriticalAddonsOnly\"\n          operator: \"Exists\"\n          effect: \"NoSchedule\"\n      affinity:\n        nodeAffinity:\n          preferredDuringSchedulingIgnoredDuringExecution:\n            - weight: 100\n              preference:\n                matchExpressions:\n                  - key: kubernetes.azure.com/scalesetpriority\n                    operator: In\n                    values: [\"spot\"]\n          requiredDuringSchedulingIgnoredDuringExecution:\n            nodeSelectorTerms:\n              - matchExpressions:\n                  - key: agentpool\n                    operator: In\n                    values: [\"cafedevspot\"]\n      containers:\n        - name: code-server\n          image: cafehynadevhlg.azurecr.io/devpod-workspace:1.0.0\n          ports:\n            - name: http\n              containerPort: 8080\n            - name: ssh\n              containerPort: 2222\n          env:\n            - name: TZ\n              value: America/Sao_Paulo\n            - name: PASSWORD\n              valueFrom:\n                secretKeyRef:\n                  name: devpod-secrets\n                  key: code-server-password\n                  optional: true\n            - name: ANTHROPIC_API_KEY\n              valueFrom:\n                secretKeyRef:\n                  name: devpod-akv-secrets\n                  key: anthropic-api-key\n                  optional: true\n          volumeMounts:\n            - name: workspace\n              mountPath: /home/coder/workspace\n            - name: akv-secrets\n              mountPath: /mnt/secrets-store\n              readOnly: true\n          resources:\n            requests:\n              cpu: \"2\"\n              memory: 4Gi\n            limits:\n              cpu: \"4\"\n              memory: 8Gi\n          livenessProbe:\n            httpGet:\n              path: /healthz\n              port: 8080\n            initialDelaySeconds: 30\n            periodSeconds: 30\n          readinessProbe:\n            httpGet:\n              path: /healthz\n              port: 8080\n            initialDelaySeconds: 10\n            periodSeconds: 10\n      volumes:\n        - name: workspace\n          persistentVolumeClaim:\n            claimName: devpod-workspace\n        - name: akv-secrets\n          csi:\n            driver: secrets-store.csi.k8s.io\n            readOnly: true\n            volumeAttributes:\n              secretProviderClass: devpod-akv-secrets\n"
+    },
+    "timestamp": "2026-03-18T15:48:01.202Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/pvc.yaml",
+      "content": "apiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: devpod-workspace\n  namespace: devpod\nspec:\n  accessModes: [ReadWriteOnce]\n  storageClassName: managed-premium-zrs\n  resources:\n    requests:\n      storage: 50Gi\n"
+    },
+    "timestamp": "2026-03-18T15:48:03.303Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/service-web.yaml",
+      "content": "apiVersion: v1\nkind: Service\nmetadata:\n  name: devpod-web\n  namespace: devpod\nspec:\n  type: ClusterIP\n  selector:\n    app.kubernetes.io/name: devpod\n  ports:\n    - name: http\n      port: 8080\n      targetPort: 8080\n"
+    },
+    "timestamp": "2026-03-18T15:48:04.808Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/service-ssh.yaml",
+      "content": "apiVersion: v1\nkind: Service\nmetadata:\n  name: devpod-ssh\n  namespace: devpod\nspec:\n  type: ClusterIP\n  selector:\n    app.kubernetes.io/name: devpod\n  ports:\n    - name: ssh\n      port: 22\n      targetPort: 2222\n"
+    },
+    "timestamp": "2026-03-18T15:48:06.487Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/ingress.yaml",
+      "content": "apiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: devpod-web\n  namespace: devpod\n  annotations:\n    kubernetes.io/ingress.class: \"nginx\"\n    cert-manager.io/cluster-issuer: \"letsencrypt-staging-cloudflare\"\n    cert-manager.io/subject-organizations: \"Hypera Pharma\"\n    nginx.ingress.kubernetes.io/proxy-read-timeout: \"3600\"\n    nginx.ingress.kubernetes.io/proxy-send-timeout: \"3600\"\n    nginx.ingress.kubernetes.io/proxy-body-size: \"500m\"\n    nginx.ingress.kubernetes.io/proxy-http-version: \"1.1\"\n    nginx.ingress.kubernetes.io/configuration-snippet: |\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\nspec:\n  tls:\n    - hosts:\n        - devpod.dev.cafehyna.com.br\n  rules:\n    - host: devpod.dev.cafehyna.com.br\n      http:\n        paths:\n          - path: /\n            pathType: Prefix\n            backend:\n              service:\n                name: devpod-web\n                port:\n                  number: 8080\n"
+    },
+    "timestamp": "2026-03-18T15:48:11.035Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/secretproviderclass.yaml",
+      "content": "# SecretProviderClass for DevPod secrets from Azure Key Vault\n# Provides ANTHROPIC_API_KEY for Claude Code integration\napiVersion: secrets-store.csi.x-k8s.io/v1\nkind: SecretProviderClass\nmetadata:\n  name: devpod-akv-secrets\n  namespace: devpod\n  labels:\n    app.kubernetes.io/name: devpod\n    app.kubernetes.io/component: secrets\n  annotations:\n    argocd.argoproj.io/sync-wave: \"-2\"\nspec:\n  provider: azure\n  parameters:\n    usePodIdentity: \"false\"\n    useVMManagedIdentity: \"true\"\n    userAssignedIdentityID: \"f1a14a8f-6d38-40a0-a935-3cdd91a25f47\"\n    keyvaultName: \"kv-cafehyna-dev-hlg\"\n    cloudName: \"AzurePublicCloud\"\n    tenantId: \"3f7a3df4-f85b-4ca8-98d0-08b1034e6567\"\n    objects: |\n      array:\n        - |\n          objectName: \"anthropic-api-key\"\n          objectType: \"secret\"\n          objectAlias: \"anthropic-api-key\"\n  secretObjects:\n    - secretName: devpod-akv-secrets\n      type: Opaque\n      data:\n        - objectName: \"anthropic-api-key\"\n          key: \"anthropic-api-key\"\n"
+    },
+    "timestamp": "2026-03-18T15:48:15.460Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/kustomization.yaml",
+      "content": "apiVersion: kustomize.config.k8s.io/v1beta1\nkind: Kustomization\nresources:\n  - deployment.yaml\n  - pvc.yaml\n  - service-web.yaml\n  - service-ssh.yaml\n  - ingress.yaml\n  - secretproviderclass.yaml\n"
+    },
+    "timestamp": "2026-03-18T15:48:18.528Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/devpod.yaml",
+      "content": "# DevPod ApplicationSet\n# Deploys cloud-based development environment (code-server + SSH) with Claude Code\n# Uses directory source pattern (raw manifests, no Helm chart)\n# Access: https://devpod.dev.cafehyna.com.br (web IDE) or SSH via port-forward\napiVersion: argoproj.io/v1alpha1\nkind: ApplicationSet\nmetadata:\n  name: devpod\n  namespace: argocd\n  labels:\n    app.kubernetes.io/name: devpod\n    app.kubernetes.io/part-of: kube-addons\n    app.kubernetes.io/component: developer-tools\n    app.kubernetes.io/managed-by: argocd\n    cafehyna.com.br/lifecycle: active\n    cafehyna.com.br/managed-via: kustomization\n  annotations:\n    argocd.argoproj.io/sync-wave: \"5\"\n    cafehyna.com.br/owner-team: platform-engineering\nspec:\n  syncPolicy:\n    preserveResourcesOnDeletion: true\n  generators:\n    - list:\n        elements:\n          - cluster: cafehyna-dev\n            url: https://aks-cafehyna-dev-hlg-q3oga63c.30041054-9b14-4852-9bd5-114d2fac4590.privatelink.eastus.azmk8s.io:443\n            project: kube-addons\n            branch: main\n            environment: development\n            urlSuffix: .dev\n  template:\n    metadata:\n      name: \"{{cluster}}-devpod\"\n      labels:\n        app.kubernetes.io/name: devpod\n        app.kubernetes.io/instance: \"{{cluster}}-devpod\"\n        app.kubernetes.io/part-of: \"{{cluster}}-kube-addons\"\n        app.kubernetes.io/component: developer-tools\n        app.kubernetes.io/managed-by: argocd\n        environment: \"{{environment}}\"\n      annotations:\n        argocd.argoproj.io/sync-wave: \"5\"\n        notifications.argoproj.io/subscribe.on-health-degraded.slack: argocd-alerts\n        notifications.argoproj.io/subscribe.on-sync-failed.slack: argocd-alerts\n    spec:\n      revisionHistoryLimit: 10\n      project: \"{{project}}\"\n      sources:\n        # Single source: raw manifests from directory\n        - repoURL: https://hyperadevops@dev.azure.com/hyperadevops/devops-team/_git/argocd\n          targetRevision: \"{{branch}}\"\n          path: argo-cd-helm-values/kube-addons/devpod/{{cluster}}\n          directory:\n            exclude: \"{Dockerfile,README.md,*.bak}\"\n      destination:\n        server: \"{{url}}\"\n        namespace: devpod\n      info:\n        - name: DevPod Web IDE\n          value: https://devpod{{urlSuffix}}.cafehyna.com.br\n        - name: SSH Access\n          value: \"kubectl port-forward -n devpod svc/devpod-ssh 2222:22\"\n        - name: Documentation\n          value: https://coder.com/docs/code-server\n      ignoreDifferences:\n        - group: \"\"\n          kind: PersistentVolumeClaim\n          jsonPointers:\n            - /status\n            - /spec/volumeName\n        - group: \"\"\n          kind: Service\n          jsonPointers:\n            - /spec/clusterIP\n            - /spec/clusterIPs\n      syncPolicy:\n        automated:\n          prune: true\n          selfHeal: true\n          allowEmpty: false\n        retry:\n          limit: 5\n          backoff:\n            duration: 5s\n            factor: 2\n            maxDuration: 3m\n        syncOptions:\n          - ServerSideApply=true\n          - PrunePropagationPolicy=Orphan\n          - PruneLast=true\n          - Validate=true\n          - ApplyOutOfSyncOnly=true\n          - RespectIgnoreDifferences=true\n          - CreateNamespace=true\n        managedNamespaceMetadata:\n          labels:\n            managed-by: argocd\n            purpose: developer-tools\n          annotations:\n            support-team: platform-engineering\n            criticality: medium\n"
+    },
+    "timestamp": "2026-03-18T15:48:35.772Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/kustomization.yaml",
+      "old_string": "  - defectdojo.yaml",
+      "new_string": "  - defectdojo.yaml\n  - devpod.yaml"
+    },
+    "timestamp": "2026-03-18T15:48:40.730Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "kustomize build argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/ 2>&1 | head -100",
+      "description": "Validate kustomize build for devpod manifests"
+    },
+    "timestamp": "2026-03-18T15:48:45.469Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "kustomize build infra-team/applicationset/ 2>&1 | grep -A2 \"name: devpod\"",
+      "description": "Verify devpod included in applicationset kustomization"
+    },
+    "timestamp": "2026-03-18T15:48:46.974Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "pre-commit run --all-files 2>&1",
+      "description": "Run pre-commit validation on all files",
+      "timeout": 120000
+    },
+    "timestamp": "2026-03-18T15:48:51.539Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "pre-commit run yamllint --files argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/*.yaml infra-team/applicationset/devpod.yaml infra-team/applicationset/kustomization.yaml 2>&1",
+      "description": "Run yamllint only on new devpod files"
+    },
+    "timestamp": "2026-03-18T15:50:51.800Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml"
+    },
+    "timestamp": "2026-03-18T15:50:58.040Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "CriticalAddonsOnly",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/sonarqube",
+      "output_mode": "content",
+      "-C": 2
+    },
+    "timestamp": "2026-03-18T15:51:03.726Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "old_string": "          value: \"spot\"\n          effect: NoSchedule\n        - key: \"CriticalAddonsOnly\"\n          operator: \"Exists\"\n          effect: \"NoSchedule\"",
+      "new_string": "          value: spot\n          effect: NoSchedule\n        - key: CriticalAddonsOnly\n          operator: Exists\n          effect: NoSchedule"
+    },
+    "timestamp": "2026-03-18T15:51:12.474Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "old_string": "                    values: [\"spot\"]",
+      "new_string": "                    values:\n                      - spot"
+    },
+    "timestamp": "2026-03-18T15:51:13.806Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "old_string": "                    values: [\"cafedevspot\"]",
+      "new_string": "                    values:\n                      - cafedevspot"
+    },
+    "timestamp": "2026-03-18T15:51:15.122Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/ingress.yaml",
+      "old_string": "    kubernetes.io/ingress.class: \"nginx\"\n    cert-manager.io/cluster-issuer: \"letsencrypt-staging-cloudflare\"\n    cert-manager.io/subject-organizations: \"Hypera Pharma\"",
+      "new_string": "    kubernetes.io/ingress.class: nginx\n    cert-manager.io/cluster-issuer: letsencrypt-staging-cloudflare\n    cert-manager.io/subject-organizations: Hypera Pharma"
+    },
+    "timestamp": "2026-03-18T15:51:20.758Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/ingress.yaml",
+      "old_string": "    nginx.ingress.kubernetes.io/proxy-body-size: \"500m\"",
+      "new_string": "    nginx.ingress.kubernetes.io/proxy-body-size: 500m"
+    },
+    "timestamp": "2026-03-18T15:51:22.495Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/secretproviderclass.yaml"
+    },
+    "timestamp": "2026-03-18T15:51:31.514Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/secretproviderclass.yaml",
+      "old_string": "    userAssignedIdentityID: \"f1a14a8f-6d38-40a0-a935-3cdd91a25f47\"\n    keyvaultName: \"kv-cafehyna-dev-hlg\"\n    cloudName: \"AzurePublicCloud\"\n    tenantId: \"3f7a3df4-f85b-4ca8-98d0-08b1034e6567\"",
+      "new_string": "    userAssignedIdentityID: f1a14a8f-6d38-40a0-a935-3cdd91a25f47\n    keyvaultName: kv-cafehyna-dev-hlg\n    cloudName: AzurePublicCloud\n    tenantId: 3f7a3df4-f85b-4ca8-98d0-08b1034e6567"
+    },
+    "timestamp": "2026-03-18T15:51:38.980Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/secretproviderclass.yaml",
+      "old_string": "        - objectName: \"anthropic-api-key\"\n          key: \"anthropic-api-key\"",
+      "new_string": "        - objectName: anthropic-api-key\n          key: anthropic-api-key"
+    },
+    "timestamp": "2026-03-18T15:51:40.451Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "quoted",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/devpod.yaml",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-18T15:51:46.474Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/devpod.yaml",
+      "offset": 60,
+      "limit": 10
+    },
+    "timestamp": "2026-03-18T15:51:50.730Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/devpod.yaml",
+      "old_string": "          value: \"kubectl port-forward -n devpod svc/devpod-ssh 2222:22\"",
+      "new_string": "          value: kubectl port-forward -n devpod svc/devpod-ssh 2222:22"
+    },
+    "timestamp": "2026-03-18T15:51:55.715Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "pre-commit run yamllint --files argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/*.yaml infra-team/applicationset/devpod.yaml infra-team/applicationset/kustomization.yaml 2>&1",
+      "description": "Re-run yamllint on devpod files after fixes"
+    },
+    "timestamp": "2026-03-18T15:52:00.161Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "kustomize build argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/ > /dev/null 2>&1 && echo \"OK\" || echo \"FAIL\"",
+      "description": "Final kustomize build validation"
+    },
+    "timestamp": "2026-03-18T15:52:08.889Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "find argo-cd-helm-values/kube-addons/devpod/ infra-team/applicationset/devpod.yaml -type f | sort",
+      "description": "List all created devpod files"
+    },
+    "timestamp": "2026-03-18T15:52:14.423Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-18T17:52:44.851Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-18T17:52:51.361Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "cafehynadevhlg",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-18T17:53:03.215Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "cafehynadevhlg",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/infra-team/applicationset/devpod.yaml",
+      "output_mode": "content"
+    },
+    "timestamp": "2026-03-18T17:53:04.237Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": true,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/Dockerfile",
+      "old_string": "cafehynadevhlg",
+      "new_string": "cafehyna"
+    },
+    "timestamp": "2026-03-18T17:53:08.594Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": true,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "old_string": "cafehynadevhlg",
+      "new_string": "cafehyna"
+    },
+    "timestamp": "2026-03-18T17:53:09.900Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-18T17:53:14.669Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/ 2>/dev/null | head -30",
+      "description": "List docs directory contents"
+    },
+    "timestamp": "2026-03-18T17:53:15.616Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/index.md 2>/dev/null && echo \"EXISTS\" || echo \"NOT FOUND\"",
+      "description": "Check if docs/index.md exists"
+    },
+    "timestamp": "2026-03-18T17:53:19.971Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json 2>/dev/null && echo \"EXISTS\" || echo \"NOT FOUND\"",
+      "description": "Check if project-scan-report.json exists"
+    },
+    "timestamp": "2026-03-18T17:53:20.986Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json",
+      "limit": 30
+    },
+    "timestamp": "2026-03-18T17:53:24.664Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "acr|registry|container.registry",
+      "path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/k8s-clusters.md",
+      "output_mode": "content",
+      "-i": true
+    },
+    "timestamp": "2026-03-18T17:53:32.458Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/clusters/ 2>/dev/null",
+      "description": "List cluster docs"
+    },
+    "timestamp": "2026-03-18T17:53:33.385Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/clusters/cafehyna-dev.md"
+    },
+    "timestamp": "2026-03-18T17:53:37.263Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/k8s-clusters.md",
+      "offset": 125,
+      "limit": 85
+    },
+    "timestamp": "2026-03-18T17:53:42.114Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/k8s-clusters.md",
+      "old_string": "## Kubeconfig Files Reference",
+      "new_string": "## Azure Container Registries (ACR)\n\n| Registry Name | Login Server | Subscription | Used By |\n|---------------|-------------|--------------|---------|\n| **cafehyna** | `cafehyna.azurecr.io` | hypera-pharma | All cafehyna clusters (dev, hub, prd) |\n\n> **Note**: Custom container images (e.g., DevPod workspace) are built and stored in the `cafehyna` ACR. Use `az acr build --registry cafehyna` to build images.\n\n## Kubeconfig Files Reference"
+    },
+    "timestamp": "2026-03-18T17:53:50.113Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/k8s-clusters.md",
+      "old_string": "| 2025-12-22 | 3.0 | **Major refactoring**: Split monolithic file into modular documentation structure with dedicated files for clusters, operations, and storage | Claude Code |",
+      "new_string": "| 2026-03-18 | 3.1 | Added Azure Container Registry (ACR) section, DevPod workspace documentation | Claude Code |\n| 2025-12-22 | 3.0 | **Major refactoring**: Split monolithic file into modular documentation structure with dedicated files for clusters, operations, and storage | Claude Code |"
+    },
+    "timestamp": "2026-03-18T17:53:52.559Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/clusters/cafehyna-dev.md",
+      "old_string": "## Services Deployed\n\n- ArgoCD (GitOps controller)\n- Prometheus & Grafana (monitoring)\n- Loki & Promtail (logging)\n- Cert-Manager (certificate management)\n- External-DNS (DNS management)\n- Ingress-NGINX (ingress controller)",
+      "new_string": "## Container Registry\n\n| Property | Value |\n|----------|-------|\n| **ACR Name** | `cafehyna` |\n| **Login Server** | `cafehyna.azurecr.io` |\n\n## Services Deployed\n\n- ArgoCD (GitOps controller)\n- Prometheus & Grafana (monitoring)\n- Loki & Promtail (logging)\n- Cert-Manager (certificate management)\n- External-DNS (DNS management)\n- Ingress-NGINX (ingress controller)\n- DevPod (cloud development environment - code-server + SSH + Claude Code)"
+    },
+    "timestamp": "2026-03-18T17:53:59.456Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/deep-dive-devpod.md",
+      "content": "# Deep Dive: DevPod Cloud Development Environment\n\n> **Generated**: 2026-03-18\n> **Target**: `argo-cd-helm-values/kube-addons/devpod/` + `infra-team/applicationset/devpod.yaml`\n> **Cluster**: cafehyna-dev\n> **Status**: Manifests created, pending image build and deploy\n\n## Overview\n\nDevPod is a cloud-based development environment deployed on `cafehyna-dev` providing browser-accessible VS Code (code-server) with SSH access, pre-loaded with a full DevOps toolstack and Claude Code AI assistant.\n\n**Key Decision**: DevPod.sh is a client-only tool with no server component. The solution uses **code-server** (browser-based VS Code) deployed as raw Kubernetes manifests via ArgoCD's directory source pattern.\n\n## Architecture\n\n```\n┌─────────────────────────────────────────────────┐\n│                  cafehyna-dev                     │\n│                                                   │\n│  ┌─────────────────────────────────────────────┐ │\n│  │           Namespace: devpod                  │ │\n│  │                                              │ │\n│  │  ┌──────────────────────┐  ┌──────────────┐ │ │\n│  │  │  devpod-workspace    │  │  PVC: 50Gi   │ │ │\n│  │  │  (Deployment)        │──│  managed-     │ │ │\n│  │  │                      │  │  premium-zrs  │ │ │\n│  │  │  code-server :8080   │  └──────────────┘ │ │\n│  │  │  SSH server  :2222   │                    │ │\n│  │  │                      │  ┌──────────────┐ │ │\n│  │  │  Tools:              │  │  AKV CSI     │ │ │\n│  │  │  - az cli            │──│  Secret      │ │ │\n│  │  │  - kubectl, helm     │  │  Provider    │ │ │\n│  │  │  - terraform         │  │  Class       │ │ │\n│  │  │  - claude-code       │  └──────────────┘ │ │\n│  │  │  - k9s, argocd cli   │                    │ │\n│  │  └──────────────────────┘                    │ │\n│  │       │              │                        │ │\n│  │  ┌────┴───┐    ┌────┴──────┐                 │ │\n│  │  │Service │    │ Service   │                  │ │\n│  │  │web:8080│    │ ssh:22    │                  │ │\n│  │  └────┬───┘    └───────────┘                  │ │\n│  │       │                                       │ │\n│  │  ┌────┴──────────────────┐                    │ │\n│  │  │ Ingress               │                    │ │\n│  │  │ devpod.dev.cafehyna   │                    │ │\n│  │  │ .com.br               │                    │ │\n│  │  │ (WebSocket support)   │                    │ │\n│  │  └───────────────────────┘                    │ │\n│  └─────────────────────────────────────────────┘ │\n└─────────────────────────────────────────────────┘\n```\n\n## File Structure\n\n```\ninfra-team/applicationset/\n  └── devpod.yaml                    # ApplicationSet (directory source pattern)\n\nargo-cd-helm-values/kube-addons/devpod/\n  ├── Dockerfile                     # Custom workspace image (for ACR build)\n  └── cafehyna-dev/\n      ├── kustomization.yaml         # Resource list\n      ├── deployment.yaml            # code-server + SSH, spot tolerations\n      ├── pvc.yaml                   # 50Gi managed-premium-zrs\n      ├── service-web.yaml           # ClusterIP :8080\n      ├── service-ssh.yaml           # ClusterIP :22→2222\n      ├── ingress.yaml               # WebSocket-enabled ingress\n      └── secretproviderclass.yaml   # AKV CSI for ANTHROPIC_API_KEY\n```\n\n## ApplicationSet Pattern\n\nUses the **directory source** pattern (same as DefectDojo Source 3) — no Helm chart involved:\n\n| Property | Value |\n|----------|-------|\n| **Source Type** | Directory (raw manifests) |\n| **Path** | `argo-cd-helm-values/kube-addons/devpod/{{cluster}}` |\n| **Excluded** | `{Dockerfile,README.md,*.bak}` |\n| **Sync Policy** | Automated, self-heal, prune, SSA |\n| **Namespace Management** | CreateNamespace=true |\n\nThis differs from most ApplicationSets in this repo which use multi-source Helm + values. The directory pattern is simpler for raw manifests that don't need a Helm chart.\n\n## Container Image\n\n**Registry**: `cafehyna.azurecr.io`\n**Image**: `devpod-workspace:1.0.0`\n\n### Installed Tools\n\n| Category | Tools |\n|----------|-------|\n| **Cloud** | Azure CLI |\n| **Kubernetes** | kubectl, helm, kustomize, k9s, ArgoCD CLI |\n| **Infrastructure** | Terraform |\n| **Development** | git, jq, yq, pre-commit, Node.js 22 |\n| **AI** | Claude Code (`@anthropic-ai/claude-code`) |\n| **SSH** | openssh-server (port 2222) |\n\n### VS Code Extensions\n\n- `redhat.vscode-yaml` — YAML language support\n- `ms-kubernetes-tools.vscode-kubernetes-tools` — Kubernetes\n- `hashicorp.terraform` — Terraform\n- `ms-azuretools.vscode-docker` — Docker\n\n### Build Command\n\n```bash\ncd argo-cd-helm-values/kube-addons/devpod/\naz acr build --registry cafehyna --image devpod-workspace:1.0.0 -f Dockerfile .\n```\n\n## Deployment Configuration\n\n### Scheduling\n\n| Property | Value |\n|----------|-------|\n| **Replicas** | 1 |\n| **Strategy** | Recreate (avoids PVC multi-attach) |\n| **Node Affinity** | Required: `agentpool=cafedevspot` |\n| **Spot Preference** | Preferred: `kubernetes.azure.com/scalesetpriority=spot` |\n| **Tolerations** | `spot:NoSchedule` + `CriticalAddonsOnly:NoSchedule` |\n\n### Resources\n\n| Resource | Request | Limit |\n|----------|---------|-------|\n| **CPU** | 2 cores | 4 cores |\n| **Memory** | 4Gi | 8Gi |\n\n> **Note**: This deployment defines CPU limits, which deviates from the cluster standard (no CPU limits). This is intentional for a development workspace to prevent runaway processes from consuming all node resources.\n\n### Storage\n\n| Property | Value |\n|----------|-------|\n| **PVC Name** | `devpod-workspace` |\n| **Size** | 50Gi |\n| **Storage Class** | `managed-premium-zrs` |\n| **Access Mode** | ReadWriteOnce |\n| **Mount Path** | `/home/coder/workspace` |\n\n### Secrets\n\n**Source**: Azure Key Vault `kv-cafehyna-dev-hlg` via CSI driver\n\n| Secret | Key Vault Name | K8s Secret | K8s Key |\n|--------|---------------|------------|---------|\n| ANTHROPIC_API_KEY | `anthropic-api-key` | `devpod-akv-secrets` | `anthropic-api-key` |\n| CODE_SERVER_PASSWORD | (manual) | `devpod-secrets` | `code-server-password` |\n\nThe `devpod-akv-secrets` secret is automatically synced via SecretProviderClass + CSI volume mount. The `devpod-secrets` secret for code-server password is optional and must be created manually if password auth is desired.\n\n### Health Checks\n\n| Probe | Path | Port | Initial Delay | Period |\n|-------|------|------|---------------|--------|\n| **Liveness** | `/healthz` | 8080 | 30s | 30s |\n| **Readiness** | `/healthz` | 8080 | 10s | 10s |\n\n## Access Methods\n\n| Method | How |\n|--------|-----|\n| **Web IDE** | Navigate to `https://devpod.dev.cafehyna.com.br` |\n| **SSH (port-forward)** | `kubectl port-forward -n devpod svc/devpod-ssh 2222:22` then `ssh -p 2222 coder@localhost` |\n| **VS Code Remote SSH** | SSH extension → `localhost:2222` after port-forward |\n\n### Ingress Configuration\n\n| Property | Value |\n|----------|-------|\n| **Host** | `devpod.dev.cafehyna.com.br` |\n| **TLS** | Let's Encrypt Staging (Cloudflare DNS-01) |\n| **WebSocket** | Enabled via `configuration-snippet` |\n| **Proxy Timeouts** | 3600s read/send (for long-running terminal sessions) |\n| **Max Body Size** | 500m (for file uploads) |\n\n## Verification Checklist\n\nAfter deployment:\n\n1. ArgoCD UI: `cafehyna-dev-devpod` app shows **Synced + Healthy**\n2. `kubectl get pods -n devpod` — pod Running\n3. `kubectl get pvc -n devpod` — PVC Bound (50Gi)\n4. Web IDE: navigate to `https://devpod.dev.cafehyna.com.br`\n5. SSH: `kubectl port-forward -n devpod svc/devpod-ssh 2222:22` then connect\n6. Tool verification inside pod:\n   ```bash\n   az version && kubectl version --client && helm version && \\\n   terraform version && argocd version --client && kustomize version && \\\n   k9s version && jq --version && yq --version && pre-commit --version && \\\n   claude --version\n   ```\n7. Persistence: delete pod, wait for recreation, verify `/home/coder/workspace` data survived\n\n## Prerequisites (Before Deploy)\n\n1. **Add `anthropic-api-key` secret** to Azure Key Vault `kv-cafehyna-dev-hlg`\n2. **Build container image**: `az acr build --registry cafehyna --image devpod-workspace:1.0.0 -f Dockerfile .`\n3. **DNS record**: Ensure `devpod.dev.cafehyna.com.br` resolves (External-DNS should handle this automatically from the Ingress resource)\n\n## Design Decisions\n\n| Decision | Rationale |\n|----------|-----------|\n| **Directory source (no Helm)** | No public Helm chart for code-server with SSH; raw manifests are simpler |\n| **Single container** | SSH runs inside same container as code-server; simpler than sidecar |\n| **Recreate strategy** | PVC is RWO; cannot multi-attach during rolling updates |\n| **Spot nodes** | Cost optimization for non-critical dev workload |\n| **50Gi PVC** | Sufficient for repos, tools, and build artifacts |\n| **Password auth (initial)** | Simple bootstrap; can upgrade to OAuth2/SSO later |\n| **CPU limits defined** | Dev workspace exception to prevent runaway processes |\n\n## Reference Files\n\n| File | Used For |\n|------|----------|\n| `infra-team/applicationset/defectdojo.yaml` | Directory source pattern (Source 3) |\n| `infra-team/applicationset/adminer.yaml` | Minimal ApplicationSet pattern |\n| `argo-cd-helm-values/kube-addons/sonarqube/cafehyna-dev/values.yaml` | Spot tolerations, nodeAffinity, ingress, cert-manager |\n| `infra-team/applicationset/TEMPLATE.yaml` | Standard labels, annotations, syncPolicy |\n| `argo-cd-helm-values/kube-addons/defectdojo/cafehyna-dev/secretproviderclass.yaml` | AKV CSI SecretProviderClass pattern |\n"
+    },
+    "timestamp": "2026-03-18T17:54:57.158Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json"
+    },
+    "timestamp": "2026-03-18T17:55:01.844Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json",
+      "old_string": "  \"last_updated\": \"2026-03-03\",",
+      "new_string": "  \"last_updated\": \"2026-03-18\","
+    },
+    "timestamp": "2026-03-18T17:55:06.181Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json",
+      "old_string": "    {\n      \"target_name\": \"ArgoCD RBAC\",",
+      "new_string": "    {\n      \"target_name\": \"DevPod Cloud Development Environment\",\n      \"target_path\": \"argo-cd-helm-values/kube-addons/devpod/ + infra-team/applicationset/devpod.yaml\",\n      \"target_type\": \"feature\",\n      \"files_analyzed\": 9,\n      \"total_loc\": 350,\n      \"output_file\": \"deep-dive-devpod.md\",\n      \"timestamp\": \"2026-03-18\"\n    },\n    {\n      \"target_name\": \"ArgoCD RBAC\","
+    },
+    "timestamp": "2026-03-18T17:55:08.981Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json",
+      "old_string": "    \"docs/deep-dive-applicationsets.md\",\n    \"docs/deep-dive-argocd-rbac.md\",",
+      "new_string": "    \"docs/deep-dive-applicationsets.md\",\n    \"docs/deep-dive-argocd-rbac.md\",\n    \"docs/deep-dive-devpod.md\","
+    },
+    "timestamp": "2026-03-18T17:55:10.581Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "grep -r \"cafehynadevhlg\" argo-cd-helm-values/kube-addons/devpod/ infra-team/applicationset/devpod.yaml 2>/dev/null; echo \"---\"; grep \"cafehyna.azurecr.io\" argo-cd-helm-values/kube-addons/devpod/cafehyna-dev/deployment.yaml",
+      "description": "Verify registry was updated correctly"
+    },
+    "timestamp": "2026-03-18T17:55:16.597Z"
+  },
+  {
+    "name": "Skill",
+    "input": {
+      "skill": "bmad-document-project"
+    },
+    "timestamp": "2026-03-18T18:06:14.206Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflow.md"
+    },
+    "timestamp": "2026-03-18T18:06:18.801Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/_bmad/bmm/config.yaml"
+    },
+    "timestamp": "2026-03-18T18:06:25.872Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/instructions.md"
+    },
+    "timestamp": "2026-03-18T18:06:34.058Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "mkdir -p /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/.archive && mv /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/project-scan-report.json /Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/.archive/project-scan-report-2026-03-18.json",
+      "description": "Archive old state file"
+    },
+    "timestamp": "2026-03-18T18:10:54.996Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/docs/index.md"
+    },
+    "timestamp": "2026-03-18T18:11:02.613Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-workflow.md"
+    },
+    "timestamp": "2026-03-18T18:11:38.961Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md"
+    },
+    "timestamp": "2026-03-18T18:11:44.345Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/projects/-Users-juliano-barbosa-Repos-azure-rg-hypera-cafehyna-web-Repos-dev-src-argocd--claude-worktrees-argocd-app-websites-wip/717c5a62-9f41-4c41-bd61-f3074aca57dc/tool-results/toolu_019fvqK67QLyFV2DYxTYHx5E.txt"
+    },
+    "timestamp": "2026-03-18T18:11:48.803Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 1,
+      "limit": 200
+    },
+    "timestamp": "2026-03-18T18:11:53.702Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 200,
+      "limit": 200
+    },
+    "timestamp": "2026-03-18T18:11:57.535Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 399,
+      "limit": 300
+    },
+    "timestamp": "2026-03-18T18:12:05.718Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 695,
+      "limit": 200
+    },
+    "timestamp": "2026-03-18T18:12:10.161Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/workflows/full-scan-instructions.md",
+      "offset": 895,
+      "limit": 100
+    },
+    "timestamp": "2026-03-18T18:12:16.555Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/Repos/azure/rg-hypera-cafehyna-web/Repos/dev/src/argocd/.claude/worktrees/argocd-app-websites-wip/.claude/skills/bmad-document-project/documentation-requirements.csv"
+    },
+    "timestamp": "2026-03-18T18:12:23.586Z"
+  }
+]

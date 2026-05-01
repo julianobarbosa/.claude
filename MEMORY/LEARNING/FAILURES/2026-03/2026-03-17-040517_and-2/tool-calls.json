@@ -1,0 +1,685 @@
+[
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/MEMORY/WORK/20260316-213800_analyze-obsidian-vault-improvements/PRD.md"
+    },
+    "timestamp": "2026-03-17T00:53:10.212Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "00 - Maps of Content/*"
+    },
+    "timestamp": "2026-03-17T00:53:10.718Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.claude/PAI/Algorithm/v3.7.0.md",
+      "limit": 5
+    },
+    "timestamp": "2026-03-17T00:53:11.790Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Projects.base"
+    },
+    "timestamp": "2026-03-17T00:53:18.209Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "content": "---\ncreated: 2026-03-16T22:00\nupdated: 2026-03-16T22:00\ntype: report\ntags:\n  - moc\n  - vault/health\n  - y/2026\n  - y/2026-03\naliases:\n  - Vault Health Report\ncssclasses:\n  - wide\n---\n\n# Vault Health Report — March 2026\n\n> [!abstract] TL;DR\n> 17-year vault with **excellent daily capture discipline** and a solid clippings pipeline, but **PARA is operationally dead**, the **task backlog is unsustainable** (11,911 open / 8.6% completion), and the **knowledge graph is flat** (near-zero cross-linking). Overall grade: **B-**.\n\n---\n\n## 1. Vault Health Scorecard\n\n| Dimension | Grade | Evidence |\n|---|---|---|\n| Daily Notes | **A+** | 8,723 files spanning 2009–2026. v2.0 template 100% compliant for 2025–2026. |\n| Clippings | **A** | 438 files, 99.8% frontmatter compliance, proper source metadata. |\n| BMAD Framework | **B+** | 25 agents configured across 6 modules; 5 workflows operational. |\n| Git / LFS | **B+** | Clean status, 79 LFS-tracked files, auto-backup active. |\n| Inbox Processing | **A+** | Zero unprocessed files — inbox is empty. |\n| Books Collection | **C+** | 791 files, but inconsistent metadata across the collection. |\n| PARA Structure | **D** | `01 - Projects` has 1 real file. `02 - Areas` and `03 - Resources` are placeholders only. |\n| Task Management | **D** | 11,911 incomplete tasks, 1,029 complete — **8.6% completion rate**. No review mechanism. |\n| Knowledge Graph | **D** | 0.04–0.08 wikilinks per line. Minimal cross-linking; vault is document-centric. |\n| Tag System | **D+** | Only temporal tags (`y/YYYY`, `y/YYYY-MM`) actively used. Topic tags absent. |\n| MOCs / Navigation | **D** | 1 `Projects.base` file. No other Maps of Content. |\n| Storage Hygiene | **C** | ~900 MB orphaned worktree. 11,701 archive files. |\n\n> [!tip] Overall Grade: **B-**\n> The vault excels at *capture* but underperforms at *retrieval, review, and connection*.\n\n---\n\n## 2. What's Working Well\n\n> [!success] Preserve these — they are load-bearing habits\n\n1. **Daily note discipline** — 17 years of continuous journaling is genuinely rare. The v2.0 template migration (507 files, Feb 2025) shows active maintenance.\n2. **Clippings pipeline** — 99.8% frontmatter compliance with consistent source metadata. This is the model to replicate elsewhere.\n3. **Inbox zero** — The capture-to-inbox flow works; nothing piles up.\n4. **BMAD configuration** — 25 agents across 6 modules with 5 operational workflows. Infrastructure is ready even if underused.\n5. **Auto-backup** — Git + LFS with automatic commits. Data loss risk is minimal.\n\n---\n\n## 3. Critical Findings\n\n### 3.1 PARA Is Operationally Dead\n\n`01 - Projects` contains a single real file. `02 - Areas` and `03 - Resources` hold only placeholders. The PARA folders exist structurally but serve no functional purpose — all actual work lives in daily notes as inline tasks and log entries.\n\n**Root cause:** Daily capture is frictionless; moving items into PARA folders requires a second step that never became habit. There's no periodic review to surface items from daily notes into project/area notes.\n\n### 3.2 Task Backlog Is Unsustainable\n\n11,911 incomplete tasks vs 1,029 completed — an **8.6% completion rate**. With task management staying vault-only, this is the single highest-impact problem.\n\n**Root cause:** Tasks are captured in daily notes but never reviewed, triaged, or closed. There's no weekly review, no task dashboard, and no mechanism to distinguish \"still relevant\" from \"silently abandoned.\"\n\n### 3.3 Knowledge Graph Is Flat\n\nWikilink density is 0.04–0.08 links per line — almost entirely navigation links (`<< prev | today | next >>`). Notes don't reference each other meaningfully. The vault functions as 11,000+ independent documents, not a connected knowledge base.\n\n**Root cause:** Daily notes are designed for capture, not connection. Without MOCs or topic notes to link *through*, there's no natural place to create cross-references.\n\n### 3.4 Tags Are Underutilized\n\nOnly temporal tags (`y/2026`, `y/2026-03`) are actively used. No topic, project, or status tags exist despite 37 plugins installed. The tag system adds no findability beyond what a date filter provides.\n\n**Root cause:** No tag taxonomy was defined upfront, and retroactively tagging 11,000+ notes is impractical. Tags need to be introduced going forward, not backfilled.\n\n### 3.5 Books Collection Is Inconsistent\n\n791 book note files with mixed metadata schemas — some have author/rating/genre, others have minimal or no frontmatter. No standard template enforced.\n\n**Root cause:** Notes accumulated over years under different conventions. No single template was established early enough to prevent drift.\n\n---\n\n## 4. Prioritized Recommendations\n\n> [!warning] Scope\n> These are recommendations only. No changes were made to the vault. Task management and PARA activation are prioritized per Juliano's direction.\n\n### Tier 1: Quick Wins (< 30 min each)\n\n| # | Action | Impact |\n|---|---|---|\n| Q1 | **Clean orphaned worktree** — `rm -rf .worktrees/fix-copy-and-paste/` recovers ~900 MB | Storage |\n| Q2 | **Update memory bank** — `memory-bank/activeContext.md` is frozen at Nov 2025; refresh to current state | Context |\n| Q3 | **Fix project file frontmatter** — Add `type: project` and `status: active` to the one real project file | PARA |\n| Q4 | **Create 3–5 Area notes** — `02 - Areas/Cloud Ops.md`, `Security.md`, `DevOps.md`, `AI-ML.md`, `Personal.md` with proper frontmatter | PARA |\n| Q5 | **Task shape analysis** — Count incomplete tasks per month to see where the backlog concentrates (likely pre-2025) | Tasks |\n\n### Tier 2: High Priority (1–2 hrs each)\n\n> [!important] These target the two biggest gaps: task management and PARA activation.\n\n**M1: Weekly Review Template**\nCreate a periodic note template (weekly) that surfaces:\n- Incomplete tasks from the past 7 days\n- New clippings to process or promote\n- Active projects needing attention\n- A \"close/defer/delete\" triage step for stale tasks\n\nUse the periodic-notes plugin with a `06 - Daily/YYYY/WW` structure or a dedicated `99 - Meta/Reviews/` folder.\n\n**M2: Task Rollup Dashboard (.base file)**\nCreate a `.base` file at `00 - Maps of Content/Tasks.base` that:\n- Filters all vault files containing incomplete tasks\n- Groups by folder or `::` project prefix patterns found in daily notes\n- Shows task count, oldest task date, and last-modified date\n- Provides a single view of the full backlog\n\n**M3: PARA Activation**\nActivate PARA by connecting daily note patterns to dedicated project notes:\n\n1. **Identify active projects** from recent daily notes — look for recurring task prefixes like `hypera`, `cafehyna`, `antigravity`, `infracost`\n2. **Create project notes** in `01 - Projects/` with proper frontmatter (`type: project`, `status: active`, `priority: high|medium|low`)\n3. **Create area notes** in `02 - Areas/` for ongoing responsibilities (Cloud Ops, Security, DevOps, AI/ML, Personal Finance)\n4. **Link daily tasks to projects** using `[[Project Name]]` wikilinks in task lines going forward\n5. **The `Projects.base` MOC already exists** — once project notes have proper frontmatter, the dashboard populates automatically\n\n> [!tip] Start small\n> Create 3 project notes and 3 area notes. Don't try to retroactively categorize everything. Let PARA grow from daily use.\n\n**M4: Topic MOCs**\nCreate `.base` files for the vault's dominant knowledge domains:\n- `00 - Maps of Content/Kubernetes.base` — filter by tag or folder\n- `00 - Maps of Content/Azure.base`\n- `00 - Maps of Content/DevOps.base`\n- `00 - Maps of Content/Security.base`\n- `00 - Maps of Content/AI-ML.base`\n\nThese give the knowledge graph structure without requiring manual linking of every note.\n\n**M5: Tag Taxonomy Seed**\nIntroduce 5–10 topic tags for use in daily notes **going forward**:\n- `#topic/kubernetes`, `#topic/azure`, `#topic/security`, `#topic/devops`, `#topic/ai`\n- `#project/hypera`, `#project/cafehyna`, `#project/antigravity`\n- `#type/decision`, `#type/learning`, `#type/blocker`\n\nDon't backfill. Add these when touching notes naturally.\n\n### Tier 3: Structural (half-day+)\n\n**S1: Task Bankruptcy**\nDeclare bankruptcy on pre-2026 incomplete tasks:\n1. Run a count of incomplete tasks by year\n2. Archive everything pre-2026 as \"historical\" — mark with `- [~]` or move to a canceled state\n3. Start 2026 with a clean task baseline\n4. Use the weekly review (M1) to prevent re-accumulation\n\n**S2: Book Note Template**\nCreate a standard template for `08 - books/` with fields: `title`, `author`, `rating`, `genre`, `status` (reading/read/abandoned), `date_started`, `date_finished`. Apply only to new entries — don't backfill the 791 existing files.\n\n**S3: Progressive Linking**\nAdopt a rule: when touching any note for any reason, add 1–2 wikilinks to related notes. This builds the knowledge graph organically without a dedicated \"linking sprint.\"\n\n**S4: Clippings-to-Resources Pipeline**\nPeriodically promote high-value clippings from `Clippings/` to `03 - Resources/` with added context. The clippings pipeline is the vault's strongest system — extend it into the knowledge layer.\n\n---\n\n## 5. Anti-Patterns to Avoid\n\n> [!danger] These will waste time or break what works\n\n1. **Don't bulk-migrate pre-2025 notes** — They're historical records. Changing their structure risks breaking links and provides minimal return on 8,000+ files.\n2. **Don't force zettelkasten on daily notes** — The daily capture workflow works. Atomic notes are a different paradigm; mixing them creates friction without benefit.\n3. **Don't create an elaborate tag taxonomy upfront** — Start with 5–10 tags. Expand only when you hit a real findability gap. Premature taxonomy is maintenance debt.\n4. **Don't try to complete the 11,911 task backlog** — Most are silently abandoned. Triage and declare bankruptcy on anything older than 90 days.\n5. **Don't use BMAD for vault housekeeping** — BMAD is configured for software development workflows. Vault maintenance is simpler than what BMAD orchestrates; use native Obsidian tools (Bases, Dataview, templates).\n\n---\n\n## 6. Vault Statistics Summary\n\n| Metric | Value |\n|---|---|\n| Total markdown files | 11,334 |\n| Total attachments | 24,183 |\n| Daily notes | 8,723 |\n| Book notes | 791 |\n| Clippings | 438 |\n| Installed plugins | 37 |\n| BMAD agents | 25 |\n| LFS-tracked files | 79 |\n| Incomplete tasks | 11,911 |\n| Completed tasks | 1,029 |\n| Task completion rate | 8.6% |\n| Archive files | 11,701 |\n| Orphaned worktree size | ~900 MB |\n\n---\n\n## 7. Next Steps\n\nIf you want to start implementing, the recommended order is:\n\n1. **Q1–Q5** (quick wins) — clean worktree, update memory bank, seed PARA\n2. **M2** (task dashboard) — get visibility into the backlog first\n3. **M1** (weekly review) — establish the review habit\n4. **S1** (task bankruptcy) — clear the backlog after you can see it\n5. **M3** (PARA activation) — create project/area notes from daily patterns\n6. **M4–M5** (MOCs + tags) — add findability layers\n\n---\n\n*Generated 2026-03-16 by PAI vault analysis. Data sourced from direct vault exploration across three parallel agents.*\n"
+    },
+    "timestamp": "2026-03-17T00:54:45.864Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md"
+    },
+    "timestamp": "2026-03-17T00:54:50.361Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/\"",
+      "description": "List existing MOC files"
+    },
+    "timestamp": "2026-03-17T10:43:03.870Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\]",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026/03",
+      "output_mode": "content",
+      "head_limit": 30
+    },
+    "timestamp": "2026-03-17T10:43:14.173Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\]",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "count",
+      "head_limit": 20
+    },
+    "timestamp": "2026-03-17T10:43:14.883Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\]",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "count",
+      "head_limit": 80,
+      "offset": 20
+    },
+    "timestamp": "2026-03-17T10:43:29.459Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[x\\]",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "count",
+      "head_limit": 50
+    },
+    "timestamp": "2026-03-17T10:43:30.850Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026/03/20260304.md"
+    },
+    "timestamp": "2026-03-17T10:43:31.134Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/.obsidian/plugins/\" | grep -i task",
+      "description": "Check if Tasks plugin is installed"
+    },
+    "timestamp": "2026-03-17T10:43:50.887Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[x\\]",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026/03",
+      "output_mode": "content",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-17T10:43:52.512Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\] .*hypera\"",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "count",
+      "head_limit": 5
+    },
+    "timestamp": "2026-03-17T10:44:15.467Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\] .*::\"",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026/03",
+      "output_mode": "content",
+      "head_limit": 40
+    },
+    "timestamp": "2026-03-17T10:44:16.457Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\] .*hypera\"",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "content",
+      "head_limit": 10
+    },
+    "timestamp": "2026-03-17T10:44:21.412Z"
+  },
+  {
+    "name": "Grep",
+    "input": {
+      "pattern": "^- \\[ \\] .*hypera",
+      "path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026",
+      "output_mode": "content",
+      "head_limit": 15
+    },
+    "timestamp": "2026-03-17T10:44:25.630Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Daily Activity.base",
+      "content": "filters:\n  and:\n    - file.inFolder(\"06 - Daily/2026\")\n    - 'type == \"daily-note\"'\n\nformulas:\n  word_estimate: '(file.size / 5).round(0)'\n  last_modified: 'file.mtime.format(\"YYYY-MM-DD HH:mm\")'\n  age_days: '(today() - date(date_formatted)).days.round(0)'\n  month: 'if(date_formatted, date_formatted.slice(0, 7), \"\")'\n\nproperties:\n  formula.word_estimate:\n    displayName: \"~Words\"\n  formula.last_modified:\n    displayName: \"Modified\"\n  formula.age_days:\n    displayName: \"Days Ago\"\n  formula.month:\n    displayName: \"Month\"\n\nviews:\n  - type: table\n    name: \"Recent Activity (Last 30 Days)\"\n    filters:\n      and:\n        - 'if(date_formatted, (today() - date(date_formatted)).days <= 30, false)'\n    order:\n      - file.name\n      - formula.age_days\n      - formula.word_estimate\n      - formula.last_modified\n    summaries:\n      formula.word_estimate: Average\n      formula.age_days: Min\n\n  - type: table\n    name: \"March 2026\"\n    filters:\n      and:\n        - file.hasTag(\"y/2026-03\")\n    order:\n      - file.name\n      - formula.word_estimate\n      - formula.last_modified\n    summaries:\n      formula.word_estimate: Sum\n\n  - type: table\n    name: \"February 2026\"\n    filters:\n      and:\n        - file.hasTag(\"y/2026-02\")\n    order:\n      - file.name\n      - formula.word_estimate\n      - formula.last_modified\n    summaries:\n      formula.word_estimate: Sum\n\n  - type: table\n    name: \"January 2026\"\n    filters:\n      and:\n        - file.hasTag(\"y/2026-01\")\n    order:\n      - file.name\n      - formula.word_estimate\n      - formula.last_modified\n    summaries:\n      formula.word_estimate: Sum\n\n  - type: table\n    name: \"All 2026\"\n    order:\n      - file.name\n      - formula.month\n      - formula.word_estimate\n      - formula.last_modified\n    groupBy:\n      property: formula.month\n      direction: DESC\n    summaries:\n      formula.word_estimate: Sum\n"
+    },
+    "timestamp": "2026-03-17T10:44:59.275Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Tasks Dashboard.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: moc\ntags:\n  - moc\n  - tasks\n  - y/2026\naliases:\n  - Task Dashboard\ncssclasses:\n  - wide\n---\n\n# Tasks Dashboard\n\n> [!abstract] Overview\n> Vault-wide task visibility using Dataview TASK queries. Tasks live as inline `- [ ]` items in daily notes, using `::` separators for project/context hierarchy (e.g., `hypera :: cafehyna :: argocd`).\n\n---\n\n## This Week (Last 7 Days)\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed\nWHERE file.cday >= date(today) - dur(7 days)\nSORT file.cday DESC\n```\n\n---\n\n## Recent Open Tasks (Last 30 Days)\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed\nWHERE file.cday >= date(today) - dur(30 days)\nSORT file.cday DESC\n```\n\n---\n\n## By Project: Hypera\n\n> [!note] Work tasks — largest category\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND contains(text, \"hypera\")\nSORT file.cday DESC\n```\n\n### Cafehyna (Sub-project)\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND contains(text, \"cafehyna\")\nSORT file.cday DESC\n```\n\n---\n\n## By Project: Claude Code / PAI\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND contains(text, \"cc ::\")\nSORT file.cday DESC\n```\n\n---\n\n## By Project: BMAD\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND contains(text, \"bmad\")\nSORT file.cday DESC\n```\n\n---\n\n## By Project: Azure / Microsoft\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND (contains(text, \"azure\") OR contains(text, \"microsoft\"))\nSORT file.cday DESC\n```\n\n---\n\n## Personal / Other\n\n> [!tip] Tasks not matching any project prefix above\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE !completed AND !contains(text, \"hypera\") AND !contains(text, \"cc ::\") AND !contains(text, \"bmad\") AND !contains(text, \"azure\") AND !contains(text, \"microsoft\")\nSORT file.cday DESC\n```\n\n---\n\n## Completed Tasks (2026)\n\n```dataview\nTASK\nFROM \"06 - Daily/2026\"\nWHERE completed\nSORT file.cday DESC\n```\n\n---\n\n## Backlog Shape\n\n> [!warning] Task distribution by month — helps identify where bankruptcy makes sense\n\n```dataview\nTABLE length(filter(file.tasks, (t) => !t.completed)) AS \"Open Tasks\", length(filter(file.tasks, (t) => t.completed)) AS \"Done\"\nFROM \"06 - Daily\"\nWHERE length(file.tasks) > 0\nSORT file.name DESC\nLIMIT 50\n```\n\n---\n\n## Daily Activity\n\n> [!info] Note-level view of 2026 daily notes — see [[Daily Activity.base]] for the full interactive view\n\n![[Daily Activity.base#Recent Activity (Last 30 Days)]]\n\n---\n\n*See also: [[Vault Health Report 2026-03]] for the full vault analysis and improvement recommendations.*\n"
+    },
+    "timestamp": "2026-03-17T10:45:15.259Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Daily Activity.base"
+    },
+    "timestamp": "2026-03-17T10:45:19.315Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Tasks Dashboard.md"
+    },
+    "timestamp": "2026-03-17T10:45:19.737Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "updated: 2026-03-16T22:00",
+      "new_string": "updated: 2026-03-17T00:00"
+    },
+    "timestamp": "2026-03-17T10:45:24.225Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "limit": 10
+    },
+    "timestamp": "2026-03-17T10:45:27.929Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "updated: 2026-03-16T22:00",
+      "new_string": "updated: 2026-03-17T00:00"
+    },
+    "timestamp": "2026-03-17T10:45:31.704Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 115,
+      "limit": 15
+    },
+    "timestamp": "2026-03-17T10:45:36.668Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "**M2: Task Rollup Dashboard (.base file)**\nCreate a `.base` file at `00 - Maps of Content/Tasks.base` that:\n- Filters all vault files containing incomplete tasks\n- Groups by folder or `::` project prefix patterns found in daily notes\n- Shows task count, oldest task date, and last-modified date\n- Provides a single view of the full backlog",
+      "new_string": "**M2: Task Rollup Dashboard** ==DONE==\nCreated [[Tasks Dashboard]] (Dataview TASK queries grouped by project) and [[Daily Activity.base]] (note-level activity view). Tasks are inline `- [ ]` items — Bases can't index them, so Dataview provides the task-level granularity while the `.base` file shows daily note activity."
+    },
+    "timestamp": "2026-03-17T10:45:43.578Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 119,
+      "limit": 6
+    },
+    "timestamp": "2026-03-17T10:45:48.540Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "**M2: Task Rollup Dashboard (.base file)**\nCreate a `.base` file at `00 - Maps of Content/Tasks.base` that:\n- Filters all vault files containing incomplete tasks\n- Groups by folder or `::` project prefix patterns found in daily notes\n- Shows task count, oldest task date, and last-modified date\n- Provides a single view of the full backlog",
+      "new_string": "**M2: Task Rollup Dashboard** ==DONE==\nCreated [[Tasks Dashboard]] (Dataview TASK queries grouped by project) and [[Daily Activity.base]] (note-level activity view). Tasks are inline `- [ ]` items — Bases can't index them, so Dataview provides the task-level granularity while the `.base` file shows daily note activity."
+    },
+    "timestamp": "2026-03-17T10:45:53.693Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls -la \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/.worktrees/\" 2>/dev/null && du -sh \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/.worktrees/\" 2>/dev/null || echo \"No .worktrees directory found\"",
+      "description": "Check orphaned worktree (Q1)"
+    },
+    "timestamp": "2026-03-17T10:48:39.567Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "01 - Projects/*.md"
+    },
+    "timestamp": "2026-03-17T10:48:39.896Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "memory-bank/*.md"
+    },
+    "timestamp": "2026-03-17T10:48:39.919Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/rg-hypera-packer-image-vnet-task.md"
+    },
+    "timestamp": "2026-03-17T10:48:47.287Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/memory-bank/activeContext.md"
+    },
+    "timestamp": "2026-03-17T10:48:47.830Z"
+  },
+  {
+    "name": "Agent",
+    "input": {
+      "description": "Count tasks per year/month (Q5)",
+      "prompt": "Count all incomplete tasks (`- [ ]`) and completed tasks (`- [x]`) in the Obsidian vault at `/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/` broken down by year. \n\nUse Grep with output_mode \"count\" to search each year folder. The years are: 2009 through 2026 (check which year folders exist first with Glob).\n\nReturn a markdown table with columns: Year, Incomplete, Completed, Total, Completion Rate %.\n\nThis is research only - do NOT write any files.",
+      "subagent_type": "Explore",
+      "run_in_background": true
+    },
+    "timestamp": "2026-03-17T10:48:52.093Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "du -sh \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/.worktrees/fix-copy-and-paste/\" 2>/dev/null || echo \"Could not determine size\"",
+      "description": "Get worktree size with standard du"
+    },
+    "timestamp": "2026-03-17T10:49:04.638Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/rg-hypera-packer-image-vnet-task.md",
+      "old_string": "---\ncreated: 2025-05-15T09:09\nupdated: 2026-02-10T08:34\ntags:\n  - project/hypera\n  - azure/networking\n---",
+      "new_string": "---\ncreated: 2025-05-15T09:09\nupdated: 2026-03-17T00:00\ntype: project\nstatus: complete\npriority: medium\ntags:\n  - project/hypera\n  - azure/networking\n---"
+    },
+    "timestamp": "2026-03-17T10:49:05.870Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "/usr/bin/du -sh \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/.worktrees/fix-copy-and-paste/\"",
+      "description": "Get worktree size with absolute path to du"
+    },
+    "timestamp": "2026-03-17T10:49:15.479Z"
+  },
+  {
+    "name": "Agent",
+    "input": {
+      "description": "Identify active projects from daily notes",
+      "prompt": "Analyze recent daily notes in `/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/06 - Daily/2026/` to identify the most common project prefixes used in task lines (`- [ ]` items).\n\nTasks use `::` as separators, e.g., `hypera :: cafehyna :: argocd`.\n\nSearch for all incomplete tasks across 2026 daily notes using Grep, then extract and count the top-level project prefixes (the first word/phrase before the first `::`).\n\nReturn:\n1. A ranked list of project prefixes with counts\n2. For each top prefix, the most common sub-prefixes (second level after `::`)\n3. Which prefixes appear in the last 30 days vs older\n\nThis is research only - do NOT write any files.",
+      "subagent_type": "Explore",
+      "run_in_background": true
+    },
+    "timestamp": "2026-03-17T10:49:25.463Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "02 - Areas/*.md"
+    },
+    "timestamp": "2026-03-17T10:49:30.470Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "99 - Meta/00 - Templates/**/*.md"
+    },
+    "timestamp": "2026-03-17T10:49:30.808Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/99 - Meta/00 - Templates/daily/daily.md"
+    },
+    "timestamp": "2026-03-17T10:49:34.931Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/99 - Meta/00 - Templates/daily/add-task.md"
+    },
+    "timestamp": "2026-03-17T10:49:35.400Z"
+  },
+  {
+    "name": "Glob",
+    "input": {
+      "pattern": "03 - Resources/*.md"
+    },
+    "timestamp": "2026-03-17T10:49:35.568Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/Cloud Operations.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: area\ntags:\n  - area/cloud-ops\n  - azure\naliases:\n  - Cloud Ops\n---\n\n# Cloud Operations\n\n> [!abstract] Ongoing responsibility\n> Azure infrastructure management, cost optimization (FinOps), networking, and platform operations at Hypera.\n\n## Scope\n\n- Azure subscription and resource management\n- Networking (VNets, NSGs, subnets, CIDR planning)\n- Cost management and FinOps (reservations, billing, waste discovery)\n- Microsoft quota and support requests\n- Policy and compliance\n\n## Related Projects\n\n- [[rg-hypera-packer-image-vnet-task]]\n\n## Key Resources\n\n- Azure Portal\n- Infracost dashboards\n- `infra-redes` repository (CIDR documentation)\n"
+    },
+    "timestamp": "2026-03-17T10:49:50.818Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/DevOps Platform.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: area\ntags:\n  - area/devops\n  - kubernetes\n  - argocd\naliases:\n  - DevOps\n  - Platform Engineering\n---\n\n# DevOps Platform\n\n> [!abstract] Ongoing responsibility\n> Kubernetes platform, CI/CD pipelines, GitOps (ArgoCD), and developer experience at Hypera/Cafehyna.\n\n## Scope\n\n- Kubernetes cluster management (AKS)\n- ArgoCD and GitOps workflows (ApplicationSets, Image Updater)\n- Azure DevOps pipelines and self-hosted agents (Blue Agent)\n- Helm, Kustomize, and Terraform patterns\n- Container image management and registry\n\n## Key Repositories\n\n- `cafehyna` — main platform repository\n- `rg-hypera-aks-python-infra` — AKS Python infrastructure\n"
+    },
+    "timestamp": "2026-03-17T10:49:55.386Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/Security.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: area\ntags:\n  - area/security\naliases:\n  - Security\n  - InfoSec\n---\n\n# Security\n\n> [!abstract] Ongoing responsibility\n> Information security practices, vulnerability management, and compliance across cloud infrastructure.\n\n## Scope\n\n- Azure security posture (Defender, Sentinel)\n- RBAC and identity management (PIM, Entra ID)\n- Secret management (Key Vault)\n- Security assessments and penetration testing\n- Compliance and audit requirements\n- Copilot security configuration\n"
+    },
+    "timestamp": "2026-03-17T10:49:58.119Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/AI & Automation.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: area\ntags:\n  - area/ai\n  - claude-code\n  - bmad\naliases:\n  - AI\n  - Automation\n---\n\n# AI & Automation\n\n> [!abstract] Ongoing responsibility\n> Personal AI infrastructure (PAI), Claude Code workflows, BMAD framework, and automation tooling.\n\n## Scope\n\n- PAI (Personal AI Infrastructure) — skills, algorithms, agents\n- Claude Code configuration and MCP servers\n- BMAD framework (agents, workflows, modules)\n- Obsidian automation (Templater, Dataview, Bases)\n- AI-assisted development workflows\n\n## Key Tools\n\n- Claude Code (PAI)\n- BMAD Core Platform (`_bmad/`)\n- Obsidian plugins (Templater, Dataview, Tasks)\n"
+    },
+    "timestamp": "2026-03-17T10:50:02.598Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/Personal Development.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: area\ntags:\n  - area/personal\naliases:\n  - Personal\n---\n\n# Personal Development\n\n> [!abstract] Ongoing responsibility\n> Learning, health, finances, and personal growth.\n\n## Scope\n\n- MBA Internacional program\n- Technical learning and certifications\n- Health and medical appointments\n- Personal finance\n- Reading and book notes (`08 - books/`)\n"
+    },
+    "timestamp": "2026-03-17T10:50:04.456Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/99 - Meta/00 - Templates/daily/weekly-review.md",
+      "content": "---\ncreated: <% tp.file.creation_date(\"YYYY-MM-DDTHH:mm\") %>\nupdated: <% tp.file.creation_date(\"YYYY-MM-DDTHH:mm\") %>\ntype: weekly-review\ntags:\n  - review/weekly\n  - y/<% tp.date.now(\"YYYY\") %>\n  - y/<% tp.date.now(\"YYYY-MM\") %>\naliases:\n  - Week <% tp.date.now(\"WW\") %> Review\ncssclasses:\n  - wide\nweek_start: <% tp.date.now(\"YYYY-MM-DD\", 0, tp.file.title, \"YYYY-[W]WW\") %>\nweek_end: <% tp.date.now(\"YYYY-MM-DD\", 6, tp.file.title, \"YYYY-[W]WW\") %>\n---\n\n# Weekly Review — <% tp.file.title %>\n\n## 1. Incomplete Tasks (This Week)\n\n> [!warning] Triage each: **close**, **defer**, or **keep**\n\n```dataview\nTASK\nFROM \"06 - Daily/<% tp.date.now(\"YYYY\") %>\"\nWHERE !completed\nWHERE file.cday >= date(\"<% tp.date.now(\"YYYY-MM-DD\", -6) %>\") AND file.cday <= date(\"<% tp.date.now(\"YYYY-MM-DD\") %>\")\nSORT file.cday DESC\n```\n\n## 2. Completed Tasks\n\n```dataview\nTASK\nFROM \"06 - Daily/<% tp.date.now(\"YYYY\") %>\"\nWHERE completed\nWHERE file.cday >= date(\"<% tp.date.now(\"YYYY-MM-DD\", -6) %>\") AND file.cday <= date(\"<% tp.date.now(\"YYYY-MM-DD\") %>\")\nSORT file.cday DESC\n```\n\n## 3. New Clippings\n\n```dataview\nLIST\nFROM \"Clippings\"\nWHERE file.cday >= date(\"<% tp.date.now(\"YYYY-MM-DD\", -6) %>\") AND file.cday <= date(\"<% tp.date.now(\"YYYY-MM-DD\") %>\")\nSORT file.ctime DESC\n```\n\n## 4. Active Projects Check\n\n```dataview\nTABLE status, priority, updated\nFROM \"01 - Projects\"\nWHERE type = \"project\" AND status = \"active\"\nSORT priority ASC\n```\n\n> [!todo] For each active project:\n> - Is it still active? Update status if not.\n> - What's the next action?\n> - Any blockers?\n\n## 5. Wins This Week\n\n-\n\n## 6. Lessons Learned\n\n-\n\n## 7. Next Week Focus\n\n> [!important] Top 3 priorities for next week\n\n1.\n2.\n3.\n\n## 8. Stale Task Cleanup\n\n> [!danger] Tasks older than 30 days — consider closing or deferring\n\n```dataview\nTASK\nFROM \"06 - Daily\"\nWHERE !completed\nWHERE file.cday < date(\"<% tp.date.now(\"YYYY-MM-DD\", -30) %>\") AND file.cday >= date(\"<% tp.date.now(\"YYYY-MM-DD\", -60) %>\")\nSORT file.cday ASC\nLIMIT 20\n```\n"
+    },
+    "timestamp": "2026-03-17T10:50:21.828Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Kubernetes.base",
+      "content": "filters:\n  or:\n    - file.hasTag(\"kubernetes\")\n    - file.hasTag(\"k8s\")\n    - file.hasTag(\"area/devops\")\n    - file.hasTag(\"argocd\")\n\nformulas:\n  last_modified: 'file.mtime.format(\"YYYY-MM-DD\")'\n  age_days: '(today() - file.ctime).days.round(0)'\n  source: 'if(file.folder.contains(\"Clippings\"), \"Clipping\", if(file.folder.contains(\"Daily\"), \"Daily\", if(file.folder.contains(\"Projects\"), \"Project\", file.folder)))'\n\nproperties:\n  formula.last_modified:\n    displayName: \"Modified\"\n  formula.age_days:\n    displayName: \"Age\"\n  formula.source:\n    displayName: \"Source\"\n\nviews:\n  - type: table\n    name: \"All Kubernetes Notes\"\n    order:\n      - file.name\n      - formula.source\n      - file.tags\n      - formula.last_modified\n    summaries:\n      formula.age_days: Average\n\n  - type: table\n    name: \"Recent (Last 90 Days)\"\n    filters:\n      and:\n        - 'file.mtime >= today() + \"-90d\"'\n    order:\n      - file.name\n      - formula.source\n      - formula.last_modified\n"
+    },
+    "timestamp": "2026-03-17T10:50:28.536Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Azure.base",
+      "content": "filters:\n  or:\n    - file.hasTag(\"azure\")\n    - file.hasTag(\"area/cloud-ops\")\n    - file.hasTag(\"azure/networking\")\n\nformulas:\n  last_modified: 'file.mtime.format(\"YYYY-MM-DD\")'\n  source: 'if(file.folder.contains(\"Clippings\"), \"Clipping\", if(file.folder.contains(\"Daily\"), \"Daily\", if(file.folder.contains(\"Projects\"), \"Project\", if(file.folder.contains(\"Areas\"), \"Area\", file.folder))))'\n\nproperties:\n  formula.last_modified:\n    displayName: \"Modified\"\n  formula.source:\n    displayName: \"Source\"\n\nviews:\n  - type: table\n    name: \"All Azure Notes\"\n    order:\n      - file.name\n      - formula.source\n      - file.tags\n      - formula.last_modified\n\n  - type: table\n    name: \"Recent (Last 90 Days)\"\n    filters:\n      and:\n        - 'file.mtime >= today() + \"-90d\"'\n    order:\n      - file.name\n      - formula.source\n      - formula.last_modified\n"
+    },
+    "timestamp": "2026-03-17T10:50:31.347Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Security.base",
+      "content": "filters:\n  or:\n    - file.hasTag(\"security\")\n    - file.hasTag(\"area/security\")\n\nformulas:\n  last_modified: 'file.mtime.format(\"YYYY-MM-DD\")'\n  source: 'if(file.folder.contains(\"Clippings\"), \"Clipping\", if(file.folder.contains(\"Daily\"), \"Daily\", if(file.folder.contains(\"Areas\"), \"Area\", file.folder)))'\n\nproperties:\n  formula.last_modified:\n    displayName: \"Modified\"\n  formula.source:\n    displayName: \"Source\"\n\nviews:\n  - type: table\n    name: \"All Security Notes\"\n    order:\n      - file.name\n      - formula.source\n      - file.tags\n      - formula.last_modified\n\n  - type: table\n    name: \"Recent (Last 90 Days)\"\n    filters:\n      and:\n        - 'file.mtime >= today() + \"-90d\"'\n    order:\n      - file.name\n      - formula.source\n      - formula.last_modified\n"
+    },
+    "timestamp": "2026-03-17T10:50:33.797Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/AI-ML.base",
+      "content": "filters:\n  or:\n    - file.hasTag(\"area/ai\")\n    - file.hasTag(\"claude-code\")\n    - file.hasTag(\"bmad\")\n    - file.hasTag(\"ai\")\n\nformulas:\n  last_modified: 'file.mtime.format(\"YYYY-MM-DD\")'\n  source: 'if(file.folder.contains(\"Clippings\"), \"Clipping\", if(file.folder.contains(\"Daily\"), \"Daily\", if(file.folder.contains(\"Areas\"), \"Area\", file.folder)))'\n\nproperties:\n  formula.last_modified:\n    displayName: \"Modified\"\n  formula.source:\n    displayName: \"Source\"\n\nviews:\n  - type: table\n    name: \"All AI/ML Notes\"\n    order:\n      - file.name\n      - formula.source\n      - file.tags\n      - formula.last_modified\n\n  - type: table\n    name: \"Recent (Last 90 Days)\"\n    filters:\n      and:\n        - 'file.mtime >= today() + \"-90d\"'\n    order:\n      - file.name\n      - formula.source\n      - formula.last_modified\n"
+    },
+    "timestamp": "2026-03-17T10:50:36.322Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "tail -50 /private/tmp/claude-501/-Users-juliano-barbosa--obsidian-vaults--obsidian-barbosa-0/33487dbb-15b5-49f8-9669-d5bdabb007c5/tasks/af218c3e11b46bf40.output 2>/dev/null || echo \"Not ready yet\"",
+      "description": "Check task count agent progress"
+    },
+    "timestamp": "2026-03-17T10:50:43.974Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "tail -50 /private/tmp/claude-501/-Users-juliano-barbosa--obsidian-vaults--obsidian-barbosa-0/33487dbb-15b5-49f8-9669-d5bdabb007c5/tasks/a011d7780ea67f01f.output 2>/dev/null || echo \"Not ready yet\"",
+      "description": "Check project prefix agent progress"
+    },
+    "timestamp": "2026-03-17T10:50:45.584Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/Cafehyna Platform.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: project\nstatus: active\npriority: high\ntags:\n  - project/cafehyna\n  - project/hypera\n  - area/devops\n---\n\n# Cafehyna Platform\n\n> [!abstract] Active project\n> Hypera's internal DevOps/GitOps platform. Kubernetes (AKS), ArgoCD ApplicationSets, CI/CD pipelines, and infrastructure automation.\n\n## Active Work Streams\n\n- ArgoCD ApplicationSet deployments and auto-deploy\n- ADP Agent (Azure DevOps Pipeline self-hosted agents)\n- Network calculator and CIDR segregation\n- Elasticsearch configuration\n- MySQL 5.4 to 8 upgrade\n- Kargo integration\n- Parallel execution workflows\n\n## Key Repositories\n\n- `cafehyna` — main platform repo\n- `rg-hypera-aks-python-infra` — AKS Python infrastructure\n\n## Related Areas\n\n- [[DevOps Platform]]\n- [[Cloud Operations]]\n"
+    },
+    "timestamp": "2026-03-17T10:51:03.427Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/PAI Development.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: project\nstatus: active\npriority: high\ntags:\n  - project/pai\n  - project/cc\n  - area/ai\n---\n\n# PAI Development\n\n> [!abstract] Active project\n> Personal AI Infrastructure — Claude Code skills, MCP servers, Obsidian integration, and BMAD framework improvements.\n\n## Active Work Streams\n\n- Obsidian skill development and plugin integration\n- MCP server configuration (Teams, etc.)\n- Security hardening (left-of-boom)\n- Tips and workflow optimization\n- BMAD workflow documentation\n\n## Related Areas\n\n- [[AI & Automation]]\n"
+    },
+    "timestamp": "2026-03-17T10:51:07.172Z"
+  },
+  {
+    "name": "Write",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/Hypera FinOps.md",
+      "content": "---\ncreated: 2026-03-17T00:00\nupdated: 2026-03-17T00:00\ntype: project\nstatus: active\npriority: medium\ntags:\n  - project/hypera\n  - project/finops\n  - area/cloud-ops\n---\n\n# Hypera FinOps\n\n> [!abstract] Active project\n> Azure cost optimization — reservation management, billing analysis, Infracost dashboards, and Microsoft quota requests.\n\n## Active Work Streams\n\n- Infracost Azure DevOps dashboard\n- Reservation validation and coverage analysis\n- Microsoft support requests (quota, billing)\n- Orphaned resource discovery\n\n## Related Areas\n\n- [[Cloud Operations]]\n"
+    },
+    "timestamp": "2026-03-17T10:51:13.147Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/\"",
+      "description": "Verify MOC folder contents"
+    },
+    "timestamp": "2026-03-17T10:51:17.924Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/\"",
+      "description": "Verify Projects folder"
+    },
+    "timestamp": "2026-03-17T10:51:18.783Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "ls \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/\"",
+      "description": "Verify Areas folder"
+    },
+    "timestamp": "2026-03-17T10:51:19.248Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 90,
+      "limit": 80
+    },
+    "timestamp": "2026-03-17T10:51:24.680Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "> [!warning] Scope\n> These are recommendations only. No changes were made to the vault. Task management and PARA activation are prioritized per Juliano's direction.\n\n### Tier 1: Quick Wins (< 30 min each)\n\n| # | Action | Impact |\n|---|---|---|\n| Q1 | **Clean orphaned worktree** — `rm -rf .worktrees/fix-copy-and-paste/` recovers ~900 MB | Storage |\n| Q2 | **Update memory bank** — `memory-bank/activeContext.md` is frozen at Nov 2025; refresh to current state | Context |\n| Q3 | **Fix project file frontmatter** — Add `type: project` and `status: active` to the one real project file | PARA |\n| Q4 | **Create 3–5 Area notes** — `02 - Areas/Cloud Ops.md`, `Security.md`, `DevOps.md`, `AI-ML.md`, `Personal.md` with proper frontmatter | PARA |\n| Q5 | **Task shape analysis** — Count incomplete tasks per month to see where the backlog concentrates (likely pre-2025) | Tasks |\n\n### Tier 2: High Priority (1–2 hrs each)\n\n> [!important] These target the two biggest gaps: task management and PARA activation.\n\n**M1: Weekly Review Template**\nCreate a periodic note template (weekly) that surfaces:\n- Incomplete tasks from the past 7 days\n- New clippings to process or promote\n- Active projects needing attention\n- A \"close/defer/delete\" triage step for stale tasks\n\nUse the periodic-notes plugin with a `06 - Daily/YYYY/WW` structure or a dedicated `99 - Meta/Reviews/` folder.\n\n**M2: Task Rollup Dashboard** ==DONE==\nCreated [[Tasks Dashboard]] (Dataview TASK queries grouped by project) and [[Daily Activity.base]] (note-level activity view). Tasks are inline `- [ ]` items — Bases can't index them, so Dataview provides the task-level granularity while the `.base` file shows daily note activity.\n\n**M3: PARA Activation**\nActivate PARA by connecting daily note patterns to dedicated project notes:\n\n1. **Identify active projects** from recent daily notes — look for recurring task prefixes like `hypera`, `cafehyna`, `antigravity`, `infracost`\n2. **Create project notes** in `01 - Projects/` with proper frontmatter (`type: project`, `status: active`, `priority: high|medium|low`)\n3. **Create area notes** in `02 - Areas/` for ongoing responsibilities (Cloud Ops, Security, DevOps, AI/ML, Personal Finance)\n4. **Link daily tasks to projects** using `[[Project Name]]` wikilinks in task lines going forward\n5. **The `Projects.base` MOC already exists** — once project notes have proper frontmatter, the dashboard populates automatically\n\n> [!tip] Start small\n> Create 3 project notes and 3 area notes. Don't try to retroactively categorize everything. Let PARA grow from daily use.\n\n**M4: Topic MOCs**\nCreate `.base` files for the vault's dominant knowledge domains:\n- `00 - Maps of Content/Kubernetes.base` — filter by tag or folder\n- `00 - Maps of Content/Azure.base`\n- `00 - Maps of Content/DevOps.base`\n- `00 - Maps of Content/Security.base`\n- `00 - Maps of Content/AI-ML.base`\n\nThese give the knowledge graph structure without requiring manual linking of every note.\n\n**M5: Tag Taxonomy Seed**\nIntroduce 5–10 topic tags for use in daily notes **going forward**:\n- `#topic/kubernetes`, `#topic/azure`, `#topic/security`, `#topic/devops`, `#topic/ai`\n- `#project/hypera`, `#project/cafehyna`, `#project/antigravity`\n- `#type/decision`, `#type/learning`, `#type/blocker`\n\nDon't backfill. Add these when touching notes naturally.",
+      "new_string": "> [!success] Implementation Progress\n> Items marked ==DONE== were implemented on 2026-03-17.\n\n### Tier 1: Quick Wins (< 30 min each)\n\n| # | Action | Impact | Status |\n|---|---|---|---|\n| Q1 | **Clean orphaned worktree** — `rm -rf .worktrees/fix-copy-and-paste/` recovers **3.6 GB** (larger than estimated) | Storage | Needs confirmation |\n| Q2 | **Update memory bank** — `memory-bank/activeContext.md` is frozen at **March 2025** (contains template placeholders); refresh to current state | Context | Manual |\n| Q3 | **Fix project file frontmatter** — Added `type: project`, `status: complete`, `priority: medium` to `rg-hypera-packer-image-vnet-task.md` | PARA | ==DONE== |\n| Q4 | **Create 5 Area notes** — [[Cloud Operations]], [[Security]], [[DevOps Platform]], [[AI & Automation]], [[Personal Development]] | PARA | ==DONE== |\n| Q5 | **Task shape analysis** — Analysis in progress (background agent counting tasks per year) | Tasks | In progress |\n\n### Tier 2: High Priority (1–2 hrs each)\n\n> [!important] These target the two biggest gaps: task management and PARA activation.\n\n**M1: Weekly Review Template** ==DONE==\nCreated `99 - Meta/00 - Templates/daily/weekly-review.md` — Templater template with 8 sections:\n1. Incomplete tasks (this week) with triage prompt\n2. Completed tasks\n3. New clippings\n4. Active projects check\n5. Wins / Lessons learned\n6. Next week focus (top 3)\n7. Stale task cleanup (30+ days old)\n\n> [!tip] To use: Configure the periodic-notes plugin to use this template for weekly notes, or trigger manually via Templater.\n\n**M2: Task Rollup Dashboard** ==DONE==\nCreated [[Tasks Dashboard]] (Dataview TASK queries grouped by project) and [[Daily Activity.base]] (note-level activity view). Tasks are inline `- [ ]` items — Bases can't index them, so Dataview provides the task-level granularity while the `.base` file shows daily note activity.\n\n**M3: PARA Activation** ==DONE==\nActivated PARA with real content:\n\n**Projects created** (3 active + 1 existing):\n- [[Cafehyna Platform]] — `priority: high`, DevOps/GitOps platform\n- [[PAI Development]] — `priority: high`, Claude Code and AI tooling\n- [[Hypera FinOps]] — `priority: medium`, Azure cost optimization\n- [[rg-hypera-packer-image-vnet-task]] — `status: complete` (frontmatter fixed)\n\n**Areas created** (5):\n- [[Cloud Operations]] — Azure infra, networking, FinOps\n- [[DevOps Platform]] — K8s, ArgoCD, CI/CD\n- [[Security]] — InfoSec, RBAC, compliance\n- [[AI & Automation]] — PAI, Claude Code, BMAD\n- [[Personal Development]] — MBA, learning, health\n\nThe [[Projects.base]] MOC now populates automatically with the 3 active projects.\n\n> [!todo] Going forward\n> Link daily tasks to projects using `[[Project Name]]` wikilinks in task lines. The dashboards will surface them automatically.\n\n**M4: Topic MOCs** ==DONE==\nCreated 4 `.base` files in `00 - Maps of Content/`:\n- [[Kubernetes.base]] — filters `kubernetes`, `k8s`, `area/devops`, `argocd` tags\n- [[Azure.base]] — filters `azure`, `area/cloud-ops` tags\n- [[Security.base]] — filters `security`, `area/security` tags\n- [[AI-ML.base]] — filters `area/ai`, `claude-code`, `bmad` tags\n\nEach has two views: \"All Notes\" and \"Recent (Last 90 Days)\". These will populate as topic tags are added to notes.\n\n> [!note] DevOps MOC\n> Not created separately — covered by [[Kubernetes.base]] (which includes ArgoCD) and the [[DevOps Platform]] area note.\n\n**M5: Tag Taxonomy Seed**\nThe following tags are now seeded via the Area and Project notes created above:\n- `area/cloud-ops`, `area/devops`, `area/security`, `area/ai`, `area/personal`\n- `project/cafehyna`, `project/hypera`, `project/pai`, `project/cc`, `project/finops`\n- `azure`, `kubernetes`, `argocd`, `claude-code`, `bmad`\n\n> [!todo] Going forward\n> Add these tags when touching daily notes naturally. Don't backfill."
+    },
+    "timestamp": "2026-03-17T10:51:56.427Z"
+  },
+  {
+    "name": "Agent",
+    "input": {
+      "description": "Check task count agent results",
+      "prompt": "Return your final results — the markdown table of task counts by year.",
+      "resume": "af218c3e11b46bf40"
+    },
+    "timestamp": "2026-03-17T10:52:03.331Z"
+  },
+  {
+    "name": "Agent",
+    "input": {
+      "description": "Check project prefix agent results",
+      "prompt": "Return your final results — the ranked list of project prefixes.",
+      "resume": "a011d7780ea67f01f"
+    },
+    "timestamp": "2026-03-17T10:52:04.274Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 96,
+      "limit": 10
+    },
+    "timestamp": "2026-03-17T10:52:26.838Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "| Q5 | **Task shape analysis** — Analysis in progress (background agent counting tasks per year) | Tasks | In progress |",
+      "new_string": "| Q5 | **Task shape analysis** — See results below | Tasks | ==DONE== |\n\n> [!info]- Q5 Results: Task Distribution by Year (Daily Notes Only)\n>\n> | Year | Incomplete | Completed | Total | Completion % |\n> |------|-----------|-----------|-------|-------------|\n> | 2012 | 7 | 1 | 8 | 12.5% |\n> | 2013 | 27 | 6 | 33 | 18.2% |\n> | 2015 | 4 | 0 | 4 | 0% |\n> | 2017 | 1 | 0 | 1 | 0% |\n> | 2021 | 4 | 8 | 12 | 66.7% |\n> | 2022 | 8 | 2 | 10 | 20% |\n> | **2024** | **428** | **147** | **575** | **25.6%** |\n> | **2025** | **945** | **48** | **993** | **4.8%** |\n> | **2026** | **213** | **32** | **245** | **13.1%** |\n> | **TOTAL** | **1,716** | **244** | **1,960** | **12.4%** |\n>\n> **Key insight:** 80% of the backlog (1,373 tasks) is from 2024–2025. Pre-2024 is negligible (39 tasks). Task bankruptcy should target 2024–2025 specifically.\n>\n> **Project breakdown (2026, by prefix):**\n> - `hypera` — 89 tasks (57%), 67 active in last 30 days\n> - `cc` (Claude Code) — 19 tasks (12%)\n> - `pai` — 14 tasks (9%)\n> - `bmad` — 11 tasks (7%)\n> - `zsh` — 7 tasks (4%, all stale)\n> - Other — 16 tasks across 29 prefixes"
+    },
+    "timestamp": "2026-03-17T10:52:37.033Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 33,
+      "limit": 3
+    },
+    "timestamp": "2026-03-17T10:52:44.807Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "| PARA Structure | **D** | `01 - Projects` has 1 real file. `02 - Areas` and `03 - Resources` are placeholders only. |\n| Task Management | **D** | 11,911 incomplete tasks, 1,029 complete — **8.6% completion rate**. No review mechanism. |",
+      "new_string": "| PARA Structure | **D** → ==C+== | Was: 1 file + placeholders. Now: 4 projects, 5 areas, `Projects.base` active. `03 - Resources` still empty. |\n| Task Management | **D** | 1,716 incomplete in daily notes (80% from 2024–2025), 244 complete — **12.4% completion rate**. No review mechanism (weekly template now available). |"
+    },
+    "timestamp": "2026-03-17T10:52:52.457Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 36,
+      "limit": 4
+    },
+    "timestamp": "2026-03-17T10:52:57.444Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "| Tag System | **D+** | Only temporal tags (`y/YYYY`, `y/YYYY-MM`) actively used. Topic tags absent. |\n| MOCs / Navigation | **D** | 1 `Projects.base` file. No other Maps of Content. |\n| Storage Hygiene | **C** | ~900 MB orphaned worktree. 11,701 archive files. |",
+      "new_string": "| Tag System | **D+** → ==C== | Was: only temporal tags. Now: `area/*`, `project/*`, and topic tags seeded via 9 new notes. |\n| MOCs / Navigation | **D** → ==B-== | Was: 1 `.base` file. Now: 7 MOC files (`Projects.base`, `Tasks Dashboard`, `Daily Activity.base`, `Kubernetes.base`, `Azure.base`, `Security.base`, `AI-ML.base`) + health report. |\n| Storage Hygiene | **C** | **3.6 GB** orphaned worktree (larger than estimated). 11,701 archive files. |"
+    },
+    "timestamp": "2026-03-17T10:53:04.816Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 36,
+      "limit": 4
+    },
+    "timestamp": "2026-03-17T10:53:08.651Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "| Tag System | **D+** | Only temporal tags (`y/YYYY`, `y/YYYY-MM`) actively used. Topic tags absent. |\n| MOCs / Navigation | **D** | 1 `Projects.base` file. No other Maps of Content. |\n| Storage Hygiene | **C** | ~900 MB orphaned worktree. 11,701 archive files. |",
+      "new_string": "| Tag System | **D+** → ==C== | Was: only temporal tags. Now: `area/*`, `project/*`, and topic tags seeded via 9 new notes. |\n| MOCs / Navigation | **D** → ==B-== | Was: 1 `.base` file. Now: 7 MOC files + health report. |\n| Storage Hygiene | **C** | **3.6 GB** orphaned worktree (larger than estimated). 11,701 archive files. |"
+    },
+    "timestamp": "2026-03-17T10:53:14.794Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 210,
+      "limit": 25
+    },
+    "timestamp": "2026-03-17T10:53:18.939Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 234,
+      "limit": 20
+    },
+    "timestamp": "2026-03-17T10:53:22.514Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "| Incomplete tasks | 11,911 |\n| Completed tasks | 1,029 |\n| Task completion rate | 8.6% |\n| Archive files | 11,701 |\n| Orphaned worktree size | ~900 MB |\n\n---\n\n## 7. Next Steps\n\nIf you want to start implementing, the recommended order is:\n\n1. **Q1–Q5** (quick wins) — clean worktree, update memory bank, seed PARA\n2. **M2** (task dashboard) — get visibility into the backlog first\n3. **M1** (weekly review) — establish the review habit\n4. **S1** (task bankruptcy) — clear the backlog after you can see it\n5. **M3** (PARA activation) — create project/area notes from daily patterns\n6. **M4–M5** (MOCs + tags) — add findability layers",
+      "new_string": "| Incomplete tasks (daily notes) | 1,716 |\n| Completed tasks (daily notes) | 244 |\n| Task completion rate | 12.4% |\n| Task backlog (2024–2025) | 1,373 (80% of total) |\n| Active project prefixes | 34 unique (`hypera` = 57%) |\n| Archive files | 11,701 |\n| Orphaned worktree size | 3.6 GB |\n\n---\n\n## 7. Next Steps\n\n> [!success] Implemented on 2026-03-17\n> Q3, Q4, Q5, M1, M2, M3, M4, M5 — all done. See status markers above.\n\n**Remaining items:**\n\n1. **Q1** — Clean orphaned worktree (3.6 GB) — needs your confirmation to delete\n2. **Q2** — Update stale memory bank — manual review needed\n3. **S1** (task bankruptcy) — Data shows 1,373 tasks from 2024–2025 should be triaged. See [[Tasks Dashboard]] for the full backlog view\n4. **S2–S4** — Book template, progressive linking, clippings pipeline — lower priority, do when convenient"
+    },
+    "timestamp": "2026-03-17T10:53:42.384Z"
+  },
+  {
+    "name": "Read",
+    "input": {
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "offset": 219,
+      "limit": 1
+    },
+    "timestamp": "2026-03-17T10:53:48.366Z"
+  },
+  {
+    "name": "Edit",
+    "input": {
+      "replace_all": false,
+      "file_path": "/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/Vault Health Report 2026-03.md",
+      "old_string": "4. **Don't try to complete the 11,911 task backlog** — Most are silently abandoned. Triage and declare bankruptcy on anything older than 90 days.",
+      "new_string": "4. **Don't try to complete the 1,716 task backlog** — 80% is from 2024–2025 and likely stale. Declare bankruptcy on 2024 (428 tasks) and triage 2025 (945 tasks)."
+    },
+    "timestamp": "2026-03-17T10:53:54.186Z"
+  },
+  {
+    "name": "Bash",
+    "input": {
+      "command": "echo \"=== MOC Files ===\" && ls -1 \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/00 - Maps of Content/\" && echo \"\" && echo \"=== Project Files ===\" && ls -1 \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/01 - Projects/\" && echo \"\" && echo \"=== Area Files ===\" && ls -1 \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/02 - Areas/\" && echo \"\" && echo \"=== Templates ===\" && ls -1 \"/Users/juliano.barbosa/.obsidian/vaults/.obsidian-barbosa-0/99 - Meta/00 - Templates/daily/\"",
+      "description": "Final verification of all created files"
+    },
+    "timestamp": "2026-03-17T10:54:04.355Z"
+  }
+]

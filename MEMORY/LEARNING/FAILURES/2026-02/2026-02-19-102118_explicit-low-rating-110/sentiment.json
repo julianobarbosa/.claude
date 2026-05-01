@@ -1,0 +1,8 @@
+{
+  "rating": 1,
+  "summary": "Explicit low rating: 1/10",
+  "detailed_context": "Bob (Scrum Master): \"Got it, we're reviewing **Epic 1**. Let me check completion status...\"\n\n---\n\n**Verifying Epic 1 completion against `sprint-status.yaml`:**\n\nScanning all keys starting with `1-` (excluding `epic-1` and `epic-1-retrospective`):\n\n| Story | Status |\n|---|---|\n| `1-1-provision-network-infrastructure` | `in-progress` |\n| `1-2-provision-aks-clusters-for-dev-and-prd` | `review` |\n| `1-3-configure-namespace-isolation-with-rbac-and-quotas` | `done` ✅ |\n\n---\n\nAlice (Product Owner): \"Wa",
+  "session_id": "b811969e-3777-420f-99a5-ed75256293af",
+  "captured_at": "2026-02-19T18:21:18.945Z",
+  "transcript_source": "b811969e-3777-420f-99a5-ed75256293af.jsonl"
+}

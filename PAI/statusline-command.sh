@@ -1239,7 +1239,7 @@ bar=$(render_context_bar $bar_width $display_pct)
 printf "${CTX_SECONDARY}CONTEXT:${RESET} ${bar} ${pct_color}${display_pct}%%${RESET}\n"
 
 # Thin separator between context bar and files
-printf "${SLATE_600}%s${RESET}\n" "$SEP_DOT"
+# printf "${SLATE_600}%s${RESET}\n" "$SEP_DOT"
 
 # Context files line — parse @imports from CLAUDE.md (v5.0: static files loaded via @imports, not loadAtStartup)
 _ctx_files=()
@@ -1281,10 +1281,11 @@ if [ "$_ctx_count" -gt 0 ]; then
         _line_len=$((_line_len + _needed))
     done
 
-    printf "  ${SLATE_500}FILES(${_ctx_count}):${RESET} "
-    printf '%b\n' "${_output}"
+    # printf "  ${SLATE_500}FILES(${_ctx_count}):${RESET} "
+    # printf '%b\n' "${_output}"
+    :
 fi
-sep
+# sep
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LINE: ACCOUNT USAGE (Claude API rate limits — 5H and 7D windows)
@@ -1380,7 +1381,7 @@ if [ "${usage_no_data:-false}" != "true" ] && { [ "$usage_5h_int" -gt 0 ] || [ "
     [ -n "$extra_display" ] && printf " ${SLATE_600}│${RESET} ${USAGE_EXTRA}${extra_display}${RESET}"
     [ -n "$stale_suffix" ] && printf "${stale_suffix}"
     printf "\n"
-    sep
+    # sep  # disabled: LEARNING block hidden, avoid double-separator before QUOTE
 fi
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -1558,23 +1559,26 @@ CACHE_EOF
 
         [ "$latest_source" = "explicit" ] && src_label="EXP" || src_label="IMP"
 
-        printf "${LEARN_LABEL}LEARNING:${RESET} ${SLATE_600}│${RESET} "
-        printf "${LATEST_COLOR}${latest}${RESET}${SLATE_500}${src_label}${RESET} ${SLATE_600}│${RESET} "
-        printf "${SIGNAL_PERIOD}60m:${RESET} ${HOUR_COLOR}${hour_avg}${RESET} "
-        printf "${SIGNAL_PERIOD}1d:${RESET} ${TODAY_COLOR}${today_avg}${RESET} "
-        printf "${SIGNAL_PERIOD}1mo:${RESET} ${MONTH_COLOR}${month_avg}${RESET}\n"
+        # printf "${LEARN_LABEL}LEARNING:${RESET} ${SLATE_600}│${RESET} "
+        # printf "${LATEST_COLOR}${latest}${RESET}${SLATE_500}${src_label}${RESET} ${SLATE_600}│${RESET} "
+        # printf "${SIGNAL_PERIOD}60m:${RESET} ${HOUR_COLOR}${hour_avg}${RESET} "
+        # printf "${SIGNAL_PERIOD}1d:${RESET} ${TODAY_COLOR}${today_avg}${RESET} "
+        # printf "${SIGNAL_PERIOD}1mo:${RESET} ${MONTH_COLOR}${month_avg}${RESET}\n"
 
         # Sparklines (condensed, no blank lines — 60m + 1d + 1mo)
-        printf "   ${SLATE_600}├─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "60m:" "$hour_sparkline"
-        printf "   ${SLATE_600}├─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "1d:" "$day_sparkline"
-        printf "   ${SLATE_600}└─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "1mo:" "$month_sparkline"
+        # printf "   ${SLATE_600}├─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "60m:" "$hour_sparkline"
+        # printf "   ${SLATE_600}├─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "1d:" "$day_sparkline"
+        # printf "   ${SLATE_600}└─${RESET} ${SIGNAL_PERIOD}%-5s${RESET} %s\n" "1mo:" "$month_sparkline"
+        :
     else
-        printf "${LEARN_LABEL}LEARNING:${RESET}\n"
-        printf "  ${SLATE_500}No ratings yet${RESET}\n"
+        # printf "${LEARN_LABEL}LEARNING:${RESET}\n"
+        # printf "  ${SLATE_500}No ratings yet${RESET}\n"
+        :
     fi
 else
-    printf "${LEARN_LABEL}✿${RESET} ${LEARN_LABEL}LEARNING:${RESET}\n"
-    printf "  ${SLATE_500}No ratings yet${RESET}\n"
+    # printf "${LEARN_LABEL}✿${RESET} ${LEARN_LABEL}LEARNING:${RESET}\n"
+    # printf "  ${SLATE_500}No ratings yet${RESET}\n"
+    :
 fi
 
 # ═══════════════════════════════════════════════════════════════════════════════

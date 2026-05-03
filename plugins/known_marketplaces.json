@@ -5,6 +5,14 @@
       "url": "https://github.com/anthropics/claude-plugins-official.git"
     },
     "installLocation": "/Users/juliano.barbosa/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-05-02T11:09:07.426Z"
+    "lastUpdated": "2026-05-03T18:45:54.433Z"
+  },
+  "openai-codex": {
+    "source": {
+      "source": "github",
+      "repo": "openai/codex-plugin-cc"
+    },
+    "installLocation": "/Users/juliano.barbosa/.claude/plugins/marketplaces/openai-codex",
+    "lastUpdated": "2026-05-03T17:40:25.834Z"
   }
 }

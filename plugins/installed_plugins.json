@@ -4,31 +4,101 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/835814d0d339",
-        "version": "835814d0d339",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/efe6cc3d7cb5",
+        "version": "efe6cc3d7cb5",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-01T17:28:18.928Z",
+        "lastUpdated": "2026-05-03T15:47:38.018Z",
         "gitCommitSha": "0742692199b49af5c6c33cd68ee674fb2e679d50"
       }
     ],
     "pr-review-toolkit@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/835814d0d339",
-        "version": "835814d0d339",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/efe6cc3d7cb5",
+        "version": "efe6cc3d7cb5",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-01T17:28:18.931Z",
+        "lastUpdated": "2026-05-03T15:47:37.996Z",
         "gitCommitSha": "0742692199b49af5c6c33cd68ee674fb2e679d50"
       }
     ],
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/835814d0d339",
-        "version": "835814d0d339",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/efe6cc3d7cb5",
+        "version": "efe6cc3d7cb5",
         "installedAt": "2026-05-02T11:12:32.524Z",
-        "lastUpdated": "2026-05-02T11:12:32.524Z",
+        "lastUpdated": "2026-05-03T15:47:38.004Z",
         "gitCommitSha": "835814d0d33964c2793a2a7a8df5e3611b2ad26d"
+      }
+    ],
+    "codex@openai-codex": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/openai-codex/codex/1.0.4",
+        "version": "1.0.4",
+        "installedAt": "2026-05-03T17:40:29.423Z",
+        "lastUpdated": "2026-05-03T17:40:29.423Z",
+        "gitCommitSha": "807e03ac9d5aa23bc395fdec8c3767500a86b3cf"
+      }
+    ],
+    "skill-creator@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/skill-creator/efe6cc3d7cb5",
+        "version": "efe6cc3d7cb5",
+        "installedAt": "2026-05-03T17:51:31.705Z",
+        "lastUpdated": "2026-05-03T17:51:31.705Z",
+        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-03T17:51:31.753Z",
+        "lastUpdated": "2026-05-03T17:51:31.753Z",
+        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+      }
+    ],
+    "claude-code-setup@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-03T17:51:31.792Z",
+        "lastUpdated": "2026-05-03T17:51:31.792Z",
+        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+      }
+    ],
+    "microsoft-docs@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/microsoft-docs/0.3.1",
+        "version": "0.3.1",
+        "installedAt": "2026-05-03T17:51:34.134Z",
+        "lastUpdated": "2026-05-03T17:51:34.134Z",
+        "gitCommitSha": "6f80d0119e2c0ad7d1c5e4c7e9c687efed1dd044"
+      }
+    ],
+    "terraform@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/terraform/efe6cc3d7cb5",
+        "version": "efe6cc3d7cb5",
+        "installedAt": "2026-05-03T17:51:34.186Z",
+        "lastUpdated": "2026-05-03T17:51:34.186Z",
+        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+      }
+    ],
+    "azure@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/azure/1.1.27",
+        "version": "1.1.27",
+        "installedAt": "2026-05-03T17:51:37.187Z",
+        "lastUpdated": "2026-05-03T17:51:37.187Z",
+        "gitCommitSha": "eb84d07b5490334e1254a0f9519e9bc613c6406d"
       }
     ]
   }

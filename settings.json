@@ -373,13 +373,26 @@
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true
+    "commit-commands@claude-plugins-official": true,
+    "codex@openai-codex": true,
+    "skill-creator@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "microsoft-docs@claude-plugins-official": true,
+    "terraform@claude-plugins-official": true,
+    "azure@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
         "source": "git",
         "url": "https://github.com/anthropics/claude-plugins-official.git"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
       }
     }
   },
@@ -1350,10 +1363,10 @@
     "hooks": 24,
     "signals": 2,
     "files": 0,
-    "work": 2,
-    "sessions": 27,
+    "work": 3,
+    "sessions": 36,
     "research": 1,
-    "ratings": 29,
-    "updatedAt": "2026-05-02T11:01:38.226Z"
+    "ratings": 72,
+    "updatedAt": "2026-05-03T18:07:09.422Z"
   }
 }

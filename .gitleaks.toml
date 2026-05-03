@@ -1,0 +1,35 @@
+title = "PAI gitleaks config"
+
+# Inherit gitleaks' built-in ruleset (covers AWS, Azure, GCP, GitHub,
+# Stripe, Slack, generic high-entropy, etc.) and add allowlists below.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "PAI allowlist — paths that legitimately contain high-entropy strings"
+paths = [
+  # detect-secrets baseline holds SHA1-hashed secret fingerprints by design.
+  '''\.secrets\.baseline$''',
+  # Built Next.js bundles ship with chunk hashes that match generic-api-key.
+  '''^PAI/PULSE/Observability/out/''',
+  # Plugin caches are vendored verbatim from third-party repos.
+  '''^plugins/cache/''',
+  '''^plugins/marketplaces/''',
+  # Lock files are noise; their hashes aren't secrets.
+  '''bun\.lockb$''',
+  '''package-lock\.json$''',
+  # Conversation logs and observability streams — high false-positive rate;
+  # gitleaks pre-push --log-opts=--all still scans the whole history if you
+  # need a deeper sweep.
+  '''^(PAI/)?MEMORY/(OBSERVABILITY|LEARNING|RESEARCH|WORK|RELATIONSHIP|SKILLS|STATE)/''',
+  '''^history\.jsonl$''',
+]
+
+# Stopwords reduce false positives on common high-entropy-looking tokens
+# (commit SHAs, build hashes) without hiding real secrets.
+stopwords = [
+  "example",
+  "sample",
+  "placeholder",
+  "redacted",
+]

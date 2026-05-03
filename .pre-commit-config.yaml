@@ -1,0 +1,102 @@
+# pre-commit hooks for ~/.claude (PAI infrastructure)
+#
+# Layered defense against committed secrets:
+#   1. detect-secrets — entropy + plugin-based, baseline-aware (Yelp)
+#   2. gitleaks       — pattern-based, broad cloud-provider coverage
+#   3. pre-commit-hooks — basic hygiene + large-file guard
+#
+# Server-side GitHub secret scanning still runs on push as a final net.
+# Local hooks catch issues before history is rewritten — much cheaper than filter-repo.
+#
+# Install once:    pre-commit install --hook-type pre-commit --hook-type pre-push
+# Update pins:     pre-commit autoupdate
+# Run on full repo: pre-commit run --all-files
+# Initialize baseline (first time, after detect-secrets is added):
+#   detect-secrets scan --exclude-files '\.secrets\.baseline$' > .secrets.baseline
+
+minimum_pre_commit_version: "3.7.0"
+default_install_hook_types: [pre-commit, pre-push]
+fail_fast: false
+
+# Skip auto-generated and high-volume artifact paths from secret scans.
+# These are scanned by gitleaks on pre-push instead of every commit.
+# Both legacy (no prefix) and current (PAI/) MEMORY paths are covered.
+exclude: |
+  (?x)^(
+    (PAI/)?MEMORY/OBSERVABILITY/.*|
+    (PAI/)?MEMORY/LEARNING/.*|
+    (PAI/)?MEMORY/RESEARCH/.*|
+    (PAI/)?MEMORY/WORK/.*|
+    (PAI/)?MEMORY/RELATIONSHIP/.*|
+    (PAI/)?MEMORY/SKILLS/.*|
+    (PAI/)?MEMORY/STATE/.*|
+    PAI/PULSE/state/.*|
+    PAI/PULSE/logs/.*|
+    history\.jsonl|
+    plugins/cache/.*|
+    plugins/marketplaces/.*|
+    \.secrets\.baseline|
+    .*\.lock|
+    .*\.lockb|
+    bun\.lockb
+  )$
+
+repos:
+  # ── Secret scanning: detect-secrets (Yelp) ──────────────────────────────
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        name: detect-secrets (entropy + plugins)
+        args:
+          - --baseline
+          - .secrets.baseline
+        # detect-secrets respects the top-level `exclude` plus this baseline.
+        # Update baseline after a legitimate finding:
+        #   detect-secrets scan --baseline .secrets.baseline
+        #   detect-secrets audit .secrets.baseline
+
+  # ── Secret scanning: gitleaks (broad pattern coverage) ──────────────────
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+        name: gitleaks (pre-commit, staged diff)
+        # Default scans only the staged diff — fast on every commit.
+      - id: gitleaks
+        name: gitleaks (pre-push, full history)
+        stages: [pre-push]
+        args: [detect, --redact, --no-banner, --log-opts=--all]
+
+  # ── Basic hygiene + large-file guard ────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=512]
+        # Stops 1 MB transcript dumps like the one that introduced the leak.
+      - id: check-merge-conflict
+      - id: check-yaml
+        args: [--unsafe]   # PAI uses custom YAML tags in some configs
+      - id: check-json
+        exclude: |
+          (?x)^(
+            .*\.jsonc|
+            .*tsconfig.*\.json
+          )$
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # ── Optional deeper sweep on push only (slow, comprehensive) ────────────
+  # Uncomment to add Trufflehog as a belt-and-suspenders pre-push net.
+  # - repo: https://github.com/trufflesecurity/trufflehog
+  #   rev: v3.84.0
+  #   hooks:
+  #     - id: trufflehog
+  #       stages: [pre-push]
+  #       args: [git, "file://.", --since-commit=HEAD~50, --only-verified, --fail]

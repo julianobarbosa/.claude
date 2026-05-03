@@ -1,20 +1,19 @@
 # Beliefs
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > What you hold true about the world — axioms that shape your decisions.
 
 ## Core Beliefs
 
-- (sample) Most problems are systems problems, not people problems.
-- (sample) Iteration beats planning past a certain point of uncertainty.
-- (sample) Truth lives downstream of action — you learn what's real by trying things.
-- (sample) Compounding small habits outperforms heroic effort over a long enough horizon.
+- **Complexidade não é gratuita.** Toda escolha de stack carrega custo cognitivo, financeiro e operacional. A pergunta não é "isso resolve?" mas "isso resolve com o menor custo total ao longo do tempo?"
+- **Custo é critério de qualidade.** Sistema caro demais é tão quebrado quanto sistema fora do ar. Engenheiro que não consegue explicar o custo do que construiu não terminou o trabalho.
+- **Sem baseline, sem otimização.** Você não consegue mexer um número que não mede. Toda iniciativa de melhoria começa pela métrica que define sucesso, não pela solução que parece boa.
+- **Contexto local muda tudo.** Conteúdo técnico em pt-BR não é tradução do inglês — é contextualização. Preços, contratos, regulação, cultura de equipe e maturidade do mercado mudam o que funciona aqui.
+- **Práticas viralizam por caso real.** O que muda comportamento de engenharia é caso real com número, não whitepaper de fornecedor nem talk de pessoa que nunca operou em produção.
 
 ## Provisional Beliefs
 
-- (sample) Generalists win the next decade more than specialists do — provisional, watching this play out.
-- (sample) Most public discourse is a poor signal for what actually matters — provisional, could be wrong about the magnitude.
+- **FinOps vai virar disciplina padrão.** Como SRE virou disciplina no último decênio, FinOps vai virar nos próximos cinco anos. Provisório — dependo da maturidade empresarial brasileira pra confirmar.
+- **IA muda plataforma por automação de glue work.** O ganho real de IA em engenharia de plataforma não é gerar código mágico — é tirar o trabalho repetitivo de cola entre sistemas. Provisório, ainda observando.
 
 ---
 *Beliefs differ from opinions: a belief frames everything downstream. The DA uses these to understand *why* you react certain ways to suggestions. If a recommendation conflicts with a core belief, it won't land regardless of how logical it is.*

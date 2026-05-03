@@ -2,6 +2,20 @@
 
 Web scraping and crawling using WebFetch for simple pages, BrightData MCP for CAPTCHA/blocking, and Apify MCP for social media. Includes HTML parsing, rate limiting, and best practices for ethical scraping.
 
+## 🎯 Load Full PAI Context
+
+**Before starting any task with this skill, load complete PAI context:**
+
+`read ~/.claude/PAI/SKILL.md`
+
+This provides access to:
+- Complete contact list (Angela, Bunny, Saša, Greg, team members)
+- Stack preferences (TypeScript>Python, bun>npm, uv>pip)
+- Security rules and repository safety protocols
+- Response format requirements (structured emoji format)
+- Voice IDs for agent routing (ElevenLabs)
+- Personal preferences and operating instructions
+
 ## When to Activate This Skill
 - Scrape web pages
 - Extract data from websites

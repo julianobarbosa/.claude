@@ -6,9 +6,9 @@
 
 ## Active
 
-- **G0:** (sample) Ship MVP of Project X by 2026-Q2 — measurable: 100 daily active users.
-- **G1:** (sample) Publish 24 newsletter issues this year — measurable: one every other Sunday, no skipped weeks.
-- **G2:** (sample) Reach a sustainable monthly revenue target — measurable: $X MRR by end of year.
+- **G0:** Publicar 1 conteúdo por mês sobre FinOps até dezembro/2026 — mensurável: 12 publicações no ano, cadência mensal sem falhas.
+- **G1:** Entregar o ambiente de dev do CaféHyna na Hypera até Q2/2026 — mensurável: ambiente provisionado, validado e disponível para o time até 30/jun/2026.
+- **G2:** Entregar o dashboard de FinOps da Hypera até final de maio/2026 — mensurável: dashboard publicado e em uso pelo time até 31/mai/2026.
 
 ## Deferred / Ongoing
 

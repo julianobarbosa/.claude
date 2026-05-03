@@ -2,6 +2,20 @@
 
 Intelligent multi-layer content retrieval system for DIFFICULT content retrieval. Uses built-in tools (WebFetch, WebSearch), BrightData MCP (CAPTCHA handling, advanced scraping), and Apify MCP (RAG browser, Actor ecosystem). USE ONLY WHEN user indicates difficulty: 'can't get this', 'having trouble', 'site is blocking', 'protected site', 'keeps giving CAPTCHA', 'won't let me scrape'. DO NOT use for simple 'read this page' or 'get content from' without indication of difficulty.
 
+## 🎯 Load Full PAI Context
+
+**Before starting any task with this skill, load complete PAI context:**
+
+`read ~/.claude/PAI/SKILL.md`
+
+This provides access to:
+- Complete contact list (Angela, Bunny, Saša, Greg, team members)
+- Stack preferences (TypeScript>Python, bun>npm, uv>pip)
+- Security rules and repository safety protocols
+- Response format requirements (structured emoji format)
+- Voice IDs for agent routing (ElevenLabs)
+- Personal preferences and operating instructions
+
 ## When to Use This Skill
 
 **⚠️ IMPORTANT:** This skill is for CHALLENGING content retrieval only, not routine fetching.
@@ -387,12 +401,12 @@ mcp__Apify__apify-slash-rag-web-browser({
 
 ## 📁 Working Files → History Pattern
 
-**Working Directory:** `~/.claude/PAI/MEMORY/WORK/{current_work}/`
+**Working Directory:** `~/.claude/MEMORY/WORK/{current_work}/`
 
 **Getting Current Work Directory:**
-1. Read `~/.claude/`
+1. Read `~/.claude/MEMORY/STATE/current-work.json`
 2. Extract the `work_dir` value
-3. Use `~/.claude/PAI/MEMORY/WORK/{work_dir}/` for temporary artifacts
+3. Use `~/.claude/MEMORY/WORK/{work_dir}/` for temporary artifacts
 
 **Process:**
 
@@ -420,7 +434,7 @@ mcp__Apify__apify-slash-rag-web-browser({
 
 **Working files (in current work item directory):**
 ```
-~/.claude/PAI/MEMORY/WORK/20260111-172408_retrieve-react19-docs/
+~/.claude/MEMORY/WORK/20260111-172408_retrieve-react19-docs/
 ├── raw-content/
 │   ├── page1.md (Layer 2 output)
 │   ├── page2.md (Layer 2 output)

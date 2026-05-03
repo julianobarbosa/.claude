@@ -1,48 +1,46 @@
-# Principal TELOS — User
+# Principal TELOS — {{PRINCIPAL_FULL_NAME}}
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
-> Auto-generated from TELOS source files (MISSION, GOALS, PROBLEMS, STRATEGIES, NARRATIVES, CHALLENGES, etc). Do not edit manually — rerun `bun PAI/TOOLS/GenerateTelosSummary.ts` after updating any TELOS/*.md file.
-
-> This is a bootstrap scaffold. After running `/interview` and filling in TELOS/*.md files, regenerate this summary. The DA loads it at every session start — keeping it current is how the DA stays aligned with your actual goals and constraints.
+> Auto-generated from TELOS source files. Do not edit manually.
+> Generated: 2026-05-03T19:46:27.928Z | Sources: MISSION, GOALS, PROBLEMS, STRATEGIES, NARRATIVES, CHALLENGES, WRONG, TRAUMAS, MODELS
 
 ## Missions
 
-- (sample) M0: Help one million people make better decisions through accessible AI tools.
-- (sample) M1: Build infrastructure that lets individuals own their data and AI.
+- **M0**: ** Ajudo times a automatizar infraestrutura de forma simples e eficiente...
+- **M1**: ** Reduzir custo de cloud no Brasil através de FinOps acessível.
+- **M2**: ** (aspirational) Ver FinOps virar disciplina padrão em todo time de infra...
 
-## Active Goals
+## Active Goals (2026)
 
-- (sample) G0: Ship MVP of Project X by 2026-Q2 — measurable: 100 daily active users.
-- (sample) G1: Publish 24 newsletter issues this year — one every other Sunday.
+- **G0**: ** Publicar 1 conteúdo por mês sobre FinOps até dezembro/2026
+- **G1**: ** Entregar o ambiente de dev do CaféHyna na Hypera até Q2/2026
+
+_Deferred (full text in TELOS/GOALS.md): G2_
 
 ## Problems Being Solved
 
-- (sample) P0: Most knowledge workers spend more time fighting their tools than doing the work.
-- (sample) P1: High-quality information is unevenly distributed.
+- **P0**:  Empresas brasileiras (especialmente médias/grandes em setores regulados como farma, financeiro e varejo) desperdiçam parcela significativa do orçamento de cloud por falta de visibilidade, disciplina FinOps e cultura de accountability de custo entre engenharia e financeiro.
+- **P1**:  Conteúdo de FinOps de qualidade está majoritariamente em inglês e contexto americano (preços, EDPs, RIs/Savings Plans gringos). O praticante brasileiro precisa traduzir mentalmente e adaptar tudo, e o tema não amadurece como disciplina aqui por falta de referências locais em pt
+- **P2**:  Times de infra/DevOps adotam stacks complexas (Kubernetes, service mesh, IaC elaborada) por moda ou pressão de mercado, quando o problema se resolveria com ferramentas mais simples. O custo dessa complexidade é cognitivo, financeiro e operacional.
+- **P3**:  Em empresas reguladas (farma, financeiro), montar um ambiente de dev/teste leva semanas por travas de compliance, processos manuais e falta de plataforma. O dev fica ocioso esperando infra; o time perde velocidade.
 
 ## Strategies
 
-- (sample) S0: Ship the crappy version, then iterate in public.
-- (sample) S1: Write before building.
 
 ## Active Narratives
 
-- (sample) N0: I build tools that move power from institutions to individuals.
 
 ## Personal Challenges
 
-- (sample) C0: I start more projects than I finish.
-- (sample) C1: I avoid hard conversations until they get harder.
+- **C0**: ** Excesso de paralelismo. Tendo a tocar muitas frentes ao mesmo tempo (CaféHyna +...
+- **C1**: ** Conteúdo fica para depois. Trabalho da Hypera sempre tem urgência; conteúdo (G0) é...
+- **C2**: ** Perfeccionismo de publicação. Tenho conteúdo escrito ou começado e não publico porque...
+- **C3**: ** Diluição em ferramentas e setup. Otimizo o sistema (PAI, dotfiles, automações...
+- **C4**: ** Solo demais. Resolvo problemas sozinho mesmo quando alguém na rede (time, comunidade,...
+- **C5**: ** Compromissos sem capacidade. Aceito demandas/projetos rapidamente quando aparecem...
 
 ## Core Models
 
-- (sample) Systems thinking: most problems are structural, not personal.
-- (sample) Compounding: small consistent inputs beat heroic sprints over a long horizon.
 
 ## Context Filter
 
-When steering work, bias toward: (sample — what makes this user distinctive when the DA is picking between options. Examples: long-horizon thinking, building over consuming, open-source over proprietary, depth over breadth).
-
----
-*This file is the DA's compressed view of who you are and what you're trying to do. The Algorithm uses it to prioritize, the Advisor uses it to catch drift, and every skill uses it to tailor recommendations. Regenerate after every TELOS update so the summary stays in sync.*
+When steering work, bias toward: human flourishing, Human 3.0 transition, AI augmentation strategies, becoming one's full self, correct framing.

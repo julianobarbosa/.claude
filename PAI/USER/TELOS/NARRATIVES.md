@@ -1,12 +1,12 @@
 # Narratives
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > The stories you tell yourself (and others) about the world — the frames your work operates within.
 
-- **N0:** (sample) I build tools that move power from institutions to individuals.
-- **N1:** (sample) The next decade rewards people who can ship working software end-to-end without waiting for a team.
-- **N2:** (sample — conference one-liner) I'm a [your craft] who helps [your audience] do [your outcome].
+- **N0** *(missão comprimida):* Ajudo times a automatizar infraestrutura de forma simples e eficiente em custos. Linux, Kubernetes, IA + DevOps, Observabilidade, FinOps.
+- **N1** *(visão de mercado):* Engenharia de plataforma no Brasil não vai amadurecer copiando gringo — vai amadurecer quando tivermos referências locais resolvendo problemas locais com custo brasileiro.
+- **N2** *(one-liner de conferência):* Sou engenheiro de plataforma que ajuda times brasileiros a tirar custo da cloud sem virar refém de ferramenta complexa.
+- **N3** *(posicionamento de conteúdo):* Escrevo sobre FinOps em pt-BR pra fechar o gap entre o conhecimento gringo e a realidade de quem opera cloud no Brasil.
+- **N4** *(aspiração de referência):* Quero ser referência em DevOps + FinOps assistido por IA — plataforma onde custo é cidadão de primeira classe, não checklist do financeiro.
 
 ## Notes
 

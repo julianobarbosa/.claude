@@ -1,12 +1,15 @@
 # Problems Being Solved
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > External problems in the world you're working to address.
 
-- **P0:** (sample) Most knowledge workers spend more time fighting their tools than doing the work the tools are supposed to enable.
-- **P1:** (sample) High-quality information is unevenly distributed — people without insider networks pay a real cost in worse decisions.
-- **P2:** (sample) Personal data is held by platforms that don't share the user's incentives.
+- **P0:** Empresas brasileiras (especialmente médias/grandes em setores regulados como farma, financeiro e varejo) desperdiçam parcela significativa do orçamento de cloud por falta de visibilidade, disciplina FinOps e cultura de accountability de custo entre engenharia e financeiro.
+  - *Aponta para: M1 (FinOps Brasil) · G2 (Dashboard FinOps Hypera)*
+- **P1:** Conteúdo de FinOps de qualidade está majoritariamente em inglês e contexto americano (preços, EDPs, RIs/Savings Plans gringos). O praticante brasileiro precisa traduzir mentalmente e adaptar tudo, e o tema não amadurece como disciplina aqui por falta de referências locais em pt-BR.
+  - *Aponta para: G0 (1 conteúdo/mês de FinOps) · M2 (FinOps como disciplina padrão no Brasil)*
+- **P2:** Times de infra/DevOps adotam stacks complexas (Kubernetes, service mesh, IaC elaborada) por moda ou pressão de mercado, quando o problema se resolveria com ferramentas mais simples. O custo dessa complexidade é cognitivo, financeiro e operacional.
+  - *Aponta para: M0 (automatizar infra de forma simples)*
+- **P3:** Em empresas reguladas (farma, financeiro), montar um ambiente de dev/teste leva semanas por travas de compliance, processos manuais e falta de plataforma. O dev fica ocioso esperando infra; o time perde velocidade.
+  - *Aponta para: G1 (ambiente de dev do CaféHyna até Q2/2026)*
 
 ## Notes
 

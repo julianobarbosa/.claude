@@ -2,12 +2,26 @@
 
 Intelligent pattern selection for Fabric CLI. Automatically selects the right pattern from 242+ specialized prompts based on your intent - threat modeling, analysis, summarization, content creation, extraction, and more. USE WHEN processing content, analyzing data, creating summaries, threat modeling, or transforming text.
 
+## 🎯 Load Full PAI Context
+
+**Before starting any task with this skill, load complete PAI context:**
+
+`read ~/.claude/PAI/SKILL.md`
+
+This provides access to:
+- Complete contact list (Angela, Bunny, Saša, Greg, team members)
+- Stack preferences (TypeScript>Python, bun>npm, uv>pip)
+- Security rules and repository safety protocols
+- Response format requirements (structured emoji format)
+- Voice IDs for agent routing (ElevenLabs)
+- Personal preferences and operating instructions
+
 ## Primary Skill Reference
 
 **The Fabric skill has moved to a dedicated skill directory.**
 
-**Primary Skill:** `~/.claude/skills/Fabric/SKILL.md`
-**Patterns Location:** `~/.claude/skills/Fabric/Patterns/`
+**Primary Skill:** `~/.claude/skills/Utilities/Fabric/SKILL.md`
+**Patterns Location:** `~/.claude/skills/Utilities/Fabric/Patterns/`
 
 For pattern updates, use: "update fabric patterns" → invokes Fabric skill's UpdatePatterns workflow.
 
@@ -146,6 +160,7 @@ fabric "your text here" -p [pattern]
 - `summarize_pull-requests` - PR summary
 - `summarize_prompt` - Prompt summary
 - `youtube_summary` - YouTube video summary
+- `create_business_summary` - {YOUR_BUSINESS_NAME} summary
 - `create_cyber_summary` - Cybersecurity summary
 
 ### Extraction (30+ patterns)
@@ -257,7 +272,7 @@ fabric "your text here" -p [pattern]
 
 ## Updating Patterns
 
-Patterns are managed by the Fabric skill at `~/.claude/skills/Fabric/`.
+Patterns are managed by the Fabric skill at `~/.claude/skills/Utilities/Fabric/`.
 
 **To update patterns:**
 
@@ -266,7 +281,7 @@ Say: "update fabric patterns" → invokes Fabric skill's UpdatePatterns workflow
 **To see all available patterns:**
 
 ```bash
-ls ~/.claude/skills/Fabric/Patterns/
+ls ~/.claude/skills/Utilities/Fabric/Patterns/
 ```
 
 ## 💡 Usage Examples
@@ -341,10 +356,10 @@ cat wisdom.txt | fabric -p create_5_sentence_summary
 
 ## Supplementary Resources
 
-**Full Pattern List:** `ls ~/.claude/skills/Fabric/Patterns/`
-**Fabric Skill:** `~/.claude/skills/Fabric/SKILL.md`
+**Full Pattern List:** `ls ~/.claude/skills/Utilities/Fabric/Patterns/`
+**Fabric Skill:** `~/.claude/skills/Utilities/Fabric/SKILL.md`
 **Fabric Documentation:** https://github.com/danielmiessler/fabric
-**Pattern Templates:** See `~/.claude/skills/Fabric/Patterns/official_pattern_template/`
+**Pattern Templates:** See `~/.claude/skills/Utilities/Fabric/Patterns/official_pattern_template/`
 
 ## 🔑 Key Insight
 

@@ -1,12 +1,17 @@
 # Challenges
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > Personal patterns, friction points, and persistent failure modes you're aware of.
 
-- **C0:** (sample) I tend to start more projects than I finish — when something gets hard or boring, a new idea looks more attractive than completing the current one.
-- **C1:** (sample) I avoid hard conversations until they become harder than they needed to be.
-- **C2:** (sample) I optimize small surface-area tasks (inbox, tweaks) when I'm avoiding the one big thing that actually matters this week.
+- **C0:** Excesso de paralelismo. Tendo a tocar muitas frentes ao mesmo tempo (CaféHyna + Dashboard FinOps + conteúdo mensal + PAI). Quando o foco se dilui, todas avançam devagar; é mais eficiente concluir uma antes de abrir outra, mas resisto a fechar opções.
+- **C1:** Conteúdo fica para depois. Trabalho da Hypera sempre tem urgência; conteúdo (G0) é importante mas não urgente, então é o primeiro a ser sacrificado quando a semana aperta. Resultado: meta mensal vira trimestral.
+- **C2:** Perfeccionismo de publicação. Tenho conteúdo escrito ou começado e não publico porque "ainda falta uma coisinha". O custo é invisível (post não publicado não pesa hoje), mas composta no longo prazo — voz/audiência só cresce com cadência.
+- **C3:** Diluição em ferramentas e setup. Otimizo o sistema (PAI, dotfiles, automações pessoais) quando a tarefa real é difícil ou ambígua. O setup parece progresso, mas é procrastinação produtiva.
+- **C4:** Solo demais. Resolvo problemas sozinho mesmo quando alguém na rede (time, comunidade, peer) economizaria horas. Pedir ajuda parece custo social; tentar sozinho parece "responsabilidade".
+- **C5:** Compromissos sem capacidade. Aceito demandas/projetos rapidamente quando aparecem (interesse genuíno + dificuldade de dizer não), depois descubro que a semana não cabe. Resultado: ou entrego corrido, ou renegocio prazo.
+
+## Notes
+
+- Lista capturada via `/interview` em 2026-05-03 a partir de candidatos sugeridos pelo DA. Reler depois de algumas semanas e podar o que não bater de verdade — challenges falsas custam mais do que challenges ausentes.
 
 ## Notes
 

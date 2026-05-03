@@ -1,6 +1,6 @@
 # Standard Research Workflow
 
-**Mode:** 4 different researcher types, 1 query each | **Timeout:** 2 minutes
+**Mode:** 2 different researcher types, 1 query each | **Timeout:** 1 minute
 
 ## 🚨 CRITICAL: URL Verification Required
 
@@ -25,36 +25,22 @@ See `SKILL.md` for full URL Verification Protocol.
 Create ONE focused query optimized for each researcher's strengths:
 - **Claude**: Academic depth, detailed analysis, scholarly sources
 - **Gemini**: Multi-perspective synthesis, cross-domain connections
-- **Grok**: Contrarian, fact-based perspective; long-term truth over short-term trend; social/political nuance
-- **Perplexity**: Live-web retrieval with citations; fastest current-state snapshot
 
-### Step 2: Launch 4 Agents in Parallel (1 of each type)
+### Step 2: Launch 2 Agents in Parallel (1 of each type)
 
-**SINGLE message with 4 Task calls:**
+**SINGLE message with 2 Task calls:**
 
 ```typescript
 Task({
   subagent_type: "ClaudeResearcher",
   description: "[topic] analysis",
-  prompt: "Do ONE search for: [query optimized for depth/analysis]. Tag each finding with confidence: [HIGH], [MED], or [LOW]. Return findings immediately."
+  prompt: "Do ONE search for: [query optimized for depth/analysis]. Return findings immediately."
 })
 
 Task({
   subagent_type: "GeminiResearcher",
   description: "[topic] perspectives",
-  prompt: "Do ONE search for: [query optimized for breadth/perspectives]. Tag each finding with confidence: [HIGH], [MED], or [LOW]. Return findings immediately."
-})
-
-Task({
-  subagent_type: "GrokResearcher",
-  description: "[topic] contrarian take",
-  prompt: "Do ONE search for: [query optimized for contrarian/long-term-truth angle]. Prefer counter-consensus signal and durable facts over trending narrative. Tag each finding with confidence: [HIGH], [MED], or [LOW]. Return findings immediately."
-})
-
-Task({
-  subagent_type: "PerplexityResearcher",
-  description: "[topic] current state",
-  prompt: "Do ONE search for: [query optimized for live-web current state with citations]. Tag each finding with confidence: [HIGH], [MED], or [LOW]. Return findings immediately."
+  prompt: "Do ONE search for: [query optimized for breadth/perspectives]. Return findings immediately."
 })
 ```
 
@@ -63,38 +49,43 @@ Task({
 - Does ONE search
 - Returns immediately
 
-### Step 3: Cross-Check Synthesis
+### Step 3: Quick Synthesis
 
-Combine the two perspectives **with confidence scoring and conflict detection:**
+Combine the two perspectives:
+- Note where they agree (high confidence)
+- Note unique contributions from each
+- Flag any conflicts
 
-1. **Cross-reference findings:** Where both agents report the same fact → tag `[HIGH]`
-2. **Flag unique findings:** Findings from only one agent → tag `[MED]`
-3. **Detect contradictions:** Where agents disagree → tag `[CONFLICT]` with both sides
-4. **Quantitative check:** Any number cited by one agent — did the other agent's sources confirm it?
+### Step 4: VERIFY ALL URLs (MANDATORY)
 
-This adds ~2-3 seconds to synthesis (reading both results with conflict lens) — well within the <5s budget.
-
-### Step 4: Parallel URL Verification
-
-Agents now self-verify URLs before returning. For any remaining unverified URLs, batch-verify in parallel:
+**Before delivering results, verify EVERY URL:**
 
 ```bash
-# Parallel URL check (not sequential)
-for url in "${urls[@]}"; do curl -s -o /dev/null -w "%{http_code} $url\n" -L "$url" & done; wait
+# For each URL returned by agents:
+curl -s -o /dev/null -w "%{http_code}" -L "URL"
+# Must return 200
+
+# Then verify content:
+WebFetch(url, "Confirm article exists and summarize main point")
+# Must return actual content, not error
 ```
 
-**If URL fails:** Remove it. If the finding was `[HIGH]` based on cross-reference, downgrade to `[MED]`.
+**If URL fails verification:**
+- Remove it from results
+- Find alternative source via WebSearch
+- Verify the replacement URL
+- NEVER include unverified URLs
 
 ### Step 5: Return Results
 
 ```markdown
 📋 SUMMARY: Research on [topic]
-🔍 ANALYSIS: [Key findings with confidence tags: [HIGH] [MED] [LOW] [CONFLICT]]
-⚡ ACTIONS: 2 researchers × 1 query each + cross-check synthesis
+🔍 ANALYSIS: [Key findings from 2 perspectives]
+⚡ ACTIONS: 2 researchers × 1 query each
 ✅ RESULTS: [Synthesized answer]
-📊 STATUS: Standard mode - 2 agents, cross-checked
-📁 CAPTURE: [Key verified facts]
-➡️ NEXT: [Suggest extensive if CONFLICT items need resolution]
+📊 STATUS: Standard mode - 2 agents, 1 query each
+📁 CAPTURE: [Key facts]
+➡️ NEXT: [Suggest extensive if more depth needed]
 📖 STORY EXPLANATION: [5-8 numbered points]
 🎯 COMPLETED: Research on [topic] complete
 ```

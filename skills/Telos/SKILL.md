@@ -1,7 +1,6 @@
 ---
 name: Telos
-description: "Dual-context Life OS and organizational analysis skill. Personal TELOS: read and update goals, beliefs, wisdom, books, movies, challenges, narratives, strategies, mission, mental models, predictions, traumas, frames, lessons-learned, and wrong-beliefs stored in the USER/TELOS/ directory — all via the Update workflow with timestamped backups and change logging. Valid personal files: BELIEFS.md, BOOKS.md, CHALLENGES.md, FRAMES.md, GOALS.md, LEARNED.md, MISSION.md, MODELS.md, MOVIES.md, NARRATIVES.md, PREDICTIONS.md, PROBLEMS.md, PROJECTS.md, STRATEGIES.md, TELOS.md, TRAUMAS.md, WISDOM.md, WRONG.md. Project TELOS: analyze any directory of .md/.csv files to extract relationships, dependency chains (PROBLEMS→GOALS→STRATEGIES→PROJECTS), bottlenecks, goal alignment, and progress metrics; generate McKinsey-style professional reports (WriteReport) or n=24 slide-ready narrative bullet points (CreateNarrativePoints); build interactive Next.js 14 + shadcn/ui + Aceternity + Recharts + D3.js dashboards via up to 16 parallel engineers. Also: InterviewExtraction workflow for analyzing interview content. USE WHEN Telos, life goals, projects, dependencies, books, movies, beliefs, wisdom, update TELOS, narrative points, interview extraction, write report, McKinsey report, TELOS report, project analysis, dashboard, n=24, analyze interviews, create narrative, professional report, executive summary, dependency mapping, what am I wrong about, add prediction, update traumas, life frames, mental models."
-effort: medium
+description: Life OS and project analysis — goals, dependencies, beliefs, wisdom, books, movies, narrative points, interview extraction, McKinsey reports, and project dashboards. USE WHEN Telos, life goals, projects, dependencies, books, movies, beliefs, wisdom, update TELOS, narrative points, interview extraction, write report, McKinsey report, TELOS report, project analysis, dashboard, n=24.
 ---
 
 ## 🚨 MANDATORY: Voice Notification (REQUIRED BEFORE ANY ACTION)
@@ -10,7 +9,7 @@ effort: medium
 
 1. **Send voice notification**:
    ```bash
-   curl -s -X POST http://localhost:31337/notify \
+   curl -s -X POST http://localhost:8888/notify \
      -H "Content-Type: application/json" \
      -d '{"message": "Running the WORKFLOWNAME workflow in the Telos skill to ACTION"}' \
      > /dev/null 2>&1 &
@@ -100,7 +99,7 @@ User: "write a TELOS report for Acme Corp"
 
 ## Context Detection
 
-**How {DA_IDENTITY.NAME} determines which TELOS context:**
+**How {DAIDENTITY.NAME} determines which TELOS context:**
 
 | User Request | Context | Location |
 |--------------|---------|----------|
@@ -204,9 +203,9 @@ For any project directory, TELOS provides:
 ```bash
 # User specifies directory
 "Analyze ~/Cloud/Projects/TELOSAPP"
---> {DA_IDENTITY.NAME} scans for .md and .csv files anywhere in tree
+--> {DAIDENTITY.NAME} scans for .md and .csv files anywhere in tree
 
-# {DA_IDENTITY.NAME} automatically finds all .md and .csv files regardless of structure
+# {DAIDENTITY.NAME} automatically finds all .md and .csv files regardless of structure
 ```
 
 ## Analysis Workflow
@@ -216,7 +215,7 @@ For any project directory, TELOS provides:
 **Auto-detection:**
 - User mentions project name (TELOSAPP, Alma, etc.)
 - User provides path explicitly
-- {DA_IDENTITY.NAME} looks for common project locations
+- {DAIDENTITY.NAME} looks for common project locations
 
 ### Step 2: Scan Files
 
@@ -390,19 +389,3 @@ Engineer 10: Integration and testing
 **TELOS is {PRINCIPAL.NAME}'s life operating system AND project analysis framework. One skill, two powerful contexts.**
 
 **Remember:** Personal TELOS files live at `~/.claude/PAI/USER/TELOS/` (in the CORE USER directory)
-
-## Gotchas
-
-- **Telos data is personal and private.** Never include in public repos, skills, or outputs.
-- **Goals and dependencies change — always read current state before advising.** Don't rely on cached knowledge.
-- **Project dashboards pull from multiple sources.** Verify data freshness before presenting.
-
-## Execution Log
-
-After completing any workflow, append a single JSONL entry:
-
-```bash
-echo '{"ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","skill":"Telos","workflow":"WORKFLOW_USED","input":"8_WORD_SUMMARY","status":"ok|error","duration_s":SECONDS}' >> ~/.claude/PAI/MEMORY/SKILLS/execution.jsonl
-```
-
-Replace `WORKFLOW_USED` with the workflow executed, `8_WORD_SUMMARY` with a brief input description, and `SECONDS` with approximate wall-clock time. Log `status: "error"` if the workflow failed.

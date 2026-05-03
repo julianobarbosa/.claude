@@ -39,9 +39,10 @@ Iteration 3+: Continue until coverage gates pass
 
 All artifacts persist at:
 ```
-~/.claude/PAI/MEMORY/RESEARCH/{YYYY-MM}/{YYYY-MM-DD}_{topic-slug}/
+~/.claude/MEMORY/RESEARCH/{YYYY-MM}/{YYYY-MM-DD}_{topic-slug}/
 ```
 
+Read `~/.claude/MEMORY/STATE/current-work.json` for the active work directory.
 
 ---
 
@@ -72,10 +73,10 @@ IF continuation:
 
 **Select domain template pack:** Read `Templates/{domain}.md` based on user's topic. If no exact match, use the closest template or create entity categories dynamically.
 
-**Launch Extensive Research (7 explorers + 2 verifiers = 9 agents):**
+**Launch Extensive Research (9-12 agents):**
 
 ```
-Use the Extensive Research pattern (7 explorers + 2 verifiers):
+Use the Extensive Research pattern (3 researcher types x 3 threads):
 
 Angles should cover:
 - Market/domain overview and structure
@@ -232,7 +233,6 @@ Task({
   prompt: "Deep research on {entity_name} in the context of {domain}.
            Focus on: {template_fields_for_this_category}
            Context: {1-paragraph from LANDSCAPE.md about this entity's category}
-           Tag each finding with confidence: [HIGH], [MED], or [LOW].
            Return comprehensive findings organized by the template fields."
 })
 
@@ -240,16 +240,14 @@ Task({
   subagent_type: "PerplexityResearcher",
   prompt: "Find recent information about {entity_name}:
            latest news, funding, product launches, key hires, partnerships.
-           Focus on developments in the last 12 months.
-           Tag each finding with confidence: [HIGH], [MED], or [LOW]."
+           Focus on developments in the last 12 months."
 })
 
 Task({
   subagent_type: "GeminiResearcher",
   prompt: "Research {entity_name}: competitive position, strengths, weaknesses,
            how they compare to {list 2-3 related entities from ENTITIES.md}.
-           What makes them distinctive in the {domain} landscape?
-           Tag each finding with confidence: [HIGH], [MED], or [LOW]."
+           What makes them distinctive in the {domain} landscape?"
 })
 ```
 
@@ -257,27 +255,11 @@ Task({
 
 Save to: `vault/{Category}/{entity-slug}.md`
 
-**Add cross-links:** Reference related entities discovered during research using `Entity Name` links.
+**Add cross-links:** Reference related entities discovered during research using `[Entity Name](../Category/entity-slug.md)` links.
 
 **Update ENTITIES.md:** Mark entity as RESEARCHED, add profile link.
 
 **Update INDEX.md:** Add profile to navigation.
-
----
-
-### Step 4.5: Verify Entity Profile (Loop Mode Only)
-
-**In loop mode**, before the Progress Check, spot-check the entity profile for quantitative claims:
-
-1. Scan the profile for numbers, dates, and percentages
-2. Pick the 2-3 most important quantitative claims
-3. Verify each via a quick WebSearch or WebFetch
-4. Tag verified claims `[HIGH]`, unverifiable claims `[LOW]`
-5. Note any `[CONFLICT]` items where agents disagreed
-
-**In single-run mode**, skip this step — verification happens at the end when reviewing the full vault.
-
-**This adds ~10-15s per iteration but catches errors before they propagate into cross-linked profiles.**
 
 ---
 

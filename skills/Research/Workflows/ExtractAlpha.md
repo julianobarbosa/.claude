@@ -10,6 +10,12 @@ the most important and surprising insights without missing subtle but profound i
 
 # Extract Alpha - Deep Content Analysis
 
+## 🎯 Load Full PAI Context
+
+**Before starting any task with this skill, load complete PAI context:**
+
+`read ~/.claude/PAI/SKILL.md`
+
 ## Core Philosophy
 
 Based on Claude Shannon's information theory: **real information is what's different, not what's the same.**
@@ -121,13 +127,13 @@ Capture the subtle genius buried in the content.
 **Use the current work item directory for all working files during analysis:**
 
 ```bash
-~/.claude/PAI/MEMORY/WORK/{current_work}/
+~/.claude/MEMORY/WORK/{current_work}/
 ```
 
 **To get the current work directory:**
-1. Read `~/.claude/`
+1. Read `~/.claude/MEMORY/STATE/current-work.json`
 2. Extract the `work_dir` value
-3. Use `~/.claude/PAI/MEMORY/WORK/{work_dir}/` for temporary artifacts
+3. Use `~/.claude/MEMORY/WORK/{work_dir}/` for temporary artifacts
 
 **What goes in the work item directory:**
 - Raw transcripts from fabric -y
@@ -143,7 +149,7 @@ Capture the subtle genius buried in the content.
 
 **Example work item structure:**
 ```
-~/.claude/PAI/MEMORY/WORK/20260111-172408_extract-alpha-analysis/
+~/.claude/MEMORY/WORK/20260111-172408_extract-alpha-analysis/
 ├── raw-transcript.txt
 ├── deep thinking-notes.md
 ├── draft-insights.md
@@ -236,10 +242,10 @@ Create a README.md in the history directory documenting the research:
 
 ```bash
 # 1. Get current work directory
-WORK_DIR=$(jq -r '.work_dir' ~/.claude/PAI/MEMORY/STATE/current-work.json)
+WORK_DIR=$(jq -r '.work_dir' ~/.claude/MEMORY/STATE/current-work.json)
 
 # 2. Work in current work item directory
-cd ~/.claude/PAI/MEMORY/WORK/${WORK_DIR}/
+cd ~/.claude/MEMORY/WORK/${WORK_DIR}/
 
 # 3. Extract content to work item directory
 fabric -y "YOUTUBE_URL" > raw-transcript.txt
@@ -371,15 +377,14 @@ fabric -y "https://youtu.be/VIDEO_ID"
 When this skill activates, PAI should:
 
 1. **Load content** via appropriate method (fabric -y, WebFetch, Read, or paste)
-2. **Get current work directory** - Read `~/.claude/` for `work_dir`
-3. **Use work item directory** - Work in `~/.claude/PAI/MEMORY/WORK/{work_dir}/`
+2. **Get current work directory** - Read `~/.claude/MEMORY/STATE/current-work.json` for `work_dir`
+3. **Use work item directory** - Work in `~/.claude/MEMORY/WORK/{work_dir}/`
 4. **Engage deep thinking mode** - Deep extended thinking through all 10 dimensions
 5. **Extract insights** - Extract 24-30 highest-alpha ideas focusing on low-probability brilliant insights
 6. **Save to history** - Final outputs to `~/.claude/History/research/YYYY-MM-DD_description/`
 7. **Verify capture** - Ensure hooks captured or manually save all files
 8. **Output simple list** - Unformatted markdown, Paul Graham style, 8-12 words each
 9. **Prioritize surprise** - Novel ideas over obvious takeaways
-10. **Optional verification** - For insights with quantitative claims, spot-check via `Workflows/Verify.md` Tier 2
 
 ### Internal Prompt Pattern
 

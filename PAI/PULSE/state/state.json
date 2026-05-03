@@ -7,7 +7,7 @@
       "consecutiveFailures": 3
     },
     "healthcheck": {
-      "lastRun": 1777834547041,
+      "lastRun": 1777839357505,
       "lastResult": "ok",
       "consecutiveFailures": 0
     },
@@ -17,7 +17,7 @@
       "consecutiveFailures": 3
     },
     "cost-aggregation": {
-      "lastRun": 1777715131708,
+      "lastRun": 1777839357478,
       "lastResult": "ok",
       "consecutiveFailures": 0
     },
@@ -27,7 +27,7 @@
       "consecutiveFailures": 3
     },
     "cost-tracker": {
-      "lastRun": 1777712437537,
+      "lastRun": 1777838463643,
       "lastResult": "ok",
       "consecutiveFailures": 0
     },
@@ -42,5 +42,5 @@
       "consecutiveFailures": 0
     }
   },
-  "startedAt": 1777834184418
+  "startedAt": 1777834737132
 }

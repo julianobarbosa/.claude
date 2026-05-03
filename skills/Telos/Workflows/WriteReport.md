@@ -151,7 +151,7 @@ If artifacts don't exist, run the assessment workflow first (CreateNarrativePoin
 
 ```bash
 # Copy template to output directory (if not already done)
-cp -r ~/.claude/skills/_TELOS/report-template/* {output_dir}/
+cp -r ~/.claude/skills/Telos/ReportTemplate/* {output_dir}/
 
 # Install dependencies
 cd {output_dir} && bun install
@@ -237,11 +237,11 @@ When {PRINCIPAL.NAME} edits source files and says "regenerate the report":
 ### 1. Cover Page
 - Confidential classification at top (Heliotrope Caps, red)
 - **Centered content block:**
-  - **UL logo** (125x125, left-justified with -ml-4) - `/ul-icon.png`
+  - **{YOUR_LOGO}** (125x125, left-justified with -ml-4) - `/your-logo.png`
   - **"TELOS Assessment"** label (Heliotrope Caps, primary blue, tracking-[0.25em])
   - Report title (Advocate Wide font)
   - "Prepared for {Client Name}" - **CUSTOMIZE per engagement**
-- Footer: Date + "<ORG_NAME> Consulting"
+- Footer: Date + "{YOUR_BUSINESS_NAME} Consulting"
 
 ### 2. Executive Summary (1 page)
 - **Methodology exhibit** - Interview count and roles interviewed (by role, not by name)
@@ -298,7 +298,7 @@ When {PRINCIPAL.NAME} edits source files and says "regenerate the report":
 
 ### Typography (Practical Typography Fonts)
 
-**CRITICAL: Use Matthew Butterick's Practical Typography fonts (see font source below)**
+**CRITICAL: Use Matthew Butterick's Practical Typography fonts from `${PROJECTS_DIR}/YourSite/public/fonts/`**
 
 The report-template includes these fonts in `public/fonts/`. The font stack is:
 
@@ -325,7 +325,7 @@ The report-template includes these fonts in `public/fonts/`. The font stack is:
 
 ```
 public/
-├── ul-icon.png                    # UL connected nodes logo (blue)
+├── your-logo.png                  # Your brand logo
 ```
 
 **Font Files Required:**
@@ -442,11 +442,11 @@ The workflow generates a complete Next.js app:
 ```bash
 # User: "Create a TELOS report for Acme Corp"
 
-# Step 1: {DA_IDENTITY.NAME} runs TELOS analysis on source directory
-# Step 2: {DA_IDENTITY.NAME} executes CreateNarrativePoints workflow
-# Step 3: {DA_IDENTITY.NAME} copies report-template to output directory
-# Step 4: {DA_IDENTITY.NAME} generates report-data.ts with content
-# Step 5: {DA_IDENTITY.NAME} runs bun install && bun dev
+# Step 1: {DAIDENTITY.NAME} runs TELOS analysis on source directory
+# Step 2: {DAIDENTITY.NAME} executes CreateNarrativePoints workflow
+# Step 3: {DAIDENTITY.NAME} copies report-template to output directory
+# Step 4: {DAIDENTITY.NAME} generates report-data.ts with content
+# Step 5: {DAIDENTITY.NAME} runs bun install && bun dev
 
 # To view:
 cd {output_dir} && bun dev
@@ -463,7 +463,7 @@ cd {output_dir} && bun dev
 **CRITICAL: The report template lives at:**
 
 ```
-~/.claude/skills/_TELOS/report-template/
+~/.claude/skills/Telos/ReportTemplate/
 ```
 
 This template includes:
@@ -490,7 +490,7 @@ When generating a report:
 - CreateNarrativePoints MUST run first to generate narrative content
 
 **Font Source:**
-- Fonts should be sourced from Practical Typography or your project's font directory
+- Fonts originally from `${PROJECTS_DIR}/YourSite/public/fonts/`
 - Already included in report-template for convenience
 
 **Works with:**
@@ -511,7 +511,7 @@ When generating a report:
 
 Before finalizing the report:
 
-- [ ] UL logo displays correctly (125x125, left-justified)
+- [ ] Logo displays correctly (125x125, left-justified)
 - [ ] "TELOS Assessment" label visible above title
 - [ ] Cover page has correct client name and date
 - [ ] Cover title uses Advocate Wide font
@@ -608,11 +608,12 @@ Before board presentation:
 
 **To update fonts:**
 ```bash
-# Copy latest fonts from ULSite
-cp ~/Projects/[your-site]/public/fonts/*.woff2 ~/.claude/skills/Telos/ReportTemplate/public/fonts/
+# Copy your custom fonts to this directory
+# Copy your custom fonts to the report template fonts directory
 ```
 
 **To update template components:**
-Edit files in `~/.claude/skills/_TELOS/report-template/components/`
+Edit files in `~/.claude/skills/Telos/ReportTemplate/components/`
 
 **To change color scheme:**
+Edit CSS custom properties in `~/.claude/skills/Telos/ReportTemplate/app/globals.css`

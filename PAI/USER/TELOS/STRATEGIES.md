@@ -1,12 +1,17 @@
 # Strategies
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > How you approach your missions, goals, and problems — the playbook.
 
-- **S0:** (sample) Ship the crappy version, then iterate in public — speed of feedback beats polish in the first 80%.
-- **S1:** (sample) Write before building — if I can't explain it in plain prose, the design isn't ready.
-- **S2:** (sample) Default to open — open-source the tools, share the work, let distribution come from usefulness.
+- **S0:** Simples > Sofisticado (sempre). Default para a ferramenta mais simples que resolve. Kubernetes só quando há razão real; Terraform só quando IaC paga; service mesh só com tráfego que justifique. Complexidade precisa ganhar o direito de existir.
+  - *Aponta para: M0 · P2*
+- **S1:** Conteúdo em pt-BR primeiro. Escrevo sobre FinOps e infra em português brasileiro, com contexto local (preços BRL, contratos AWS/Azure Brasil, realidade de empresas reguladas). Inglês é tradução depois, não direção primária.
+  - *Aponta para: G0 · P1 · M2*
+- **S2:** Custo é feature, não bug. Trato custo como requisito de design desde o dia 1, junto com confiabilidade e segurança. Toda arquitetura que proponho vem com unit economics; toda automação vem com estimativa de gasto.
+  - *Aponta para: M0 · M1 · G2 · P0*
+- **S3:** Dogfood antes de prescrever. Uso o que recomendo no meu próprio trabalho antes de levar pro time/cliente. PAI no fluxo pessoal, automações no meu dia, FinOps na minha conta — só depois vira pauta de palestra/post.
+  - *Aponta para: M0 · G0 (conteúdo vem de prática real, não teoria)*
+- **S4:** Métricas antes de soluções. Começo qualquer iniciativa de FinOps/observabilidade pelo "qual número estamos tentando mexer e como medimos hoje". Sem baseline, qualquer solução parece boa.
+  - *Aponta para: G2 · P0 · M1*
 
 ## Notes
 

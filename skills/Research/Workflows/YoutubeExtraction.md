@@ -2,6 +2,20 @@
 
 Extract content from YouTube videos using Fabric CLI. Automatically downloads, transcribes, and processes video content with optional pattern application for analysis and summarization.
 
+## 🎯 Load Full PAI Context
+
+**Before starting any task with this skill, load complete PAI context:**
+
+`read ~/.claude/PAI/SKILL.md`
+
+This provides access to:
+- Complete contact list (Angela, Bunny, Saša, Greg, team members)
+- Stack preferences (TypeScript>Python, bun>npm, uv>pip)
+- Security rules and repository safety protocols
+- Response format requirements (structured emoji format)
+- Voice IDs for agent routing (ElevenLabs)
+- Personal preferences and operating instructions
+
 ## When to Activate This Skill
 - Extract content from YouTube video
 - Get YouTube transcript

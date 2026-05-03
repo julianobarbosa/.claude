@@ -48,23 +48,3 @@ WebFetch(url, "Confirm this article exists and summarize its main point")
 | URL content actually supports the claim | URL exists but content doesn't match |
 
 **Broken links destroy credibility. Verify EVERY URL.**
-
-## Parallel Verification (for multi-agent modes)
-
-When verifying many URLs (Extensive mode can produce 10-20+), use parallel batch curl instead of sequential:
-
-```bash
-# Parallel batch verification — all URLs checked simultaneously
-urls=("url1" "url2" "url3" ...)
-for url in "${urls[@]}"; do
-  curl -s -o /dev/null -w "%{http_code} $url\n" -L "$url" &
-done
-wait
-# Parse results: any non-200 → remove from output
-```
-
-**Fallback:** If parallel verification fails (e.g., too many concurrent connections), fall back to sequential.
-
-## Agent Self-Verification
-
-As of v5.1, all researcher agents include a Self-Verification section that requires URL verification before returning results. This means most URLs should already be verified when the orchestrator receives them. The orchestrator's batch check is a safety net, not the primary verification layer.

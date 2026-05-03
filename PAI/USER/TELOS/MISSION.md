@@ -1,12 +1,11 @@
 # Mission
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > What you're here to do — the most durable north star.
 
-- **M0:** (sample) Help one million people make better decisions through accessible AI tools.
-- **M1:** (sample) Build infrastructure that lets individuals own their data and AI.
-- **M2:** (sample — aspirational, optional) Leave behind work that's still useful 50 years after I'm gone.
+- **M0:** Ajudo times a automatizar infraestrutura de forma simples e eficiente em custos.
+  - Linux · Kubernetes · IA + DevOps · Observabilidade · FinOps
+- **M1:** Reduzir custo de cloud no Brasil através de FinOps acessível.
+- **M2:** (aspirational) Ver FinOps virar disciplina padrão em todo time de infra brasileiro.
 
 ## Notes
 

@@ -1,13 +1,17 @@
 # Wisdom
 
-> 🎯 SAMPLE TEMPLATE — This file shows the SHAPE of your TELOS data. Every entry below is a placeholder. Run `/interview` (or talk to your DA) to replace these samples with your actual mission, goals, beliefs, etc. Pulse will show populated entries here once you run the interview.
-
 > Hard-won insights you keep coming back to — the distilled output of years of living.
 
-- (sample) The thing you're avoiding is usually the thing that would move the needle.
-- (sample) Slow is smooth, smooth is fast — rushing the foundation costs more time than it saves.
-- (sample) Most "decisions" are actually defaults you haven't noticed.
-- (sample) If you can't explain it to a smart twelve-year-old, you don't understand it well enough yet.
+- Custo silencioso é o mais perigoso — bug grita, fatura sussurra.
+- Se ninguém olha o dashboard, o dashboard não existe.
+- Toda automação que ninguém entende vira tech debt na primeira falha.
+- A primeira pergunta de FinOps não é "quanto custa", é "quem decide".
+- Cloud cara não é problema técnico — é problema organizacional travestido de técnico.
+- Métrica sem dono é métrica que ninguém defende.
+- Plataforma boa some — quando o time para de notar, é porque está funcionando.
+- Documentação vai existir; a única escolha é se você escreve ou se alguém adivinha depois.
+- Simples no design, sofisticado na operação — a ordem importa, o inverso quase nunca funciona.
+- Conteúdo técnico envelhece bem quando explica o porquê, mal quando lista o como.
 
 ## Format
 

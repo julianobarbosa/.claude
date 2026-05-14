@@ -19,8 +19,19 @@
  */
 
 import { spawn, spawnSync } from "bun";
-import { getIdentity, getStartupCatchphrase } from "../../../.claude/hooks/lib/identity";
-import { existsSync, readFileSync, writeFileSync, readdirSync, symlinkSync, unlinkSync, lstatSync } from "fs";
+import {
+  getIdentity,
+  getStartupCatchphrase,
+} from "../../../.claude/hooks/lib/identity";
+import {
+  existsSync,
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+  symlinkSync,
+  unlinkSync,
+  lstatSync,
+} from "fs";
 import { homedir } from "os";
 import { join, basename } from "path";
 
@@ -73,7 +84,6 @@ function log(message: string, emoji = "") {
   console.log(emoji ? `${emoji} ${message}` : message);
 }
 
-
 function error(message: string) {
   console.error(`❌ ${message}`);
   process.exit(1);
@@ -121,7 +131,11 @@ function notifyVoice(message: string) {
 
 function displayBanner() {
   if (existsSync(BANNER_SCRIPT)) {
-    spawnSync(["bun", BANNER_SCRIPT], { stdin: "inherit", stdout: "inherit", stderr: "inherit" });
+    spawnSync(["bun", BANNER_SCRIPT], {
+      stdin: "inherit",
+      stdout: "inherit",
+      stderr: "inherit",
+    });
   }
 }
 
@@ -145,7 +159,7 @@ function compareVersions(a: string, b: string): number {
 async function getLatestVersion(): Promise<string | null> {
   try {
     const response = await fetch(
-      "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest"
+      "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest",
     );
     const version = (await response.text()).trim();
     if (/^[0-9]+\.[0-9]+\.[0-9]+/.test(version)) {
@@ -182,7 +196,9 @@ function getCurrentProfile(): string | null {
     if (stats.isSymbolicLink()) {
       const target = readFileSync(ACTIVE_MCP, "utf-8");
       // For symlink, we need the real target name
-      const realpath = Bun.spawnSync(["readlink", ACTIVE_MCP]).stdout.toString().trim();
+      const realpath = Bun.spawnSync(["readlink", ACTIVE_MCP])
+        .stdout.toString()
+        .trim();
       return basename(realpath).replace(".mcp.json", "");
     }
     return "custom";
@@ -261,7 +277,10 @@ function setMcpCustom(mcpNames: string[]) {
 
   const serverCount = Object.keys((merged as any).mcpServers || {}).length;
   if (serverCount > 0) {
-    log(`Configured ${serverCount} MCP server(s): ${mcpNames.join(", ")}`, "✅");
+    log(
+      `Configured ${serverCount} MCP server(s): ${mcpNames.join(", ")}`,
+      "✅",
+    );
   }
 }
 
@@ -285,11 +304,15 @@ function findWallpaper(query: string): string | null {
   const queryLower = query.toLowerCase();
 
   // Exact match (without extension)
-  const exact = wallpapers.find((w) => getWallpaperName(w).toLowerCase() === queryLower);
+  const exact = wallpapers.find(
+    (w) => getWallpaperName(w).toLowerCase() === queryLower,
+  );
   if (exact) return exact;
 
   // Partial match
-  const partial = wallpapers.find((w) => getWallpaperName(w).toLowerCase().includes(queryLower));
+  const partial = wallpapers.find((w) =>
+    getWallpaperName(w).toLowerCase().includes(queryLower),
+  );
   if (partial) return partial;
 
   // Fuzzy: any word match
@@ -312,7 +335,12 @@ function setWallpaper(filename: string): boolean {
 
   // Set Kitty background
   try {
-    const kittyResult = spawnSync(["kitty", "@", "set-background-image", fullPath]);
+    const kittyResult = spawnSync([
+      "kitty",
+      "@",
+      "set-background-image",
+      fullPath,
+    ]);
     if (kittyResult.exitCode === 0) {
       log("Kitty background set", "✅");
     } else {
@@ -348,7 +376,12 @@ function cmdWallpaper(args: string[]) {
   }
 
   // No args or --list: show available wallpapers
-  if (args.length === 0 || args[0] === "--list" || args[0] === "-l" || args[0] === "list") {
+  if (
+    args.length === 0 ||
+    args[0] === "--list" ||
+    args[0] === "-l" ||
+    args[0] === "list"
+  ) {
     log("Available wallpapers:", "🖼️");
     console.log();
     wallpapers.forEach((w, i) => {
@@ -383,12 +416,18 @@ function cmdWallpaper(args: string[]) {
   }
 }
 
-
 // ============================================================================
 // Commands
 // ============================================================================
 
-async function cmdLaunch(options: { mcp?: string; resume?: boolean; skipPerms?: boolean; local?: boolean; systemPrompt?: string }) {
+async function cmdLaunch(options: {
+  agents?: string;
+  mcp?: string;
+  resume?: boolean;
+  skipPerms?: boolean;
+  local?: boolean;
+  systemPrompt?: string;
+}) {
   // CLAUDE.md is now static — no build step needed.
   // Algorithm spec is loaded on-demand when Algorithm mode triggers.
   // (InstantiatePAI.ts is retired — kept for reference only)
@@ -398,7 +437,8 @@ async function cmdLaunch(options: { mcp?: string; resume?: boolean; skipPerms?: 
 
   // PAI System Prompt — constitutional rules appended to Claude Code's system prompt
   // These rules get highest instruction authority (system prompt layer > CLAUDE.md layer)
-  const systemPromptFile = options.systemPrompt ?? join(CLAUDE_DIR, "PAI", "PAI_SYSTEM_PROMPT.md");
+  const systemPromptFile =
+    options.systemPrompt ?? join(CLAUDE_DIR, "PAI", "PAI_SYSTEM_PROMPT.md");
   if (existsSync(systemPromptFile)) {
     args.push("--append-system-prompt-file", systemPromptFile);
   }
@@ -407,6 +447,21 @@ async function cmdLaunch(options: { mcp?: string; resume?: boolean; skipPerms?: 
   if (options.mcp) {
     const mcpNames = options.mcp.split(",").map((s) => s.trim());
     setMcpCustom(mcpNames);
+  }
+
+  // Agent configuration — passed through to claude as `--agents <json>`.
+  // Convenience: a leading `@` reads the file at that path and forwards its
+  // contents. Upstream `claude --agents` itself only accepts a JSON string.
+  if (options.agents) {
+    let agentsValue = options.agents;
+    if (agentsValue.startsWith("@")) {
+      const agentsPath = agentsValue.slice(1);
+      if (!existsSync(agentsPath)) {
+        error(`Agents file not found: ${agentsPath}`);
+      }
+      agentsValue = readFileSync(agentsPath, "utf-8").trim();
+    }
+    args.push("--agents", agentsValue);
   }
 
   // Add flags
@@ -420,6 +475,11 @@ async function cmdLaunch(options: { mcp?: string; resume?: boolean; skipPerms?: 
   // Change to PAI directory unless --local flag is set
   if (!options.local) {
     process.chdir(CLAUDE_DIR);
+  }
+
+  // Add flags
+  if (options.resume) {
+    args.push("--resume");
   }
 
   // Voice notification (using focused marker for calmer tone).
@@ -477,7 +537,11 @@ async function cmdUpdate() {
 
   // Step 2: Update Claude Code
   log("Step 2/2: Installing latest Claude Code...", "🤖");
-  const claudeResult = spawnSync(["bash", "-c", "curl -fsSL https://claude.ai/install.sh | bash"]);
+  const claudeResult = spawnSync([
+    "bash",
+    "-c",
+    "curl -fsSL https://claude.ai/install.sh | bash",
+  ]);
   if (claudeResult.exitCode !== 0) {
     error("Claude Code installation failed");
   }
@@ -573,7 +637,10 @@ async function cmdPrompt(prompt: string) {
 
   process.chdir(CLAUDE_DIR);
 
-  const env: Record<string, string> = { ...process.env } as Record<string, string>;
+  const env: Record<string, string> = { ...process.env } as Record<
+    string,
+    string
+  >;
   delete env.ANTHROPIC_API_KEY;
   const proc = spawn(args, {
     stdio: ["inherit", "inherit", "inherit"],
@@ -592,6 +659,7 @@ USAGE:
   k                        Launch Claude (no MCPs, max performance)
   k -m <mcp>               Launch with specific MCP(s)
   k -m bd,ap               Launch with multiple MCPs
+  k -a, --agents <value>   Pass agent config to claude (JSON string or @path/to/agents.json)
   k -r, --resume           Resume last session
   k -s, --system-prompt    System prompt file to append (default: PAI_SYSTEM_PROMPT.md)
   k -l, --local            Stay in current directory (don't cd to ~/.claude)
@@ -645,6 +713,7 @@ async function main() {
 
   // Parse arguments
   let mcp: string | undefined;
+  let agents: string | undefined;
   let resume = false;
   let skipPerms = true;
   let local = false;
@@ -663,11 +732,23 @@ async function main() {
       case "--mcp":
         const nextArg = args[i + 1];
         // -m with no arg, or -m 0, or -m "" means no MCPs
-        if (!nextArg || nextArg.startsWith("-") || nextArg === "0" || nextArg === "") {
+        if (
+          !nextArg ||
+          nextArg.startsWith("-") ||
+          nextArg === "0" ||
+          nextArg === ""
+        ) {
           mcp = "none";
           if (nextArg === "0" || nextArg === "") i++;
         } else {
           mcp = args[++i];
+        }
+        break;
+      case "-a":
+      case "--agents":
+        agents = args[++i];
+        if (!agents || agents.startsWith("-")) {
+          error("Usage: k -a <json-or-@path>");
         }
         break;
       case "-r":
@@ -751,7 +832,7 @@ async function main() {
       break;
     case "prompt":
       if (!promptText) {
-        error("Usage: k prompt \"your prompt here\"");
+        error('Usage: k prompt "your prompt here"');
       }
       await cmdPrompt(promptText);
       break;
@@ -760,7 +841,7 @@ async function main() {
       break;
     default:
       // Launch with options
-      await cmdLaunch({ mcp, resume, skipPerms, local, systemPrompt });
+      await cmdLaunch({ agents, mcp, resume, skipPerms, local, systemPrompt });
   }
 }
 

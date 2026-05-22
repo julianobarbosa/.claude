@@ -424,9 +424,11 @@ async function cmdLaunch(options: {
   agents?: string;
   mcp?: string;
   resume?: boolean;
+  resumeSession?: string;
   skipPerms?: boolean;
   local?: boolean;
   systemPrompt?: string;
+  worktree?: string;
 }) {
   // CLAUDE.md is now static — no build step needed.
   // Algorithm spec is loaded on-demand when Algorithm mode triggers.
@@ -470,16 +472,19 @@ async function cmdLaunch(options: {
   // Use --dangerous flag explicitly if you really need to skip all permission checks.
   if (options.resume) {
     args.push("--resume");
+    if (options.resumeSession) {
+      args.push(options.resumeSession);
+    }
+  }
+
+  // Worktree — passed straight through to claude as `--worktree <name>`.
+  if (options.worktree) {
+    args.push("--worktree", options.worktree);
   }
 
   // Change to PAI directory unless --local flag is set
   if (!options.local) {
     process.chdir(CLAUDE_DIR);
-  }
-
-  // Add flags
-  if (options.resume) {
-    args.push("--resume");
   }
 
   // Voice notification (using focused marker for calmer tone).
@@ -651,6 +656,22 @@ async function cmdPrompt(prompt: string) {
   process.exit(exitCode);
 }
 
+async function cmdAgents(passthrough: string[]) {
+  const args = ["claude", "agents", ...passthrough];
+  process.chdir(CLAUDE_DIR);
+  const env: Record<string, string> = { ...process.env } as Record<
+    string,
+    string
+  >;
+  delete env.ANTHROPIC_API_KEY;
+  const proc = spawn(args, {
+    stdio: ["inherit", "inherit", "inherit"],
+    env,
+  });
+  const exitCode = await proc.exited;
+  process.exit(exitCode);
+}
+
 function cmdHelp() {
   console.log(`
 pai - Personal AI CLI Tool (v2.0.0)
@@ -660,9 +681,10 @@ USAGE:
   k -m <mcp>               Launch with specific MCP(s)
   k -m bd,ap               Launch with multiple MCPs
   k -a, --agents <value>   Pass agent config to claude (JSON string or @path/to/agents.json)
-  k -r, --resume           Resume last session
+  k -r, --resume [id]      Resume last session, or specific session by id
   k -s, --system-prompt    System prompt file to append (default: PAI_SYSTEM_PROMPT.md)
   k -l, --local            Stay in current directory (don't cd to ~/.claude)
+  k --worktree <name>      Launch claude in the named git worktree (passthrough)
 
 COMMANDS:
   k update                 Update Claude Code to latest version
@@ -671,6 +693,7 @@ COMMANDS:
   k mcp list               List all available MCPs
   k mcp set <profile>      Set MCP profile permanently
   k prompt "<text>"        One-shot prompt execution
+  k agents [args...]       Manage Claude Code subagents (passthrough to 'claude agents')
   k -w, --wallpaper        List/switch wallpapers (Kitty + macOS)
   k help, -h               Show this help
 
@@ -715,6 +738,7 @@ async function main() {
   let mcp: string | undefined;
   let agents: string | undefined;
   let resume = false;
+  let resumeSession: string | undefined;
   let skipPerms = true;
   let local = false;
   let systemPrompt: string | undefined;
@@ -723,6 +747,8 @@ async function main() {
   let subArg: string | undefined;
   let promptText: string | undefined;
   let wallpaperArgs: string[] = [];
+  let agentsArgs: string[] = [];
+  let worktree: string | undefined;
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -751,9 +777,18 @@ async function main() {
           error("Usage: k -a <json-or-@path>");
         }
         break;
+      case "--worktree":
+        worktree = args[++i];
+        if (!worktree || worktree.startsWith("-")) {
+          error("Usage: k --worktree <name>");
+        }
+        break;
       case "-r":
       case "--resume":
         resume = true;
+        if (args[i + 1] && !args[i + 1].startsWith("-")) {
+          resumeSession = args[++i];
+        }
         break;
       case "--safe":
         skipPerms = false;
@@ -791,6 +826,11 @@ async function main() {
       case "-p":
         command = "prompt";
         promptText = args.slice(i + 1).join(" ");
+        i = args.length; // Exit loop
+        break;
+      case "agents":
+        command = "agents";
+        agentsArgs = args.slice(i + 1);
         i = args.length; // Exit loop
         break;
       case "-w":
@@ -839,9 +879,12 @@ async function main() {
     case "wallpaper":
       cmdWallpaper(wallpaperArgs);
       break;
+    case "agents":
+      await cmdAgents(agentsArgs);
+      break;
     default:
       // Launch with options
-      await cmdLaunch({ agents, mcp, resume, skipPerms, local, systemPrompt });
+      await cmdLaunch({ agents, mcp, resume, resumeSession, skipPerms, local, systemPrompt, worktree });
   }
 }
 

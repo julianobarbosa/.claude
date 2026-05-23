@@ -89,17 +89,31 @@ function error(message: string) {
   process.exit(1);
 }
 
+function getTmuxRef(): string | null {
+  if (!process.env.TMUX) return null;
+  try {
+    const r = spawnSync(["tmux", "display-message", "-p", "#S:#I"]);
+    if (r.exitCode !== 0) return null;
+    const ref = r.stdout.toString().trim();
+    return ref.length > 0 && ref.length <= 64 ? ref : null;
+  } catch {
+    return null;
+  }
+}
+
 function notifyVoice(message: string) {
   // Fire and forget voice notification using Qwen3-TTS with personality
   const identity = getIdentity();
   const personality = identity.personality;
+  const tmuxRef = getTmuxRef();
+  const title = tmuxRef ? `PAI Notification — tmux:${tmuxRef}` : undefined;
 
   if (!personality?.baseVoice) {
     // Fall back to simple notify if no personality configured
     fetch("http://localhost:31337/notify", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, play: true }),
+      body: JSON.stringify({ message, play: true, ...(title && { title }) }),
     }).catch(() => {});
     return;
   }
@@ -109,6 +123,7 @@ function notifyVoice(message: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message,
+      ...(title && { title }),
       personality: {
         name: identity.name.toLowerCase(),
         base_voice: personality.baseVoice,

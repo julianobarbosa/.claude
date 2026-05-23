@@ -642,6 +642,7 @@ export async function handleVoiceRequest(req: Request): Promise<Response | null>
   if (pathname === "/notify/personality") {
     try {
       const data = await req.json()
+      const title = data.title || "PAI Notification"
       const message = data.message || "Notification"
 
       // Live-read voice ID from settings.json each call. Without this, pulse
@@ -661,8 +662,8 @@ export async function handleVoiceRequest(req: Request): Promise<Response | null>
         // Fall through — sendNotification will use the cached defaultVoiceId
       }
 
-      log("info", `Voice: personality notification "${message}"`, { voiceId })
-      await sendNotification("PAI Notification", message, true, voiceId)
+      log("info", `Voice: personality notification "${title}" - "${message}"`, { voiceId })
+      await sendNotification(title, message, true, voiceId)
 
       return jsonResponse({ status: "success", message: "Personality notification sent" }, 200)
     } catch (error: unknown) {

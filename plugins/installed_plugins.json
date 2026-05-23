@@ -4,31 +4,31 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/49942d02dfb7",
-        "version": "49942d02dfb7",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/e1673e5405b9",
+        "version": "e1673e5405b9",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-03T20:08:22.794Z",
-        "gitCommitSha": "0742692199b49af5c6c33cd68ee674fb2e679d50"
+        "lastUpdated": "2026-05-23T16:25:27.957Z",
+        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
       }
     ],
     "pr-review-toolkit@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/49942d02dfb7",
-        "version": "49942d02dfb7",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/e1673e5405b9",
+        "version": "e1673e5405b9",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-03T20:08:22.804Z",
-        "gitCommitSha": "0742692199b49af5c6c33cd68ee674fb2e679d50"
+        "lastUpdated": "2026-05-23T16:25:27.971Z",
+        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
       }
     ],
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/49942d02dfb7",
-        "version": "49942d02dfb7",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/e1673e5405b9",
+        "version": "e1673e5405b9",
         "installedAt": "2026-05-02T11:12:32.524Z",
-        "lastUpdated": "2026-05-03T20:08:22.790Z",
-        "gitCommitSha": "835814d0d33964c2793a2a7a8df5e3611b2ad26d"
+        "lastUpdated": "2026-05-23T16:25:27.964Z",
+        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
       }
     ],
     "codex@openai-codex": [
@@ -44,11 +44,11 @@
     "skill-creator@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/skill-creator/49942d02dfb7",
-        "version": "49942d02dfb7",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/skill-creator/e1673e5405b9",
+        "version": "e1673e5405b9",
         "installedAt": "2026-05-03T17:51:31.705Z",
-        "lastUpdated": "2026-05-03T20:08:22.797Z",
-        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+        "lastUpdated": "2026-05-23T16:25:27.961Z",
+        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
       }
     ],
     "claude-md-management@claude-plugins-official": [
@@ -84,20 +84,20 @@
     "terraform@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/terraform/49942d02dfb7",
-        "version": "49942d02dfb7",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/terraform/e1673e5405b9",
+        "version": "e1673e5405b9",
         "installedAt": "2026-05-03T17:51:34.186Z",
-        "lastUpdated": "2026-05-03T20:08:22.787Z",
-        "gitCommitSha": "efe6cc3d7cb5c368961dfd8e67b78bd35d34f9f6"
+        "lastUpdated": "2026-05-23T16:25:27.968Z",
+        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
       }
     ],
     "azure@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/azure/1.1.27",
-        "version": "1.1.27",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/azure/1.1.46",
+        "version": "1.1.46",
         "installedAt": "2026-05-03T17:51:37.187Z",
-        "lastUpdated": "2026-05-03T17:51:37.187Z",
+        "lastUpdated": "2026-05-21T17:51:17.186Z",
         "gitCommitSha": "eb84d07b5490334e1254a0f9519e9bc613c6406d"
       }
     ]

@@ -1356,17 +1356,18 @@
     }
   },
   "counts": {
-    "skills": 52,
-    "skillsPublic": 52,
+    "skills": 15,
+    "skillsPublic": 15,
     "skillsPrivate": 0,
     "workflows": 198,
     "hooks": 24,
-    "signals": 7,
+    "signals": 317,
     "files": 0,
-    "work": 3,
-    "sessions": 88,
+    "work": 7,
+    "sessions": 1529,
     "research": 1,
-    "ratings": 124,
-    "updatedAt": "2026-05-03T20:25:15.562Z"
-  }
+    "ratings": 1558,
+    "updatedAt": "2026-05-23T15:07:54.126Z"
+  },
+  "inputNeededNotifEnabled": true
 }

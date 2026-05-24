@@ -18,6 +18,42 @@ paths = [
   # Lock files are noise; their hashes aren't secrets.
   '''bun\.lockb$''',
   '''package-lock\.json$''',
+  # Security skill ships documented example JWTs / session cookies in
+  # request templates and vuln-analysis walkthroughs — pedagogical, not real.
+  '''^skills/Security/WebAssessment/''',
+  # Frozen public-release snapshots (PAI v2.4 → v4.0.3). Historical artifacts;
+  # any new release MUST be audited BEFORE landing under Releases/.
+  '''^Releases/v''',
+  # Deleted file in git history. Was a JSON catalog of regex DETECTION patterns
+  # (incl. PEM-header literal strings as PATTERNS for the SecurityFilter to find).
+  # The patterns themselves trip gitleaks and detect-private-key.
+  '''(^|/)\.pai-protected\.json$''',
+  # Released pack staging trees — mirrors of Releases/ content, also frozen.
+  '''^Packs/''',
+  # Vendored upstream-skill mirrors (Fabric, ffuf, others) — third-party teaching
+  # content with example tokens by design. Entire PAI_DIRECTORY/ tree is historical
+  # staging that no longer exists on disk.
+  '''^PAI_DIRECTORY/''',
+  '''^\.claude/skills/fabric/''',
+  # Fabric pattern that documents nuclei-template helpers — example JWTs and
+  # Java deserialization gadgets are part of the pattern's teaching surface.
+  '''write_nuclei_template_rule/system\.md$''',
+  # Deleted OSINT workflow doc; LinkedIn client_id example in git history only.
+  '''(^|/)skills/Investigation/OSINT/Workflows/PeopleLookup\.md$''',
+  # Deleted bootstrap/setup docs (working tree no longer carries them).
+  '''^documentation/how-to-start\.md$''',
+  '''^PAI_SYNC_GUIDE\.md$''',
+  # Deleted PAI subsystem READMEs (ACTIONS/FLOWS/PIPELINES) — curl examples with placeholders.
+  '''^PAI/(ACTIONS|FLOWS|PIPELINES)/README\.md$''',
+  # Live: Arbol docs show a curl with literal `Bearer YOUR_TOKEN` placeholder.
+  '''^PAI/DOCUMENTATION/Arbol/ArbolSystem\.md$''',
+  # Live: SecurityFilter.ts ships an intentional `Token: sk-abc123…` test fixture
+  # to verify its own redaction logic. Removing the fixture breaks the self-test.
+  '''^skills/Daemon/Tools/SecurityFilter\.ts$''',
+  # Deleted: Hormozi Sales workflow summary referenced in git history only.
+  '''^skills/Sales/Hormozi/Workflows/Videos7180Summary\.md$''',
+  # IDE lock files (PHPStorm/JetBrains family) — random hashes, not credentials.
+  '''^ide/.*\.lock$''',
   # Conversation logs and observability streams — high false-positive rate;
   # gitleaks pre-push --log-opts=--all still scans the whole history if you
   # need a deeper sweep.

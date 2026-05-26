@@ -675,7 +675,7 @@ Example entry:
 The diary job reads:
 - Today's ratings from `LEARNING/SIGNALS/ratings.jsonl`
 - Today's work from `MEMORY/WORK/` (completed ISAs)
-- Today's events from 
+- Today's events from
 
 ### 5b. Opinion Formation (`opinions.yaml`)
 

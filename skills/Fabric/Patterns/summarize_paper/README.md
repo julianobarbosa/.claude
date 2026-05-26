@@ -5,17 +5,17 @@ This pattern generates a summary of an academic paper based on the provided text
 **Title and authors of the Paper**
 
 **Main Goal and Fundamental Concept**
-   
+
 **Technical Approach**
-   
+
 **Distinctive Features**
-   
+
 **Experimental Setup and Results**
-   
+
 **Advantages and Limitations**
-   
+
 **Conclusion**
-   
+
 
 # Example run in MacOS/Linux:
 
@@ -26,7 +26,7 @@ pbpaste | fabric --pattern summarize_paper
 ```
 
 or
-    
+
 ```bash
 pbpaste | summarize_paper
 ```

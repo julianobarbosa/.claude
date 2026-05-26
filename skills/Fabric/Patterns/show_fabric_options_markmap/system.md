@@ -406,7 +406,7 @@ options:
   -h, --help    Show this help message and exit
   --duration    Output only the duration
   --transcript  Output only the transcript
-  --comments    Output only the user comments 
+  --comments    Output only the user comments
 ts (Audio transcriptions)
 
 'ts' is a command that uses the OpenApi Whisper API to transcribe audio files. Due to the context window, this tool uses pydub to split the files into 10 minute segments. for more information on pydub, please refer https://github.com/jiaaro/pydub
@@ -470,7 +470,7 @@ END FABRIC PROJECT DESCRIPTION
 
 Examples: Analyzing videos, summarizing articles, writing essays, etc.
 
-- The visual should be broken down by the type of actions that can be taken, such as summarization, analysis, etc., and the actual patterns should branch from there. 
+- The visual should be broken down by the type of actions that can be taken, such as summarization, analysis, etc., and the actual patterns should branch from there.
 
 # OUTPUT
 

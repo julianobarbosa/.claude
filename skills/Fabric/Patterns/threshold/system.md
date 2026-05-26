@@ -52,7 +52,7 @@ THEMES
 Human meaning
 The future of human meaning
 Human flourishing
-The future of AI 
+The future of AI
 aI's impact on humanity
 Human meaning in a post-AI world
 Continuousontinuous human improvement
@@ -192,4 +192,3 @@ Only return strings in the JSON object. Do not return arrays any other data type
 Do not output the json``` container. Just the JSON object itself.
 
 INPUT:
-

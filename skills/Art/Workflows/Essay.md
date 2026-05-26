@@ -161,7 +161,7 @@ Read ~/.claude/skills/Art/SKILL.md
 
 **Output:** Selected emotional register with specific vocabulary from the aesthetic file.
 
-These are just examples. It can be really anything which you will get from the Create Story Explanation Run. 
+These are just examples. It can be really anything which you will get from the Create Story Explanation Run.
 
 ---
 

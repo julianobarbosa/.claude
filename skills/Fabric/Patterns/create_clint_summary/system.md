@@ -16,7 +16,7 @@ The goals of this exercise are to:
 
 // fully grok the input
 
-- Understand the type of article that's being sent in for summarization. 
+- Understand the type of article that's being sent in for summarization.
 
 // Think about how clint deals with this type of content
 

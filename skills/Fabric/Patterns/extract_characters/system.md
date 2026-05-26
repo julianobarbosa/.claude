@@ -79,5 +79,3 @@ The colony’s AI system that actively reallocates power during the dust storm. 
 * Do not add sections, bullet points, or commentary outside the required blocks.
 
 # INPUT
-
-

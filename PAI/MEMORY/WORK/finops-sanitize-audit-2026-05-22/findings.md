@@ -228,10 +228,18 @@ Risk staying MEDIUM rather than escalating: the work address is already declared
 | Date | Finding | Action chosen | Commit | Status |
 |------|---------|---------------|--------|--------|
 | 2026-05-23 | **C1** | C1-alt — replace GUIDs in `docs/subscriptions.csv` with codenames; real GUIDs preserved in gitignored `docs/subscriptions.guid-map.private.csv` | `9fd0577` (local, not pushed) | HEAD clean; **GUIDs still reachable from history prior to `9fd0577`** — history rewrite (C1 full) NOT performed |
+| 2026-05-23 | **H3** | Append defensive patterns `*.env`, `*.env.*`, `*.key`, `*.pem`, `*.pfx`, `*.p12`, `*.crt`, `*.cer` to `.gitignore` (with allowlist for `*.env.example` / `*.env.sample`) | `cef4c96` (local, not pushed) | Verified no currently-tracked file would be retroactively ignored |
+| 2026-05-23 | **H2** | Propagate C1-alt treatment — replace real subscription GUIDs with codenames across 17 `iac/policy/owner-tags/subscriptions/<name>/README.md` files | `123a8ef` (local, not pushed) | All 17 READMEs clean; Terraform sources untouched (already parameterized via `var.subscription_id`); broader `iac/` tree's 2 remaining GUIDs are safe Microsoft constants (null + Tag Contributor role) |
+| 2026-05-23 | **C1-alt + H3 + H2 merge** | PR #62: feature branch `sanitize/audit-2026-05-22` → `main` with WIs #665 (C1-alt), #666 (H3), #667 (H2) | merge commit `aba027c` | Completed by `juliano.b.cloud@hypera.com.br` 2026-05-23T19:00:37Z; all 3 sanitize commits reachable from `origin/main` |
+| 2026-05-23 | **M1** | Delete `.claude/worktrees/fix-rbac-cost-view/evidence/.browser-profile/` | n/a (untracked) | No-op — directory was already absent (cleaned between sessions). Sibling worktree `eventual-gathering-shamir` verified clean of same litter. Both worktrees themselves intact. |
+| 2026-05-24 | **H1** | Path-a (declare-allowed) — add Power BI report (`e0c8edd2-...`) and dashboard (`ee31e4f2-...`) GUIDs to CLAUDE.md's Sensitive Identifiers allowlist | `aa06490` → PR #67 → merge `858006d` → WI #701 | Completed by `juliano.barbosa@hypera.com.br` 2026-05-24T11:34:16Z. WI #701 auto-closed. |
+| 2026-05-24 | **post-merge cleanup** | Deleted local + remote feature branches (`sanitize/audit-2026-05-22`, `sanitize/h1-2026-05-24`); pruned local refs; manually closed WIs #665/#666/#667 (did not auto-transition with PR #62) | n/a | All 4 audit WIs now `Closed`; no `sanitize/*` branches remain anywhere; working tree clean |
 
 **Important caveat on C1-alt vs C1:** C1-alt removes the data from HEAD going forward, but every commit reachable from `pre-sanitize-2026-05-08..9fd0577^` still contains the real tenant + subscription GUIDs (the same data class that the 2026-05-08 rewrite removed before this re-introduction). To fully restore the pre-2026-05-08 cleanliness, a history rewrite covering the re-introducing commits is still required. C1-alt is the right move if (a) you accept that anyone with read access to history sees the GUIDs already, or (b) history rewrite is being deferred for coordination reasons.
 
-**Still pending (not yet authorized):** C2 (Supabase JWT history rewrite), H1 (Power BI YAMLs scrub or move), H2 (IaC subscription READMEs — same GUIDs still present there), H3 (`.gitignore` defensive patterns for `*.env / *.key / *.pem / *.pfx / *.p12`), M1 (`.browser-profile/` cleanup), M2 (PNG redaction if external sharing planned).
+**Still pending (not yet authorized):** C2 (Supabase JWT history rewrite — IRREVERSIBLE, needs explicit go), M2 (PNG redaction — only if repo ever moves external).
+
+**Audit closure status:** all working-tree-side findings remediated (C1-alt, H3, H2, M1, H1). Only the history-rewrite item (C2) remains open, and the audit's contract was always that history rewrites required explicit per-instance authorization.
 
 - `gitleaks` 8.30.1 (working-tree scan, history scan since `pre-sanitize-2026-05-08`)
 - `ripgrep` 15.1 (regex scans for GUIDs, tokens, PII, hostnames)

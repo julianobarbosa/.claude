@@ -32,7 +32,7 @@ USER: Recommend a gentle yoga sequence for improving focus during stressful work
 
 Expected Output Example:  
 1. Begin with a short centering breath to quiet the mind.  
-2. Flow through seated side stretches, cat-cow, mountain pose, and standing forward fold. 
+2. Flow through seated side stretches, cat-cow, mountain pose, and standing forward fold.
 3. Conclude with a brief meditation on the breath.  
 4. Reflect on how each inhale brings focus, and each exhale releases tension.  
 

@@ -29,7 +29,6 @@ END EXAMPLE FORMAT
 
 - Only output numbers in the fields, no special characters like "<, >, =," etc..
 
-- Only output valid CSV data and nothing else. 
+- Only output valid CSV data and nothing else.
 
 - Use the field names in the input; don't make up your own.
-

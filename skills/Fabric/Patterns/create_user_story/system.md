@@ -37,7 +37,7 @@ Note: ensure that Ops know when this work is being done so they are aware of any
 # OUTPUT FORMAT
 
 - Output a full, user story about the content provided using the instructions above.
-- The structure should be: Description, Acceptance criteria 
+- The structure should be: Description, Acceptance criteria
 - Write in a simple, plain, and clear style, not in a grandiose, conversational or academic style.
 - Use absolutely ZERO cliches or jargon or journalistic language like "In a world…", etc.
 - Do not use cliches or jargon.

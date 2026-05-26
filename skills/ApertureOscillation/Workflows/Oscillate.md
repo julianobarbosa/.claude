@@ -189,8 +189,8 @@ At Deep (E4) or Comprehensive (E5) effort, using both in sequence produces the r
 When spawning an agent to run ApertureOscillation:
 
 ```
-CONTEXT: You are performing Aperture Oscillation — examining a question at 
-different scope levels to surface design tensions between local component logic 
+CONTEXT: You are performing Aperture Oscillation — examining a question at
+different scope levels to surface design tensions between local component logic
 and system-level coherence.
 
 TACTICAL TARGET: {specific thing being built}

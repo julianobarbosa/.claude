@@ -6,7 +6,7 @@ This example was run on llama3:latest (8B), even with the 8B limitation, the exa
 
 <details open>
     <summary>Raw</summary>
-    
+
 ```markdown
 **Pythagorean Theorem: Understanding the Relationship Between Triangles and Squares**
 
@@ -117,5 +117,3 @@ For a better understanding, you can use online tools or software to create inter
 Remember, this theorem is not just a mathematical concept; it has many practical applications in various fields.
 
 </details>
-
-

@@ -157,7 +157,7 @@ ALL PAI agents follow this security protocol. SecurityPipeline runs on subagent 
 
 Customer data is to be protected at all times, including tools, workflows, and skills that can access said data.
 
-User data is data about me and what I'm up to, my contacts, etc. 
+User data is data about me and what I'm up to, my contacts, etc.
 
 The purpose of the entire PAI Security System is to protect both Customer and /User data.
 

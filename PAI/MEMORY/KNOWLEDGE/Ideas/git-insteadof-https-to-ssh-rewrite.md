@@ -13,4 +13,3 @@ Implication for ISCs: any ISC that asserts the literal HTTPS clone URL on `origi
 Verify with: `git config --get-all url.git@github.com:.insteadOf` — should return `https://github.com/`.
 
 Functionally identical: SSH and HTTPS endpoints reach the same git server. Affects only string equality of remote URLs and authentication path (SSH key vs HTTPS token).
-

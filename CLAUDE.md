@@ -63,17 +63,17 @@ FOR: Multi-step, complex, or difficult work. Troubleshooting, debugging, buildin
 
 ### Work Principles
 
-Apply to toda task de trabalho — coding, writing, planning, research. Citáveis por nome; governam o *how* (Operational Rules governam o *what*).
+Apply to every work task — coding, writing, planning, research. Citable by name; they govern the *how* (Operational Rules govern the *what*).
 
-1. **Think before coding.** Explicite assunções. Quando há ambiguidade, apresente as interpretações em vez de escolher silenciosamente. Quando há caminho mais simples, fale. Quando confuso, pare e pergunte — confusão escondida vira trabalho errado.
-2. **Simplicity first.** Mínimo que resolve o problema. Sem features especulativas, sem abstração para uso único, sem configurabilidade não pedida, sem error handling para cenário impossível. Teste: um engenheiro sênior diria que está overcomplicated? Se sim, reescreva. Se 200 linhas poderiam ser 50, são 50.
-3. **Surgical changes.** Toque só o que a task pede. Não "melhore" código adjacente, comments ou formatação não solicitados. Mantenha o estilo existente mesmo se você faria diferente. Remova orphans que SUAS mudanças criaram (imports/vars/funcs); pre-existing dead code você sinaliza, não deleta. Cada linha alterada rastreia diretamente ao request.
-4. **Goal-driven execution.** Defina critério de sucesso antes de agir; loop até verificar. Transforme imperativo em verificável:
-   - "Add validation" → escrever tests para inputs inválidos, depois fazer passar
-   - "Fix the bug" → escrever test que reproduz, depois fazer passar
-   - "Refactor X" → garantir tests passam antes e depois
+1. **Think before coding.** Make assumptions explicit. When there's ambiguity, present the interpretations instead of silently picking one. When there's a simpler path, say so. When confused, stop and ask — hidden confusion becomes wrong work.
+2. **Simplicity first.** The minimum that solves the problem. No speculative features, no abstraction for a single use, no unrequested configurability, no error handling for impossible scenarios. Test: would a senior engineer say it's overcomplicated? If so, rewrite it. If 200 lines could be 50, they're 50.
+3. **Surgical changes.** Touch only what the task asks for. Don't "improve" adjacent code, comments, or formatting that weren't requested. Keep the existing style even if you'd do it differently. Remove orphans that YOUR changes created (imports/vars/funcs); pre-existing dead code you flag, not delete. Every changed line traces directly to the request.
+4. **Goal-driven execution.** Define the success criterion before acting; loop until verified. Turn the imperative into something verifiable:
+   - "Add validation" → write tests for invalid inputs, then make them pass
+   - "Fix the bug" → write a test that reproduces it, then make it pass
+   - "Refactor X" → ensure tests pass before and after
 
-   Para tasks multi-step, declare o plano `[step] → verify: [check]` antes de executar. Critério forte deixa o loop autônomo; critério fraco ("make it work") força clarificação constante.
+   For multi-step tasks, state the plan `[step] → verify: [check]` before executing. A strong criterion makes the loop autonomous; a weak criterion ("make it work") forces constant clarification.
 
 ### Operational Notes
 - Context reduction: PreToolUse hook rewrites Bash through RTK for 60-90% token reduction. Use `rtk gain` to check savings.

@@ -429,12 +429,26 @@ function removeSessionName(sessionId: string): void {
 
 // ─── Voice Notifications ─────────────────────────────────────────────────────
 
+function getTmuxRef(): string | null {
+  if (!process.env.TMUX) return null;
+  try {
+    const r = spawnSync("tmux", ["display-message", "-p", "#S:#I"]);
+    if (r.status !== 0) return null;
+    const ref = r.stdout.toString().trim();
+    return ref.length > 0 && ref.length <= 64 ? ref : null;
+  } catch {
+    return null;
+  }
+}
+
 function voiceNotify(message: string): void {
   try {
+    const tmuxRef = getTmuxRef();
+    const title = tmuxRef ? `PAI Notification — tmux:${tmuxRef}` : undefined;
     fetch(VOICE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, voice_id: VOICE_ID }),
+      body: JSON.stringify({ message, voice_id: VOICE_ID, ...(title && { title }) }),
     }).catch(() => {});
   } catch {}
 }

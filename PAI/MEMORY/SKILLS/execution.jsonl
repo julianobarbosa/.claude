@@ -1,1 +1,4 @@
 {"ts":"2026-05-03T18:43:50Z","skill":"Interceptor","workflow":"Reproduce","input":"Power BI Service ground-truth walk","status":"ok","duration_s":900,"note":"Substituted claude-in-chrome MCP — Interceptor CLI not installed"}
+{"ts":"2026-05-29T15:15:24Z","skill":"FirstPrinciples","workflow":"Challenge","input":"decompose premortem skill design","status":"ok","duration_s":40}
+{"ts":"2026-05-29T15:22:20Z","skill":"BitterPillEngineering","workflow":"QuickCheck","input":"audit premortem SKILL.md over-prompting","status":"ok","duration_s":20}
+{"ts":"2026-05-29T15:36:26Z","skill":"CreateSkill","workflow":"CreateSkill","input":"research premortem build complete skill","status":"ok","duration_s":1300}

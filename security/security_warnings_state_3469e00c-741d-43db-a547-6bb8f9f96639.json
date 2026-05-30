@@ -1,0 +1,1 @@
+{"shown_warnings": [], "baseline_sha": "b8f0313367e7e995d4a59dce35aa1bad89e92dd7", "head_at_capture": "f156b5dad813ffe2756bd999a5d079be91327fad", "untracked_at_baseline": {"docs/azure/alz-bootstrap-evidence-12-4.md": 1780088506358732347, "terraform/environments/cafehyna-dev/karpenter-nodepools.tf": 1780088182657965980}, "touched_paths": []}

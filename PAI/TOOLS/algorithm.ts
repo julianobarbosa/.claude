@@ -254,11 +254,13 @@ interface ParsedArgs {
   preset: string | null;        // --preset value
   focus: number | null;         // --focus value (0.0-1.0)
   paramOverrides: Record<string, string>; // --param key=value (repeatable)
+  worktree: string | null;      // --worktree [name] → passthrough to `claude --worktree`
+  agentConfig: string | null;   // --agent-config <json|@path> → passthrough to `claude --agents`
 }
 
 function parseArgs(argv: string[]): ParsedArgs {
   const args = argv.slice(2);
-  const result: ParsedArgs = { subcommand: null, mode: null, isaPath: null, maxIterations: null, agentCount: 1, title: null, effortLevel: null, preset: null, focus: null, paramOverrides: {} };
+  const result: ParsedArgs = { subcommand: null, mode: null, isaPath: null, maxIterations: null, agentCount: 1, title: null, effortLevel: null, preset: null, focus: null, paramOverrides: {}, worktree: null, agentConfig: null };
 
   // Check for subcommand (first arg that isn't a flag)
   const subcommands = ["status", "pause", "resume", "stop", "new"];
@@ -298,6 +300,13 @@ function parseArgs(argv: string[]): ParsedArgs {
         process.exit(1);
       }
       result.paramOverrides[kv.slice(0, eqIdx)] = kv.slice(eqIdx + 1);
+    } else if (arg === "-w" || arg === "--worktree") {
+      // Optional name (mirrors `claude --worktree [name]`): consume next arg
+      // only if it isn't another flag. Empty string ⇒ pass bare --worktree.
+      const next = args[i + 1];
+      result.worktree = next && !next.startsWith("-") ? args[++i] : "";
+    } else if (arg === "--agent-config" && i + 1 < args.length) {
+      result.agentConfig = args[++i];
     } else if (arg === "-h" || arg === "--help") {
       printHelp();
       process.exit(0);
@@ -338,6 +347,8 @@ Flags:
   -a, --agents <N>      Parallel agents per iteration (1-16, default: 1)
   -t, --title <title>   ISA title (required for 'new')
   -e, --effort <level>  Effort level: Standard, Extended, etc. (default: Standard)
+  -w, --worktree [name] Run claude in a git worktree (optional name; passthrough)
+  --agent-config <v>    Custom agents for claude: JSON string or @path/to/agents.json
   -h, --help            Show this help
 
 Parameter Flags (ideate/optimize modes):
@@ -428,6 +439,29 @@ function removeSessionName(sessionId: string): void {
 }
 
 // ─── Voice Notifications ─────────────────────────────────────────────────────
+
+// Build passthrough args for `claude` from --worktree / --agent-config.
+// Mirrors pai.ts: --agent-config accepts a raw JSON string or @path/to/file.json.
+function buildClaudePassthrough(worktree: string | null, agentConfig: string | null): string[] {
+  const extra: string[] = [];
+  if (worktree !== null) {
+    extra.push("--worktree");
+    if (worktree.length > 0) extra.push(worktree);
+  }
+  if (agentConfig) {
+    let value = agentConfig;
+    if (value.startsWith("@")) {
+      const p = value.slice(1);
+      if (!existsSync(p)) {
+        console.error(`\x1b[31mError:\x1b[0m Agents file not found: ${p}`);
+        process.exit(1);
+      }
+      value = readFileSync(p, "utf-8").trim();
+    }
+    extra.push("--agents", value);
+  }
+  return extra;
+}
 
 function getTmuxRef(): string | null {
   if (!process.env.TMUX) return null;
@@ -1077,7 +1111,7 @@ function detectPlateau(loopHistory: Array<{ criteriaPassing: number }>, window: 
 
 // ─── Core Loop Mode ─────────────────────────────────────────────────────────
 
-async function runLoop(isaPath: string, maxOverride?: number, agentCount: number = 1): Promise<void> {
+async function runLoop(isaPath: string, maxOverride?: number, agentCount: number = 1, passthrough: string[] = []): Promise<void> {
   const absPath = resolve(isaPath);
   if (!existsSync(absPath)) {
     console.error(`\x1b[31mError:\x1b[0m ISA not found: ${absPath}`);
@@ -1330,6 +1364,7 @@ async function runLoop(isaPath: string, maxOverride?: number, agentCount: number
     const result = spawnSync("claude", [
       "-p", "--bare", prompt,
       "--allowedTools", "Edit,Write,Bash,Read,Glob,Grep,WebFetch,WebSearch,Task,TaskCreate,TaskUpdate,TaskList,NotebookEdit",
+      ...passthrough,
     ], {
       stdio: ["pipe", "pipe", "pipe"],
       timeout: 600_000, // 10 minute timeout per iteration
@@ -1420,7 +1455,7 @@ async function runLoop(isaPath: string, maxOverride?: number, agentCount: number
 
 // ─── Interactive Mode ────────────────────────────────────────────────────────
 
-function runInteractive(isaPath: string): void {
+function runInteractive(isaPath: string, passthrough: string[] = []): void {
   const absPath = resolve(isaPath);
   if (!existsSync(absPath)) {
     console.error(`\x1b[31mError:\x1b[0m ISA not found: ${absPath}`);
@@ -1443,6 +1478,7 @@ function runInteractive(isaPath: string): void {
   const child = spawn("claude", [
     prompt,
     "--allowedTools", "Edit,Write,Bash,Read,Glob,Grep,WebFetch,WebSearch,Task,TaskCreate,TaskUpdate,TaskList,NotebookEdit",
+    ...passthrough,
   ], {
     stdio: "inherit",
     cwd: dirname(absPath),
@@ -1469,6 +1505,7 @@ function runIdeate(
   preset: string | null,
   focus: number | null,
   paramOverrides: Record<string, string>,
+  passthrough: string[] = [],
 ): void {
   const absPath = resolve(isaPath);
   if (!existsSync(absPath)) {
@@ -1509,6 +1546,7 @@ function runIdeate(
   const child = spawn("claude", [
     prompt,
     "--allowedTools", "Edit,Write,Bash,Read,Glob,Grep,WebFetch,WebSearch,Task,TaskCreate,TaskUpdate,TaskList,NotebookEdit",
+    ...passthrough,
   ], {
     stdio: "inherit",
     cwd: dirname(absPath),
@@ -1791,19 +1829,20 @@ if (parsed.subcommand) {
   }
 
   const resolvedPath = resolveISAPath(parsed.isaPath);
+  const passthrough = buildClaudePassthrough(parsed.worktree, parsed.agentConfig);
 
   switch (parsed.mode) {
     case "loop":
-      await runLoop(resolvedPath, parsed.maxIterations ?? undefined, parsed.agentCount);
+      await runLoop(resolvedPath, parsed.maxIterations ?? undefined, parsed.agentCount, passthrough);
       break;
     case "interactive":
-      runInteractive(resolvedPath);
+      runInteractive(resolvedPath, passthrough);
       break;
     case "ideate":
-      runIdeate(resolvedPath, parsed.preset, parsed.focus, parsed.paramOverrides);
+      runIdeate(resolvedPath, parsed.preset, parsed.focus, parsed.paramOverrides, passthrough);
       break;
     case "optimize":
-      runInteractive(resolvedPath);  // optimize launches interactive with /optimize context
+      runInteractive(resolvedPath, passthrough);  // optimize launches interactive with /optimize context
       break;
     default:
       console.error(`Unknown mode: ${parsed.mode}. Use 'loop', 'interactive', 'ideate', or 'optimize'.`);

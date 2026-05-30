@@ -5,7 +5,7 @@
       "url": "https://github.com/anthropics/claude-plugins-official.git"
     },
     "installLocation": "/Users/juliano.barbosa/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-05-23T16:25:27.822Z"
+    "lastUpdated": "2026-05-30T12:52:35.347Z"
   },
   "openai-codex": {
     "source": {
@@ -13,6 +13,14 @@
       "repo": "openai/codex-plugin-cc"
     },
     "installLocation": "/Users/juliano.barbosa/.claude/plugins/marketplaces/openai-codex",
-    "lastUpdated": "2026-05-03T17:40:25.834Z"
+    "lastUpdated": "2026-05-27T10:37:53.523Z"
+  },
+  "understand-anything": {
+    "source": {
+      "source": "github",
+      "repo": "Lum1104/Understand-Anything"
+    },
+    "installLocation": "/Users/juliano.barbosa/.claude/plugins/marketplaces/understand-anything",
+    "lastUpdated": "2026-05-27T10:37:57.348Z"
   }
 }

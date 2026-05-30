@@ -4,31 +4,31 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/e1673e5405b9",
-        "version": "e1673e5405b9",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-review/fefdea62cfcc",
+        "version": "fefdea62cfcc",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-23T16:25:27.957Z",
-        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
+        "lastUpdated": "2026-05-29T19:42:20.240Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
       }
     ],
     "pr-review-toolkit@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/e1673e5405b9",
-        "version": "e1673e5405b9",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/fefdea62cfcc",
+        "version": "fefdea62cfcc",
         "installedAt": "2026-05-01T16:58:55.923Z",
-        "lastUpdated": "2026-05-23T16:25:27.971Z",
-        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
+        "lastUpdated": "2026-05-29T19:42:20.264Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
       }
     ],
     "commit-commands@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/e1673e5405b9",
-        "version": "e1673e5405b9",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/commit-commands/fefdea62cfcc",
+        "version": "fefdea62cfcc",
         "installedAt": "2026-05-02T11:12:32.524Z",
-        "lastUpdated": "2026-05-23T16:25:27.964Z",
-        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
+        "lastUpdated": "2026-05-29T19:42:20.250Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
       }
     ],
     "codex@openai-codex": [
@@ -44,11 +44,11 @@
     "skill-creator@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/skill-creator/e1673e5405b9",
-        "version": "e1673e5405b9",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/skill-creator/fefdea62cfcc",
+        "version": "fefdea62cfcc",
         "installedAt": "2026-05-03T17:51:31.705Z",
-        "lastUpdated": "2026-05-23T16:25:27.961Z",
-        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
+        "lastUpdated": "2026-05-29T19:42:20.299Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
       }
     ],
     "claude-md-management@claude-plugins-official": [
@@ -84,21 +84,81 @@
     "terraform@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/terraform/e1673e5405b9",
-        "version": "e1673e5405b9",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/terraform/fefdea62cfcc",
+        "version": "fefdea62cfcc",
         "installedAt": "2026-05-03T17:51:34.186Z",
-        "lastUpdated": "2026-05-23T16:25:27.968Z",
-        "gitCommitSha": "e1673e5405b91baf2458b2fd737e339a8cb171c8"
+        "lastUpdated": "2026-05-29T19:42:20.211Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
       }
     ],
     "azure@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/azure/1.1.46",
-        "version": "1.1.46",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/azure/1.1.57",
+        "version": "1.1.57",
         "installedAt": "2026-05-03T17:51:37.187Z",
-        "lastUpdated": "2026-05-21T17:51:17.186Z",
+        "lastUpdated": "2026-05-29T21:50:20.711Z",
         "gitCommitSha": "eb84d07b5490334e1254a0f9519e9bc613c6406d"
+      }
+    ],
+    "understand-anything@understand-anything": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/understand-anything/understand-anything/2.7.5",
+        "version": "2.7.5",
+        "installedAt": "2026-05-26T20:36:20.097Z",
+        "lastUpdated": "2026-05-26T20:36:20.097Z",
+        "gitCommitSha": "26edf61856fa476e466bda1814819a266a293c47"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0",
+        "version": "5.1.0",
+        "installedAt": "2026-05-27T10:38:37.778Z",
+        "lastUpdated": "2026-05-27T10:38:37.778Z",
+        "gitCommitSha": "f2cbfbefebbfef77321e4c9abc9e949826bea9d7"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/context7/fefdea62cfcc",
+        "version": "fefdea62cfcc",
+        "installedAt": "2026-05-27T10:38:52.079Z",
+        "lastUpdated": "2026-05-29T19:42:20.218Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/github/fefdea62cfcc",
+        "version": "fefdea62cfcc",
+        "installedAt": "2026-05-27T10:39:08.679Z",
+        "lastUpdated": "2026-05-29T19:42:20.229Z",
+        "gitCommitSha": "fefdea62cfcce052605139ecffa5d3cb49ec4449"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-27T10:39:25.748Z",
+        "lastUpdated": "2026-05-27T10:39:25.748Z",
+        "gitCommitSha": "441f734edb65d836ebc4366e4fca72285f5197ab"
+      }
+    ],
+    "security-guidance@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/juliano.barbosa/.claude/plugins/cache/claude-plugins-official/security-guidance/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-05-27T10:39:38.836Z",
+        "lastUpdated": "2026-05-27T10:39:38.836Z",
+        "gitCommitSha": "441f734edb65d836ebc4366e4fca72285f5197ab"
       }
     ]
   }

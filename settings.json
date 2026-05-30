@@ -380,7 +380,13 @@
     "claude-code-setup@claude-plugins-official": true,
     "microsoft-docs@claude-plugins-official": true,
     "terraform@claude-plugins-official": true,
-    "azure@claude-plugins-official": true
+    "azure@claude-plugins-official": true,
+    "understand-anything@understand-anything": true,
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -393,6 +399,12 @@
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "understand-anything": {
+      "source": {
+        "source": "github",
+        "repo": "Lum1104/Understand-Anything"
       }
     }
   },
@@ -1168,6 +1180,7 @@
   "plansDirectory": "Plans/",
   "skipDangerousModePermissionPrompt": true,
   "teammateMode": "in-process",
+  "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "autoMode": {
@@ -1359,15 +1372,14 @@
     "skills": 15,
     "skillsPublic": 15,
     "skillsPrivate": 0,
-    "workflows": 198,
+    "workflows": 251,
     "hooks": 24,
-    "signals": 317,
+    "signals": 462,
     "files": 0,
-    "work": 7,
-    "sessions": 1529,
+    "work": 27,
+    "sessions": 2060,
     "research": 1,
-    "ratings": 1558,
-    "updatedAt": "2026-05-23T15:07:54.126Z"
-  },
-  "inputNeededNotifEnabled": true
+    "ratings": 2190,
+    "updatedAt": "2026-05-30T12:33:13.103Z"
+  }
 }

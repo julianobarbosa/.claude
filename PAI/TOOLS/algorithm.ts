@@ -51,6 +51,7 @@ import { resolve, basename, join, dirname } from "path";
 import { spawnSync, spawn } from "child_process";
 import { randomUUID } from "crypto";
 import { generateISATemplate } from "../../../.claude/hooks/lib/isa-template";
+import { tmuxNotificationTitle } from "./TmuxRef";
 
 // ─── Paths ───────────────────────────────────────────────────────────────────
 
@@ -463,22 +464,9 @@ function buildClaudePassthrough(worktree: string | null, agentConfig: string | n
   return extra;
 }
 
-function getTmuxRef(): string | null {
-  if (!process.env.TMUX) return null;
-  try {
-    const r = spawnSync("tmux", ["display-message", "-p", "#S:#I"]);
-    if (r.status !== 0) return null;
-    const ref = r.stdout.toString().trim();
-    return ref.length > 0 && ref.length <= 64 ? ref : null;
-  } catch {
-    return null;
-  }
-}
-
 function voiceNotify(message: string): void {
   try {
-    const tmuxRef = getTmuxRef();
-    const title = tmuxRef ? `PAI Notification — tmux:${tmuxRef}` : undefined;
+    const title = tmuxNotificationTitle();
     fetch(VOICE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

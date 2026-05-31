@@ -19,6 +19,7 @@
  */
 
 import { spawn, spawnSync } from "bun";
+import { tmuxNotificationTitle } from "./TmuxRef";
 import {
   getIdentity,
   getStartupCatchphrase,
@@ -89,24 +90,11 @@ function error(message: string) {
   process.exit(1);
 }
 
-function getTmuxRef(): string | null {
-  if (!process.env.TMUX) return null;
-  try {
-    const r = spawnSync(["tmux", "display-message", "-p", "#S:#I"]);
-    if (r.exitCode !== 0) return null;
-    const ref = r.stdout.toString().trim();
-    return ref.length > 0 && ref.length <= 64 ? ref : null;
-  } catch {
-    return null;
-  }
-}
-
 function notifyVoice(message: string) {
   // Fire and forget voice notification using Qwen3-TTS with personality
   const identity = getIdentity();
   const personality = identity.personality;
-  const tmuxRef = getTmuxRef();
-  const title = tmuxRef ? `PAI Notification — tmux:${tmuxRef}` : undefined;
+  const title = tmuxNotificationTitle();
 
   if (!personality?.baseVoice) {
     // Fall back to simple notify if no personality configured

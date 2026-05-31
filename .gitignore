@@ -241,3 +241,6 @@ teams/
 default/
 surface-verify/
 skills/Art/Tools/node_modules/
+
+# Local git-am patch artifacts (regenerable via git format-patch; whitespace-sensitive, must not be reflowed by hooks)
+PAI/PATCHES/
